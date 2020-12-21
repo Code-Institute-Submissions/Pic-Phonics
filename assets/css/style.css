@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=Fredoka+One&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+border: 0;
+
+}
+body {
+    font-family:"Coming Soon", sans-serif ;
+    background-color: blue;
+}
+
+.navbar{
+    font-family: "Fredoka One", sans-serif;
+    font-size:1.5rem;
+    font-weight: bolder;
+    background-color: yellow;
+}
+
+#navbarLogo a {
+    font-family: "Fredoka One", sans-serif;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: blue;
+    letter-spacing: .3rem;
+    text-decoration: none;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: blue;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgb(61, 93, 235);
+}
+
+.nav-item {
+    padding: .5rem;
+}
+
+footer{
+    background-color: yellow;
+    padding: .5rem;
+}
+
+#footer-details{
+    text-align: center;
+    color: blue;
+    font-family: "Fredoka One",sans-serif;
+}
