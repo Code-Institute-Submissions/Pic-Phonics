@@ -8,13 +8,12 @@ border: 0;
 }
 
 .row, .container, .container-fluid {
-    padding-right: 10px;
-    padding-left: 30px;
-    margin-right: 5px; 
+    padding-left: 30px; 
 }
 
 body {
     font-family:"Sniglet", sans-serif ;
+    line-height: 2.5rem;
 }
 
 hr {
@@ -54,8 +53,8 @@ hr {
     padding: .5rem;
 }
 
-.instructions-container {
-    height: 100vw;
+.intro-container {
+    height: 45vw;
     width: 100%;
     background: url('../images/abc-image.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -82,42 +81,28 @@ hr {
 .jumbotron {
     background-color:transparent;
     border-radius: 30px;
-    margin: 4rem;
+    margin: 7rem;
     text-align: center;
 }
 
 .jumbotron h2 {
     color:  #f1e318;
-    font-family: "Coming Soon", sans-serif;
+    font-family: "Sniglet", sans-serif;
     font-size: 2rem;
     font-weight: bold;
     letter-spacing: .1rem;
     padding-top: 0;
+    padding-bottom: 10px;
 }
 
-.jumbotron .lead {
+.jumbotron p {
     color:  #f1e318;
-    font-family: "Coming Soon",sans-serif;
+    font-family: "Sniglet", sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
-    margin-top: 0;
     letter-spacing: .1rem;
-
-}
-
-.jumbotron ol{
-    color:#f1e318;
-    margin-left: 20%;
-    padding-bottom: .1rem;
-    padding-top: .2rem;
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-align: justify;
-}
-
-.jumbotron ol li{
-    padding-bottom: .5rem;
-    padding-left: 1rem;
+    padding-top: 0;
+    padding-bottom: 10px;
 }
 
 .btn-lg {
@@ -131,12 +116,57 @@ hr {
     font-weight: bolder;
     font-size: 1.5rem;
     background-color: #f1e318 ;
-    margin-left: 100px;
+}
+
+.instruction-container{
+    background-color:#308a96ee; 
+    align-content: center;
+    margin-bottom: 3rem;
+}
+
+#instructions h2{
+    color:  #f1e318;
+    font-family: "Sniglet",sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-left: 2.5rem;
+    letter-spacing: .1rem;
+    text-align: justify;
+    line-height: 0;
+    
+
+}
+
+#instructions ol{
+    color:#f1e318;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    font-size: 1.3rem;
+    text-align: justify;
+     line-height: 3rem;
+}
+
+.instructions ol li{
+    padding-bottom: 1rem;
+}
+
+#instructionImage{
+    margin-left: 60px;
+    height: 30vw;
+    width: 40vw;
+    padding: .5rem .5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 
 footer{
     background-color:#32cf4c;
-    padding: .5rem;
+    padding: .5rem 1rem;
 }
 
 #footer-details{
