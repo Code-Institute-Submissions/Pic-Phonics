@@ -15,18 +15,47 @@
         <nav class="navbar navbar-expand-lg navbar-light navbar fixed-top">
             <div class="container-fluid">
                 <span id="navbarLogo" class="navbar-brand text-uppercase"><a href="index.html"> Pic Phonics</a></span>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <!--Code snippet from Stackoverflow to solve issue of hamburger menu closing once link is clicked, taken from Orel Eliyahu' on Stack Overflow - https://stackoverflow.com/questions/36405991/bootstrap-toggle-menu-on-one-page-site-does-not-uncollapse-when-clicked-->
-                        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse"><a class="nav-link" href="#about">INSTRUCTIONS</a></li>
-                        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse"><a class="nav-link" href="#team">PLAY</a></li>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalCenterInstructions">
+                        Instructions
+                        </button>
+                        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse"><a class="nav-link" href="#play">PLAY</a></li>
                         <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse"><a class="nav-link" href="#contact">CONTACT</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!--/navigation-->
+        <!-- Modal -->
+        <div class="modal fade" id="ModalCenterInstructions" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ModalTitle">How to Play</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <div class="modal-body">
+       <ol>
+            <li>Click on the letter to hear the sound.</li>
+            <li>Look at the pictures to see the words that start with that sound.</li>
+            <li>Click on all the pictures that start with that letter.</li>
+            <li>When you are finished click the next button.</li>
+            <li>Enjoy and have fun!</li>
+        </ol>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/Modal-->
+    
         <!--Jumbotron-->
         <section class="container-fluid intro-container">
             <!-- Intro -->
@@ -46,7 +75,7 @@
             </div>
         </section>
         <!--/intro-->
-        <!--Instructions-->
+        <!--Instructions
         <section class="container-fluid instruction-container">
             <div class="row">
                 <div id="instructions" class="col-md-6">
@@ -64,7 +93,7 @@
                 </div>
             </div>
         </section>
-        <!--/instructions-->
+        instructions-->
         <!--Footer-->
         <footer class="container-fluid fixed-bottom">
             <div id="footer-details" class="row">

@@ -53,6 +53,39 @@ hr {
     padding: .5rem;
 }
 
+#ModalCenterInstructions .modal-header, .modal-body{
+    color: #f1e318;
+    background-color: #29838f;
+    padding-left: 30px;
+}
+
+.modal-header #ModalTitle{
+    text-align: center;
+    font-family: "Fredoka One", sans-serif;
+    font-size: 1.4rem;
+}
+
+.modal-body{
+    font-family: "Sniglet",sans-serif;
+    font-size: 1.1rem;
+}
+
+.modal-body li {
+    padding: 10px;
+}
+
+.modal-footer{
+    color: #f1e318;
+    background-color:#32cf4c;
+}
+
+.modal-footer button{
+    color: #f1e318;
+    background-color: #29838f;
+    font-family: "Fredoka One", sans-serif;
+    font-size: 1.2rem;
+}
+
 .intro-container {
     height: 45vw;
     width: 100%;
