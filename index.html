@@ -66,11 +66,16 @@
                         <h2 class="jumbotron-header text-center">
                             <strong>PIC PHONICS <i class="fas fa-headphones"></i></strong>
                         </h2>
-                        <p class="jumbotron-sub" onclick="remove(this)">An fun interactive phonics game for young readers to learn initial phonics sounds</p>
-                        <p class="jumbotron-sub" onclick="remove(this)">Enjoy and have fun!</p>
+                        <p class="jumbotron-sub">An fun interactive phonics game for young readers to learn initial phonics sounds</p>
+                        <p class="jumbotron-sub">Enjoy and have fun!</p>
                         <hr>
                         <a class="btn btn-lg btn-warning" id="playGame" href="#play">LET'S PLAY! <i class="far fa-smile"></i></a>
-                    <div id="game"></div>
+                    <div class="container" id="game">
+                        <div class="question"></div>
+                        <div class="answers"></div>
+                        <button class="btn btn-prev">Previous</button>
+                        <button class="btn btn-next">Next</button>
+                    </div>
                     </div>
                 </div>
             </div>

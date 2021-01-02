@@ -61,19 +61,28 @@ hr {
 }
 
 #ModalCenterInstructions .modal-header, .modal-body{
-    color: #f1e318;
+    color: #ffee00;
     background-color: #29838f;
     padding-left: 30px;
 }
 
-.modal-header #ModalTitle{
+.modal-header{
     font-family: "Fredoka One", sans-serif;
     font-size: 1.4rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    -ms-flex-pack: justify;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid yellow;
+    border-top-left-radius: calc(.3rem - 1px);
+    border-top-right-radius: calc(.3rem - 1px);
 }
 
 .modal-body{
     font-family: "Sniglet",sans-serif;
     font-size: 1.1rem;
+    border-bottom: 1px solid yellow;
 }
 
 .modal-body li {
@@ -86,7 +95,7 @@ hr {
 }
 
 .modal-footer button{
-    color: #f1e318;
+    color: #ffee00;
     background-color: #29838f;
     font-family: "Fredoka One", sans-serif;
     font-size: 1.2rem;
@@ -127,6 +136,7 @@ hr {
     text-align: center;
     padding: 2rem 2rem;
     margin: 30px auto;
+    display:inline-block;
 }
 
 .jumbotron h2 {
