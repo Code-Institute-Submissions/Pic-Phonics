@@ -17,7 +17,7 @@ body {
 h2 {
     color:  #f1e318;
     font-family: "Sniglet", sans-serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     letter-spacing: .1rem;
     padding-top: 0;
@@ -36,7 +36,7 @@ hr {
     font-family: "Fredoka One", sans-serif;
     font-size:1.5rem;
     font-weight: bold;
-    background-color:#3ea7b4ee;
+    background-color:#1a8796ee;
     margin-bottom: 0;
 }
 
@@ -55,7 +55,7 @@ hr {
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-    color: #012eac;
+    color: rgb(233, 65, 65);
 }
 
 .nav-item {
@@ -73,10 +73,15 @@ hr {
     border: none;
 }
 
-#ModalCenterInstructions .modal-header, .modal-body{
+#ModalCenterInstructions .modal-body{
     color: #ffee00;
-    background-color: #29838f;
+    background-color: #1a8796ee;
     padding-left: 30px;
+}
+
+#ModalCenterInstructions .modal-header{
+    background-color: rgb(233, 65, 65);
+    color: #ffee00;
 }
 
 .modal-header{
@@ -109,13 +114,13 @@ hr {
 
 .modal-footer button{
     color: #ffee00;
-    background-color: #29838f;
+    background-color: rgb(233, 65, 65);
     font-family: "Fredoka One", sans-serif;
     font-size: 1.2rem;
 }
 
 .modal-footer button:hover{
-    background-color:  #012eac;
+    background-color:  #eb1f1f;
     color: #f1e318;
 }
 
@@ -132,10 +137,11 @@ hr {
 }
 
 #instructionButton:hover{
-    color: #012eac;
+    color: rgb(233, 65, 65);
+    border: none;
 }
 
-.game-container{
+.home-container{
     background-color: #29838f;
     color: #ffee00;
     height: 100vh;
@@ -172,12 +178,29 @@ hr {
     border-radius: .3rem;
 }
 
-.btn-warning {
-    color:#29838f;
+#playGame{
+    cursor: pointer;
+    padding-left: 50px;
+    padding-right: 50px;
+    color:#0f8392;
     font-family: "Fredoka One", sans-serif;
     font-weight: bolder;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     background-color: #f1e318 ;
+}
+
+#playGame:hover{
+    color: rgb(1, 83, 190);
+    background-color:#ffee00 ;
+}
+
+.game-container {
+    background:#0f8392;
+    color: #ffee00;
+    height: 500px;
+    width: 95%;
+    margin: auto;
+    display:none;
 }
 
 footer{
@@ -187,7 +210,7 @@ footer{
 
 #footer-details{
     text-align: center;
-     color: #f1e318;
+     color: #f5e400;
      font-size: 1.5rem;
     font-family: "Fredoka One",sans-serif;
 }

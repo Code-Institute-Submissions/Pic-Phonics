@@ -56,7 +56,7 @@
 </div>
 <!--/Modal-->
     <!--Game-->
-        <section class="container-fluid game-container">
+        <section class="container-fluid home-container">
             <div class="opaque-overlay">&nbsp;</div>
             <div class="row">
                 <div class="col-12">
@@ -65,11 +65,19 @@
             <p>An fun interactive phonics game for young readers to learn initial phonics sounds</p>
             <p>Enjoy and have fun!</p>
             <hr>
-            <button class="btn btn-lg btn-warning" id="playGame">LET'S PLAY! <i class="far fa-smile"></i></button>
+            <button type="button" class="btn btn-lg btn-warning play-btn" id="playGame">LET'S PLAY! <i class="far fa-smile"></i></button>
         </div>
         </div>
         </div>
         </section>
+        <div id="game" class="game-container">
+        <div id="question" class="question-container"></div>
+        <div id="answer" class="answer-container"></div>
+        <div id="gameControls">
+        <button type="button" class="btn-prev">Previous</button>
+        <button type="button" class="btn-next">Next</button>
+        </div>
+        </div>
         <!--/game-->
         <!--Footer-->
         <footer class="container-fluid fixed-bottom">
