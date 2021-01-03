@@ -19,10 +19,10 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <!--Code snippet from Stackoverflow to solve issue of hamburger menu closing once link is clicked, taken from Orel Eliyahu' on Stack Overflow - https://stackoverflow.com/questions/36405991/bootstrap-toggle-menu-on-one-page-site-does-not-uncollapse-when-clicked-->
-                        <button type="button" id="instructionButton" class="btn btn-primary" data-toggle="modal" data-target="#ModalCenterInstructions">
+                        <button type="button" id="instructionButton" class="btn btn-primary nav-item" data-toggle="modal" data-target="#ModalCenterInstructions">
                         INSTRUCTIONS
                         </button>
-                        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse"><a class="nav-link" href="#play">PLAY</a></li>
+                        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse"><a class="nav-link" href="#playGame">PLAY</a></li>
                         <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse"><a class="nav-link" href="#contact">CONTACT</a></li>
                     </ul>
                 </div>
@@ -55,32 +55,22 @@
   </div>
 </div>
 <!--/Modal-->
-    
-        <!--Jumbotron-->
-        <section class="container-fluid intro-container">
-            <!-- Intro -->
+    <!--Game-->
+        <section class="container-fluid game-container">
             <div class="opaque-overlay">&nbsp;</div>
             <div class="row">
                 <div class="col-12">
-                    <div class="intro jumbotron">
-                        <h2 class="jumbotron-header text-center">
-                            <strong>PIC PHONICS <i class="fas fa-headphones"></i></strong>
-                        </h2>
-                        <p class="jumbotron-sub">An fun interactive phonics game for young readers to learn initial phonics sounds</p>
-                        <p class="jumbotron-sub">Enjoy and have fun!</p>
-                        <hr>
-                        <a class="btn btn-lg btn-warning" id="playGame" href="#play">LET'S PLAY! <i class="far fa-smile"></i></a>
-                    <div class="container" id="game">
-                        <div class="question"></div>
-                        <div class="answers"></div>
-                        <button class="btn btn-prev">Previous</button>
-                        <button class="btn btn-next">Next</button>
-                    </div>
-                    </div>
-                </div>
-            </div>
+        <div id="home">
+            <h2>Pic Phonics</h2>
+            <p>An fun interactive phonics game for young readers to learn initial phonics sounds</p>
+            <p>Enjoy and have fun!</p>
+            <hr>
+            <button class="btn btn-lg btn-warning" id="playGame">LET'S PLAY! <i class="far fa-smile"></i></button>
+        </div>
+        </div>
+        </div>
         </section>
-        <!--/intro-->
+        <!--/game-->
         <!--Footer-->
         <footer class="container-fluid fixed-bottom">
             <div id="footer-details" class="row">
