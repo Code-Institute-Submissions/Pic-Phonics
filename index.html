@@ -57,7 +57,7 @@
 <!--/Modal-->
     <!--Game-->
         <section class="container-fluid home-container">
-            <div class="opaque-overlay">&nbsp;</div>
+            <div id="overlay" class="opaque-overlay">&nbsp;</div>
             <div class="row">
                 <div class="col-12">
         <div id="home">
@@ -69,15 +69,21 @@
         </div>
         </div>
         </div>
-        </section>
-        <div id="game" class="game-container">
+        <div id="game" class="game-container hide">
         <div id="question" class="question-container"></div>
-        <div id="answer" class="answer-container"></div>
-        <div id="gameControls">
-        <button type="button" class="btn-prev">Previous</button>
+        <div id="answers">
+        <button class="btn">Choice 1</button>
+        <button class="btn">Choice 2</button>
+        <button class="btn">Choice 3</button>
+        <button class="btn">Choice 4</button>
+        <button class="btn">Choice 5</button>
+        </div>
+        <div id="gameControls" class="btn-grid">
+        <button type="button" class="btn-prev hide">Previous</button>
         <button type="button" class="btn-next">Next</button>
         </div>
         </div>
+        </section>
         <!--/game-->
         <!--Footer-->
         <footer class="container-fluid fixed-bottom">
