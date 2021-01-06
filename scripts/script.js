@@ -2,23 +2,33 @@ const playButton = document.getElementById('playGame')
 const leaveButton = document.getElementById('btn-leave')
 const gameContainer = document.getElementById('game')
 const questionContainer = document.getElementById('question')
+const lText = document.getElementById("letterText");
 const qImg = document.getElementById("qImage");
 const answerContainer = document.getElementById('answers')
 const choiceA = document.getElementById("A");
+const textA = document.getElementById("textA");
 const choiceB = document.getElementById("B");
+const textB = document.getElementById("textB");
 const choiceC = document.getElementById("C");
+const textC = document.getElementById("textC");
 const choiceD = document.getElementById("D");
+const textD = document.getElementById("textD");
 const progress= document.getElementById("progress");
 
 
 const questions = [
 {
-question:"Which picture begins with the letter 'T'?",
+letterText:"This is the letter 'T'.",
+question:"Choose the picture of the word that starts with the letter 'T'?",
 qimage:"assets/images/letters/Tt.jpg",
 choiceA:"assets/images/words/treeT.jpg",
+textA:"Tree",
 choiceB:"assets/images/words/watermelon.jpg",
+textB:"Watermelon",
 choiceC:"assets/images/words/mouse.jpg",
+textC:"Mouse",
 choiceD:"assets/images/words/pumpkin.jpg",
+textD:"Pumpkin",
 answer: "choiceA"
 
 },
@@ -161,7 +171,7 @@ function renderQuestion(){
 
     let q = questions[runningQuestion];
 
-   
+    lText.innerHTML = "<h3>" + q.letterText +"</h3>";
 
     question.innerHTML = "<p>"+ q.question +"</p>";
     
@@ -169,11 +179,19 @@ function renderQuestion(){
 
     choiceA.innerHTML = "<img src =" + q.choiceA + ">";
 
+    textA.innerHTML = "<h3>" + q.textA +"</h3>";
+
     choiceB.innerHTML = "<img src =" + q.choiceB + ">";
+
+    textB.innerHTML = "<h3>" + q.textB +"</h3>";
 
     choiceC.innerHTML = "<img src =" + q.choiceC + ">";
 
+    textC.innerHTML = "<h3>" + q.textC +"</h3>";
+
     choiceD.innerHTML = "<img src =" + q.choiceD + ">";
+
+    textD.innerHTML = "<h3>" + q.textD +"</h3>";
 
 }
 
