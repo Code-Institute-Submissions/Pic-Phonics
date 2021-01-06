@@ -15,7 +15,7 @@ const questions = [
 {
 question:"Which picture begins with the letter 'T'?",
 qimage:"assets/images/letters/Tt.jpg",
-choiceA:"assets/images/words/tree.jpg",
+choiceA:"assets/images/words/treeT.jpg",
 choiceB:"assets/images/words/watermelon.jpg",
 choiceC:"assets/images/words/mouse.jpg",
 choiceD:"assets/images/words/pumpkin.jpg",
