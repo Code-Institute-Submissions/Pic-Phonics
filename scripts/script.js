@@ -21,12 +21,12 @@ const questions = [
 letterText:"This is the letter 'T'.",
 question:"Choose the picture of the word that starts with the letter 'T'?",
 qimage:"assets/images/letters/Tt.jpg",
-choiceA:"assets/images/words/treeT.jpg",
+choiceA:"assets/images/words/tree.jpg",
 textA:"Tree",
 choiceB:"assets/images/words/watermelon.jpg",
 textB:"Watermelon",
-choiceC:"assets/images/words/mouse.jpg",
-textC:"Mouse",
+choiceC:"assets/images/words/hippo.jpg",
+textC:"Hippo",
 choiceD:"assets/images/words/pumpkin.jpg",
 textD:"Pumpkin",
 answer: "choiceA"
@@ -37,8 +37,8 @@ question:"Which picture begins with the letter A?",
 qimage:"assets/images/letters/Aa.jpg",
 choiceA:"umbrella.jpg",
 choiceB:"grapes.jpg",
-choiceC:"tractor.jpg",
-choiceD:"apple alt.jpg",
+choiceC:"socks.jpg",
+choiceD:"apple.jpg",
 answer: "choiceD"
 },
 {
@@ -47,34 +47,34 @@ image:"Ss.jpg",
 choiceA:"car.jpg",
 choiceB:"snake.jpg",
 choiceC:"flower.jpg",
-choiceD:"whale.jpg",
+choiceD:"dolphin.jpg",
 answer: "choiceB"
 
 },
 {
 question:"Which picture begins with the letter M?",
 qimage:"Mm.jpg",
-choiceA:"",
-choiceB:"",
+choiceA:"rabbit.jpg",
+choiceB:"carrot.jpg",
 choiceC:"mouse.jpg",
-choiceD:"",
+choiceD:"bike.jpg",
 answer: "choiceC"
 
 },
 {
 question:"Which picture begins with the letter I?",
 qimage:"Ii.jpg",
-choiceA:"",
-choiceB:"",
-choiceC:"",
-choiceD:"igloo.jpg",
+choiceA:"teddy.jpg",
+choiceB:"books.jpg",
+choiceC:"duck.jpg",
+choiceD:"icecream.jpg",
 answer: "choiceD"
 
 },
 {
 question:"Which picture begins with the letter H?",
 qimage:"Hh.jpg",
-choiceA:"hat alt.jpg",
+choiceA:"hat.jpg",
 choiceB:"eggs.jpg",
 choiceC:"bird.jpg",
 choiceD:"alligator.jpg",
@@ -94,8 +94,8 @@ answer: "choiceC"
 {
 question:"Which picture begins with the word K?",
 qimage:"Kk.jpg",
-choiceA:"strawberry.jpg",
-choiceB:"ostrich.jpg",
+choiceA:"ball.jpg",
+choiceB:"fox.jpg",
 choiceC:"kite.jpg",
 choiceD:"tiger.jpg",
 answer: "choiceC"
@@ -107,15 +107,15 @@ qimage:"Oo.jpg",
 choiceA:"bear.jpg",
 choiceB:"octopus.jpg",
 choiceC:"iguana.jpg",
-choiceD:"apple.jpg",
+choiceD:"jellyfish.jpg",
 answer: "choiceB"
 
 },
 {
 question:"Which picture begins with the letter P?",
 qimage:"Pp.jpg",
-choiceA:"queen.jpg",
-choiceB:"volcano.jpg",
+choiceA:"leaf.jpg",
+choiceB:"cake.jpg",
 choiceC:"ladybird.jpg",
 choiceD:"pig.jpg",
 answer: "choiceD"
@@ -145,7 +145,7 @@ answer: "choiceA"
 question:"Which picture begins with the letter G?",
 qimage:"Gg.jpg",
 choiceA:"penguin.jpg",
-choiceB:"leaf.jpg",
+choiceB:"monkey.jpg",
 choiceC:"orange.jpg",
 choiceD:"giraffe.jpg",
 answer: "choiceD"
