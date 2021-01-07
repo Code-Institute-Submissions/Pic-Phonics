@@ -34,7 +34,8 @@ answer: "choiceA"
 
 },
 {
-question:"Which picture begins with the letter A?",
+letterText:"This is the letter 'A'.",
+question:"Choose the picture of the word that starts with the letter 'A'?",
 qimage:"assets/images/letters/Aa.jpg",
 choiceA:"assets/images/words/umbrella.jpg",
 textA:"Umbrella",
@@ -47,8 +48,9 @@ textD:"Apple",
 answer: "choiceD"
 },
 {
-question:"Which picture begins with the letter S?",
-image:"assets/images/letters/Ss.jpg",
+letterText:"This is the letter 'S'.",
+question:"Choose the picture of the word that starts with the letter 'S'?",
+qimage:"assets/images/letters/Ss.jpg",
 choiceA:"assets/images/words/car.jpg",
 textA:"Car",
 choiceB:"assets/images/words/snake.jpg",
@@ -61,7 +63,8 @@ answer: "choiceB"
 
 },
 {
-question:"Which picture begins with the letter M?",
+letterText:"This is the letter 'M'.",
+question:"Choose the picture of the word that starts with the letter 'M'?",
 qimage:"assets/images/letters/Mm.jpg",
 choiceA:"assets/images/words/rabbit.jpg",
 textA:"Rabbit",
@@ -75,7 +78,8 @@ answer: "choiceC"
 
 },
 {
-question:"Which picture begins with the letter I?",
+letterText:"This is the letter 'I'.",
+question:"Choose the picture of the word that starts with the letter 'I'?",
 qimage:"assets/images/letters/Ii.jpg",
 choiceA:"assets/images/words/teddy.jpg",
 textA:"Teddy",
@@ -89,7 +93,8 @@ answer: "choiceD"
 
 },
 {
-question:"Which picture begins with the letter H?",
+letterText:"This is the letter 'H'.",
+question:"Choose the picture of the word that starts with the letter 'H'?",
 qimage:"assets/images/letters/Hh.jpg",
 choiceA:"assets/images/words/hat.jpg",
 textA:"Hat",
@@ -103,7 +108,8 @@ answer: "choiceA"
 
 },
 {
-question:"Which picture begins with the letter C?",
+letterText:"This is the letter 'C'.",
+question:"Choose the picture of the word that starts with the letter 'C'?",
 qimage:"assets/images/letters/Cc.jpg",
 choiceA:"assets/images/words/dinosaur.jpg",
 textA:"Dinosaur",
@@ -117,7 +123,8 @@ answer: "choiceC"
 
 },
 {
-question:"Which picture begins with the word K?",
+letterText:"This is the letter 'K'.",
+question:"Choose the picture of the word that starts with the letter 'K'?",
 qimage:"assets/images/letters/Kk.jpg",
 choiceA:"assets/images/words/ball.jpg",
 textA:"Ball",
@@ -131,7 +138,8 @@ answer: "choiceC"
 
 },
 {
-question:"Which picture begins with the letter O?",
+letterText:"This is the letter 'O'.",
+question:"Choose the picture of the word that starts with the letter 'O'?",
 qimage:"assets/images/letter/Oo.jpg",
 choiceA:"assets/images/words/bear.jpg",
 textA:"Bear",
@@ -145,7 +153,8 @@ answer: "choiceB"
 
 },
 {
-question:"Which picture begins with the letter P?",
+letterText:"This is the letter 'P'.",
+question:"Choose the picture of the word that starts with the letter 'P'?",
 qimage:"assets/images/letters/Pp.jpg",
 choiceA:"assets/images/words/leaf.jpg",
 textA:"Leaf",
@@ -159,7 +168,8 @@ answer: "choiceD"
 
 },
 {
-question:"Which picture begins with the letter L?",
+letterText:"This is the letter 'L'.",
+question:"Choose the picture of the word that starts with the letter 'L'?",
 qimage:"assets/images/letters/Ll.jpg",
 choiceA:"assets/images/words/banana.jpg",
 textA:"Banana",
@@ -173,7 +183,8 @@ answer: "choiceC"
 
 },
 {
-question:"Which picture begins with the letter E?",
+letterText:"This is the letter 'E'.",
+question:"Choose the picture of the word that starts with the letter 'E'?",
 qimage:"assets/images/letters/Ee.jpg",
 choiceA:"assets/images/words/elephant.jpg",
 textA:"Elephant",
@@ -187,7 +198,8 @@ answer: "choiceA"
 
 },
 {
-question:"Which picture begins with the letter G?",
+letterText:"This is the letter 'G'.",
+question:"Choose the picture of the word that starts with the letter 'G'?",
 qimage:"assets/images/letters/Gg.jpg",
 choiceA:"assets/images/words/penguin.jpg",
 textA:"Penguin",
@@ -206,6 +218,7 @@ const lastQuestion = questions.length - 1;
 let currentQuestion = 0;
 
 playButton.addEventListener('click', playGame)
+nextButton.addEventListener('click', nextQuestion)
 
 function playGame() {
   playButton.classList.add('hide')
@@ -246,7 +259,6 @@ function renderQuestion(){
 
 renderQuestion();
 
-nextButton.addEventListener('click', nextQuestion)
 
 function nextQuestion(){
    
@@ -256,3 +268,7 @@ function nextQuestion(){
 function selectAnswer(){
 
 }
+
+ document.getElementById("leave").onclick = function () {
+        location.href = "index.html";
+    };
