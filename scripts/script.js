@@ -1,5 +1,6 @@
-const playButton = document.getElementById('playGame')
-const leaveButton = document.getElementById('btn-leave')
+const playButton = document.getElementById("playGame")
+const leaveButton = document.getElementById("leave")
+const nextButton = document.getElementById("next")
 const gameContainer = document.getElementById('game')
 const questionContainer = document.getElementById('question')
 const lText = document.getElementById("letterText");
@@ -35,126 +36,174 @@ answer: "choiceA"
 {
 question:"Which picture begins with the letter A?",
 qimage:"assets/images/letters/Aa.jpg",
-choiceA:"umbrella.jpg",
-choiceB:"grapes.jpg",
-choiceC:"socks.jpg",
-choiceD:"apple.jpg",
+choiceA:"assets/images/words/umbrella.jpg",
+textA:"Umbrella",
+choiceB:"assets/images/words/grapes.jpg",
+textB:"Grapes",
+choiceC:"assets/images/words/socks.jpg",
+textC:"Socks",
+choiceD:"assets/images/words/apple.jpg",
+textD:"Apple",
 answer: "choiceD"
 },
 {
 question:"Which picture begins with the letter S?",
-image:"Ss.jpg",
-choiceA:"car.jpg",
-choiceB:"snake.jpg",
-choiceC:"flower.jpg",
-choiceD:"dolphin.jpg",
+image:"assets/images/letters/Ss.jpg",
+choiceA:"assets/images/words/car.jpg",
+textA:"Car",
+choiceB:"assets/images/words/snake.jpg",
+textB:"Snake",
+choiceC:"assets/images/words/flower.jpg",
+textC:"Flower",
+choiceD:"assets/images/words/dolphin.jpg",
+textD:"Dolphin",
 answer: "choiceB"
 
 },
 {
 question:"Which picture begins with the letter M?",
-qimage:"Mm.jpg",
-choiceA:"rabbit.jpg",
-choiceB:"carrot.jpg",
-choiceC:"mouse.jpg",
-choiceD:"bike.jpg",
+qimage:"assets/images/letters/Mm.jpg",
+choiceA:"assets/images/words/rabbit.jpg",
+textA:"Rabbit",
+choiceB:"assets/images/words/carrot.jpg",
+textB:"Carrot",
+choiceC:"assets/images/words/mouse.jpg",
+textC:"Mouse",
+choiceD:"assets/images/words/bike.jpg",
+textD:"Bike",
 answer: "choiceC"
 
 },
 {
 question:"Which picture begins with the letter I?",
-qimage:"Ii.jpg",
-choiceA:"teddy.jpg",
-choiceB:"books.jpg",
-choiceC:"duck.jpg",
-choiceD:"icecream.jpg",
+qimage:"assets/images/letters/Ii.jpg",
+choiceA:"assets/images/words/teddy.jpg",
+textA:"Teddy",
+choiceB:"assets/images/words/books.jpg",
+textB:"Books",
+choiceC:"assets/images/words/duck.jpg",
+textC:"Duck",
+choiceD:"assets/images/words/icecream.jpg",
+textD:"Ice-cream",
 answer: "choiceD"
 
 },
 {
 question:"Which picture begins with the letter H?",
-qimage:"Hh.jpg",
-choiceA:"hat.jpg",
-choiceB:"eggs.jpg",
-choiceC:"bird.jpg",
-choiceD:"alligator.jpg",
+qimage:"assets/images/letters/Hh.jpg",
+choiceA:"assets/images/words/hat.jpg",
+textA:"Hat",
+choiceB:"assets/images/words/eggs.jpg",
+textB:"Eggs",
+choiceC:"assets/images/words/bird.jpg",
+textC:"Bird",
+choiceD:"assets/images/words/alligator.jpg",
+textD:"Alligator",
 answer: "choiceA"
 
 },
 {
 question:"Which picture begins with the letter C?",
-qimage:"Cc.jpg",
-choiceA:"dinosaur.jpg",
-choiceB:"zebra.jpg",
-choiceC:"cat.jpg",
-choiceD:"squirrel.jpg",
+qimage:"assets/images/letters/Cc.jpg",
+choiceA:"assets/images/words/dinosaur.jpg",
+textA:"Dinosaur",
+choiceB:"assets/images/words/zebra.jpg",
+textB:"Zebra",
+choiceC:"assets/images/words/cat.jpg",
+textC:"Cat",
+choiceD:"assets/images/words/squirrel.jpg",
+textD:"Squirrel",
 answer: "choiceC"
 
 },
 {
 question:"Which picture begins with the word K?",
-qimage:"Kk.jpg",
-choiceA:"ball.jpg",
-choiceB:"fox.jpg",
-choiceC:"kite.jpg",
-choiceD:"tiger.jpg",
+qimage:"assets/images/letters/Kk.jpg",
+choiceA:"assets/images/words/ball.jpg",
+textA:"Ball",
+choiceB:"assets/images/words/fox.jpg",
+textB:"Fox",
+choiceC:"assets/images/words/kite.jpg",
+textC:"Kite",
+choiceD:"assets/images/words/tiger.jpg",
+textD:"Tiger",
 answer: "choiceC"
 
 },
 {
 question:"Which picture begins with the letter O?",
-qimage:"Oo.jpg",
-choiceA:"bear.jpg",
-choiceB:"octopus.jpg",
-choiceC:"iguana.jpg",
-choiceD:"jellyfish.jpg",
+qimage:"assets/images/letter/Oo.jpg",
+choiceA:"assets/images/words/bear.jpg",
+textA:"Bear",
+choiceB:"assets/images/words/octopus.jpg",
+textB:"Octopus",
+choiceC:"assets/images/words/iguana.jpg",
+textC:"Iguana",
+choiceD:"assets/images/words/jellyfish.jpg",
+textD:"Jellyfish",
 answer: "choiceB"
 
 },
 {
 question:"Which picture begins with the letter P?",
-qimage:"Pp.jpg",
-choiceA:"leaf.jpg",
-choiceB:"cake.jpg",
-choiceC:"ladybird.jpg",
-choiceD:"pig.jpg",
+qimage:"assets/images/letters/Pp.jpg",
+choiceA:"assets/images/words/leaf.jpg",
+textA:"Leaf",
+choiceB:"assets/images/words/cake.jpg",
+textB:"Cake",
+choiceC:"assets/images/words/ladybird.jpg",
+textC:"Ladybird",
+choiceD:"assets/images/words/pig.jpg",
+textD:"Pig",
 answer: "choiceD"
 
 },
 {
 question:"Which picture begins with the letter L?",
-qimage:"Ll.jpg",
-choiceA:"banana.jpg",
-choiceB:"dog.jpg",
-choiceC:"lion.jpg",
-choiceD:"rainbow.jpg",
+qimage:"assets/images/letters/Ll.jpg",
+choiceA:"assets/images/words/banana.jpg",
+textA:"Banana",
+choiceB:"assets/images/words/dog.jpg",
+textB:"Dog",
+choiceC:"assets/images/words/lion.jpg",
+textC:"Lion",
+choiceD:"assets/images/words/rainbow.jpg",
+textD:"Rainbow",
 answer: "choiceC"
 
 },
 {
 question:"Which picture begins with the letter E?",
-qimage:"Ee.jpg",
-choiceA:"elephant.jpg",
-choiceB:"fish.jpg",
-choiceC:"kangaroo.jpg",
-choiceD:"seal.jpg",
+qimage:"assets/images/letters/Ee.jpg",
+choiceA:"assets/images/words/elephant.jpg",
+textA:"Elephant",
+choiceB:"assets/images/words/fish.jpg",
+textB:"Fish",
+choiceC:"assets/images/words/kangaroo.jpg",
+textC:"Kangaroo",
+choiceD:"assets/images/words/seal.jpg",
+textD:"Seal",
 answer: "choiceA"
 
 },
 {
 question:"Which picture begins with the letter G?",
-qimage:"Gg.jpg",
-choiceA:"penguin.jpg",
-choiceB:"monkey.jpg",
-choiceC:"orange.jpg",
-choiceD:"giraffe.jpg",
+qimage:"assets/images/letters/Gg.jpg",
+choiceA:"assets/images/words/penguin.jpg",
+textA:"Penguin",
+choiceB:"assets/images/words/monkey.jpg",
+textB:"Monkey",
+choiceC:"assets/images/words/orange.jpg",
+textC:"Orange",
+choiceD:"assets/images/words/giraffe.jpg",
+textD:"Giraffe",
 answer: "choiceD"
 
 },
 ]
 const lastQuestion = questions.length - 1;
 
-let runningQuestion = 0;
+let currentQuestion = 0;
 
 playButton.addEventListener('click', playGame)
 
@@ -169,30 +218,41 @@ function playGame() {
 
 function renderQuestion(){
 
-    let q = questions[runningQuestion];
+    let q = questions[currentQuestion];
 
-    lText.innerHTML = "<h3>" + q.letterText +"</h3>";
+    lText.innerHTML = `<h3>  ${q.letterText}  </h3>`;
 
-    question.innerHTML = "<p>"+ q.question +"</p>";
+    question.innerHTML = `<p> ${q.question} </p>`;
     
-    qImg.innerHTML = "<img src="+ q.qimage +">";
+    qImg.innerHTML = `<img src= ${q.qimage} >`;
 
-    choiceA.innerHTML = "<img src =" + q.choiceA + ">";
+    choiceA.innerHTML = `<img src = ${q.choiceA} >`;
 
-    textA.innerHTML = "<h3>" + q.textA +"</h3>";
+    textA.innerHTML = `<h3> ${q.textA} </h3>`;
 
-    choiceB.innerHTML = "<img src =" + q.choiceB + ">";
+    choiceB.innerHTML = `<img src = ${q.choiceB} >`;
 
-    textB.innerHTML = "<h3>" + q.textB +"</h3>";
+    textB.innerHTML = `<h3> ${q.textB} </h3>`;
 
-    choiceC.innerHTML = "<img src =" + q.choiceC + ">";
+    choiceC.innerHTML = `<img src = ${q.choiceC} >`;
 
-    textC.innerHTML = "<h3>" + q.textC +"</h3>";
+    textC.innerHTML = `<h3> ${q.textC} </h3>`;
 
-    choiceD.innerHTML = "<img src =" + q.choiceD + ">";
+    choiceD.innerHTML = `<img src = ${q.choiceD} >`;
 
-    textD.innerHTML = "<h3>" + q.textD +"</h3>";
+    textD.innerHTML = `<h3> ${q.textD} </h3>`;
 
 }
 
 renderQuestion();
+
+nextButton.addEventListener('click', nextQuestion)
+
+function nextQuestion(){
+   
+    renderQuestion(question[currentQuestion ++])
+}
+
+function selectAnswer(){
+
+}
