@@ -214,10 +214,8 @@ hr {
     background: #0f8392;
     color: #ffee00;
     height: auto;
-    margin-top: 30px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding-bottom: 10px;
+    margin: 30px 5px;
+    padding: 30px 5px;
 }
 
 .question-container{
