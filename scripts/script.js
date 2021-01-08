@@ -16,7 +16,6 @@ const choiceD = document.getElementById("D");
 const textD = document.getElementById("textD");
 const progress= document.getElementById("progress");
 
-
 const questions = [
 {
 letterText:"This is the letter 'T'.",
@@ -214,7 +213,7 @@ answer: "choiceD"
 },
 ]
 const lastQuestion = questions.length - 1;
-
+let sortQuestions
 let currentQuestion = 0;
 
 playButton.addEventListener('click', playGame)
@@ -230,10 +229,13 @@ function playGame() {
     }
 
 function renderQuestion(){
+    for(let i=0; i<questions.length; i++){
 
     let q = questions[currentQuestion];
 
-    lText.innerHTML = `<h3>  ${q.letterText}  </h3>`;
+    
+
+    lText.innerHTML = `<h3> ${q.letterText} </h3>`;
 
     question.innerHTML = `<h3> ${q.question} </h3>`;
     
@@ -254,7 +256,7 @@ function renderQuestion(){
     choiceD.innerHTML = `<img src = ${q.choiceD} >`;
 
     textD.innerHTML = `<h4> ${q.textD} </h4>`;
-
+    }
 }
 
 renderQuestion();
@@ -262,13 +264,18 @@ renderQuestion();
 
 function nextQuestion(){
    
-    renderQuestion(question[currentQuestion ++])
+    renderQuestion(questions[currentQuestion ++])
+    sortQuestions = questions.sort(() => Math.random() - .5)
+
 }
 
 function selectAnswer(){
+
 
 }
 
  document.getElementById("leave").onclick = function () {
         location.href = "index.html";
     };
+
+
