@@ -29,7 +29,7 @@ choiceC:"assets/images/words/hippo.jpg",
 textC:"HIPPO",
 choiceD:"assets/images/words/pumpkin.jpg",
 textD:"PUMPKIN",
-answer: "choiceA"
+answer:"TREE"
 
 },
 {
@@ -44,7 +44,7 @@ choiceC:"assets/images/words/socks.jpg",
 textC:"SOCKS",
 choiceD:"assets/images/words/apple.jpg",
 textD:"APPLE",
-answer: "choiceD"
+answer: choiceD
 },
 {
 letterText:"This is the letter 'S'.",
@@ -58,7 +58,7 @@ choiceC:"assets/images/words/flower.jpg",
 textC:"FLOWER",
 choiceD:"assets/images/words/dolphin.jpg",
 textD:"DOLPHIN",
-answer: "choiceB"
+answer: choiceB
 
 },
 {
@@ -73,7 +73,7 @@ choiceC:"assets/images/words/mouse.jpg",
 textC:"MOUSE",
 choiceD:"assets/images/words/bike.jpg",
 textD:"BIKE",
-answer: "choiceC"
+answer: choiceC
 
 },
 {
@@ -88,7 +88,7 @@ choiceC:"assets/images/words/duck.jpg",
 textC:"DUCK",
 choiceD:"assets/images/words/icecream.jpg",
 textD:"ICE-CREAM",
-answer: "choiceD"
+answer: choiceD
 
 },
 {
@@ -103,7 +103,7 @@ choiceC:"assets/images/words/bird.jpg",
 textC:"BIRD",
 choiceD:"assets/images/words/alligator.jpg",
 textD:"ALLIGATOR",
-answer: "choiceA"
+answer: "HAT"
 
 },
 {
@@ -118,7 +118,7 @@ choiceC:"assets/images/words/cat.jpg",
 textC:"CAT",
 choiceD:"assets/images/words/squirrel.jpg",
 textD:"SQUIRREL",
-answer: "choiceC"
+answer: choiceC
 
 },
 {
@@ -133,7 +133,7 @@ choiceC:"assets/images/words/kite.jpg",
 textC:"KITE",
 choiceD:"assets/images/words/tiger.jpg",
 textD:"TIGER",
-answer: "choiceC"
+answer: choiceC
 
 },
 {
@@ -148,7 +148,7 @@ choiceC:"assets/images/words/iguana.jpg",
 textC:"IGUANA",
 choiceD:"assets/images/words/jellyfish.jpg",
 textD:"JELLYFISH",
-answer: "choiceB"
+answer: choiceB
 
 },
 {
@@ -163,7 +163,7 @@ choiceC:"assets/images/words/ladybird.jpg",
 textC:"LADYBIRD",
 choiceD:"assets/images/words/pig.jpg",
 textD:"PIG",
-answer: "choiceD"
+answer: choiceD
 
 },
 {
@@ -178,7 +178,7 @@ choiceC:"assets/images/words/lion.jpg",
 textC:"LION",
 choiceD:"assets/images/words/rainbow.jpg",
 textD:"RAINBOW",
-answer: "choiceC"
+answer: choiceC
 
 },
 {
@@ -193,7 +193,7 @@ choiceC:"assets/images/words/kangaroo.jpg",
 textC:"KANGAROO",
 choiceD:"assets/images/words/seal.jpg",
 textD:"SEAL",
-answer: "choiceA"
+answer: choiceA
 
 },
 {
@@ -208,14 +208,13 @@ choiceC:"assets/images/words/orange.jpg",
 textC:"ORANGE",
 choiceD:"assets/images/words/giraffe.jpg",
 textD:"GIRAFFE",
-answer: "choiceD"
+answer: choiceD
 
 },
 ]
 const lastQuestion = questions.length - 1;
 let sortQuestions
 let currentQuestion = 0;
-
 playButton.addEventListener('click', playGame)
 nextButton.addEventListener('click', nextQuestion)
 
@@ -234,7 +233,6 @@ function renderQuestion(){
     let q = questions[currentQuestion];
 
     
-
     lText.innerHTML = `<h3> ${q.letterText} </h3>`;
 
     question.innerHTML = `<h3> ${q.question} </h3>`;
@@ -243,8 +241,8 @@ function renderQuestion(){
 
     choiceA.innerHTML = `<img src = ${q.choiceA} >`;
 
-    textA.innerHTML = `<h4> ${q.textA} </h4>`;
-
+    textA.innerHTML = `<h4> ${q.textA}  </h4>
+            `
     choiceB.innerHTML = `<img src = ${q.choiceB} >`;
 
     textB.innerHTML = `<h4> ${q.textB} </h4>`;
@@ -258,19 +256,44 @@ function renderQuestion(){
     textD.innerHTML = `<h4> ${q.textD} </h4>`;
     }
 }
-
 renderQuestion();
 
 
 function nextQuestion(){
    
     renderQuestion(questions[currentQuestion ++])
-    sortQuestions = questions.sort(() => Math.random() - .5)
+    sortQuestions = questions.sort(() => Math.random(questions) - .5)
 
 }
 
-function selectAnswer(){
 
+
+
+let correctAnswer = questions[currentQuestion].answer;
+let selectedAnswer = ""
+
+function checkAnswer(correctAnswer){
+    if( correctAnswer == selectedAnswer){
+        // answer is correct
+        // change progress color to green
+        correct();
+    }else{
+        // answer is wrong
+        // change progress color to red
+        wrong();
+    
+}
+
+// answer is correct
+function correct(){
+    document.getElementById('game').style.backgroundColor = "#32cf4c";
+}
+
+// answer is Wrong
+function wrong(){
+    document.getElementById('game').style.backgroundColor = "rgb(233, 65, 65)";
+    
+}
 
 }
 
