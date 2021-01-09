@@ -5,7 +5,7 @@ const gameContainer = document.getElementById('game')
 const questionContainer = document.getElementById('question')
 const lText = document.getElementById("letterText");
 const qImg = document.getElementById("qImage");
-const answerContainer = document.getElementById('answers')
+const answerContainer = document.getElementById('choices')
 const choiceA = document.getElementById("A");
 const textA = document.getElementById("textA");
 const choiceB = document.getElementById("B");
@@ -29,7 +29,7 @@ choiceC:"assets/images/words/hippo.jpg",
 textC:"HIPPO",
 choiceD:"assets/images/words/pumpkin.jpg",
 textD:"PUMPKIN",
-answer:"TREE"
+correct:"A"
 
 },
 {
@@ -44,7 +44,7 @@ choiceC:"assets/images/words/socks.jpg",
 textC:"SOCKS",
 choiceD:"assets/images/words/apple.jpg",
 textD:"APPLE",
-answer: choiceD
+correct: "D"
 },
 {
 letterText:"This is the letter 'S'.",
@@ -58,7 +58,7 @@ choiceC:"assets/images/words/flower.jpg",
 textC:"FLOWER",
 choiceD:"assets/images/words/dolphin.jpg",
 textD:"DOLPHIN",
-answer: choiceB
+correct: "B"
 
 },
 {
@@ -73,7 +73,7 @@ choiceC:"assets/images/words/mouse.jpg",
 textC:"MOUSE",
 choiceD:"assets/images/words/bike.jpg",
 textD:"BIKE",
-answer: choiceC
+correct: "C"
 
 },
 {
@@ -88,7 +88,7 @@ choiceC:"assets/images/words/duck.jpg",
 textC:"DUCK",
 choiceD:"assets/images/words/icecream.jpg",
 textD:"ICE-CREAM",
-answer: choiceD
+correct: "D"
 
 },
 {
@@ -103,7 +103,7 @@ choiceC:"assets/images/words/bird.jpg",
 textC:"BIRD",
 choiceD:"assets/images/words/alligator.jpg",
 textD:"ALLIGATOR",
-answer: "HAT"
+correct: "A"
 
 },
 {
@@ -118,7 +118,7 @@ choiceC:"assets/images/words/cat.jpg",
 textC:"CAT",
 choiceD:"assets/images/words/squirrel.jpg",
 textD:"SQUIRREL",
-answer: choiceC
+correct: "C"
 
 },
 {
@@ -133,7 +133,7 @@ choiceC:"assets/images/words/kite.jpg",
 textC:"KITE",
 choiceD:"assets/images/words/tiger.jpg",
 textD:"TIGER",
-answer: choiceC
+correct: "C"
 
 },
 {
@@ -148,7 +148,7 @@ choiceC:"assets/images/words/iguana.jpg",
 textC:"IGUANA",
 choiceD:"assets/images/words/jellyfish.jpg",
 textD:"JELLYFISH",
-answer: choiceB
+correct: "B"
 
 },
 {
@@ -163,7 +163,7 @@ choiceC:"assets/images/words/ladybird.jpg",
 textC:"LADYBIRD",
 choiceD:"assets/images/words/pig.jpg",
 textD:"PIG",
-answer: choiceD
+correct: "D"
 
 },
 {
@@ -178,7 +178,7 @@ choiceC:"assets/images/words/lion.jpg",
 textC:"LION",
 choiceD:"assets/images/words/rainbow.jpg",
 textD:"RAINBOW",
-answer: choiceC
+correct: "C"
 
 },
 {
@@ -193,7 +193,7 @@ choiceC:"assets/images/words/kangaroo.jpg",
 textC:"KANGAROO",
 choiceD:"assets/images/words/seal.jpg",
 textD:"SEAL",
-answer: choiceA
+correct: "A"
 
 },
 {
@@ -208,13 +208,13 @@ choiceC:"assets/images/words/orange.jpg",
 textC:"ORANGE",
 choiceD:"assets/images/words/giraffe.jpg",
 textD:"GIRAFFE",
-answer: choiceD
+correct: "A" 
 
 },
 ]
-const lastQuestion = questions.length - 1;
-let sortQuestions
+
 let currentQuestion = 0;
+const lastQuestion = questions.length - 1;
 playButton.addEventListener('click', playGame)
 nextButton.addEventListener('click', nextQuestion)
 
@@ -224,15 +224,15 @@ function playGame() {
   document.getElementById("overlay").classList.add('hide')
   currentQuestionIndex = 0
   gameContainer.classList.remove('hide')
- 
+  renderQuestion()
     }
 
 function renderQuestion(){
+    let currentQuestionIndex = Math.floor(Math.random() * questions.length);
     for(let i=0; i<questions.length; i++){
 
-    let q = questions[currentQuestion];
+    let q = questions[currentQuestionIndex];
 
-    
     lText.innerHTML = `<h3> ${q.letterText} </h3>`;
 
     question.innerHTML = `<h3> ${q.question} </h3>`;
@@ -241,60 +241,69 @@ function renderQuestion(){
 
     choiceA.innerHTML = `<img src = ${q.choiceA} >`;
 
-    textA.innerHTML = `<h4> ${q.textA}  </h4>
-            `
+    textA.innerHTML = `<button>${q.textA}</button>`;
+            
     choiceB.innerHTML = `<img src = ${q.choiceB} >`;
 
-    textB.innerHTML = `<h4> ${q.textB} </h4>`;
+    textB.innerHTML = `<button> ${q.textB} </button>`;
 
     choiceC.innerHTML = `<img src = ${q.choiceC} >`;
 
-    textC.innerHTML = `<h4> ${q.textC} </h4>`;
+    textC.innerHTML = `<button> ${q.textC} </button>`;
 
     choiceD.innerHTML = `<img src = ${q.choiceD} >`;
 
-    textD.innerHTML = `<h4> ${q.textD} </h4>`;
+    textD.innerHTML = `<button> ${q.textD} </button>`;
     }
 }
-renderQuestion();
-
 
 function nextQuestion(){
-   
-    renderQuestion(questions[currentQuestion ++])
-    sortQuestions = questions.sort(() => Math.random(questions) - .5)
+
+    renderQuestion(questions[currentQuestionIndex ++])
 
 }
 
+choices.addEventListener('click', checkAnswer)
+let answer = questions[currentQuestion].correct
 
-
-
-let correctAnswer = questions[currentQuestion].answer;
-let selectedAnswer = ""
-
-function checkAnswer(correctAnswer){
-    if( correctAnswer == selectedAnswer){
-        // answer is correct
-        // change progress color to green
-        correct();
-    }else{
-        // answer is wrong
-        // change progress color to red
-        wrong();
+function checkAnswer(answer) {
+  if (answer == true) {
+    // answer is correct
     
+    // change progress color to green
+    answerIsCorrect();
+  } else {
+    // answer is wrong
+    // change progress color to red
+    answerIsWrong();
+  }
 }
 
 // answer is correct
-function correct(){
-    document.getElementById('game').style.backgroundColor = "#32cf4c";
+function answerIsCorrect() {
+  Swal.fire({
+  icon:'success',   
+  title: 'Correct! Well Done',
+  text: 'Great Work',
+  imageUrl: 'assets/images/play-image.jpg',
+  imageWidth: 400,
+  imageHeight: 200,
+  imageAlt: 'abc blocks',
+})
 }
 
 // answer is Wrong
-function wrong(){
-    document.getElementById('game').style.backgroundColor = "rgb(233, 65, 65)";
-    
-}
-
+function answerIsWrong() {
+  Swal.fire({
+  icon:'error',
+  title: 'Oops...Try Again',
+  text: 'Wrong Answer',
+  imageUrl: 'assets/images/play-image.jpg',
+  imageWidth: 400,
+  imageHeight: 200,
+  imageAlt: 'abc blocks',
+})
+  
 }
 
  document.getElementById("leave").onclick = function () {

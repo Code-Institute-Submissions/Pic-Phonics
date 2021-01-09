@@ -30,15 +30,6 @@ h3 {
     text-align: center;
 }
 
- h4{
-    color:#ffee00;
-    letter-spacing: .5rem;
-    font-family: "Sniglet",sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    padding: 10px 1px;
-}
-
 
 hr {
     margin-top: 1rem;
@@ -253,14 +244,27 @@ hr {
     padding-right: 10px;
 }
 
-#answers #A img,
+#choices #A img,
 #B img,
 #C img,
 #D img{
     width: 100%;
     height:100%;
     padding: 5px;
+    cursor: pointer;
 }
+
+#textA button, #textB button, #textC button, #textD button{
+    color: #ffee00;
+    letter-spacing: .5rem;
+    font-family: "Sniglet",sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 10px 1px;
+    background: transparent;
+}
+
+
 
 #gameControls .btn-next, .btn-leave{
     cursor: pointer;
