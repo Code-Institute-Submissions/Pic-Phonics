@@ -209,6 +209,18 @@ hr {
     padding: 30px 5px;
 }
 
+#score.score-box{
+    border-radius: 50px;
+    padding: 5px 5px;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: #f5e400;
+    color: #29838f;
+    border: 1px solid #29838f;
+    display: flex;
+    justify-content: center;
+}
+
 .question-container{
     height: auto;
     width: 100%;
@@ -268,8 +280,6 @@ hr {
     font-size: 5rem;
     margin-right: 30px;
 }
-
-
 
 #gameControls .btn-next, .btn-leave{
     cursor: pointer;
