@@ -1,6 +1,8 @@
+//Variables for game
 const playButton = document.getElementById("playGame")
 const leaveButton = document.getElementById("leave")
 const nextButton = document.getElementById("next")
+const submitButton = document.getElementById("submit")
 const gameContainer = document.getElementById('game')
 const questionContainer = document.getElementById('question')
 const qImg = document.getElementById("qImage");
@@ -223,11 +225,11 @@ correct: choiceD
 let currentQuestion = 0;
 const lastQuestion = questions.length - 1;
 
-
+//Event Listeners
 playButton.addEventListener('click', playGame)
 nextButton.addEventListener('click', nextQuestion)
 
-
+//Initiates the game
 function playGame() {
   playButton.classList.add('hide')
   document.getElementById("home").classList.add('hide')
@@ -238,6 +240,7 @@ function playGame() {
   renderQuestion()
     }
 
+//Renders questions and answers to the screen
 function renderQuestion(){
     for(let i=0; i<questions.length; i++){
 
@@ -267,20 +270,20 @@ function renderQuestion(){
 
     scoreCount.innerHTML=`Score: ${score}`;
     }
-
 }
 
-
+//Next Question function
 function nextQuestion(){
-
-    renderQuestion(questions[currentQuestion++])
+ 
      if(currentQuestion == questions.length - 1){
-         nextButton.replaceWith("Submit");
+         nextButton.classList.add('hide')
+         submitButton.classList.remove('hide');
      }
-
+     else{
+        renderQuestion(questions[currentQuestion++])
+     }
 }
-
-
+// checks  if answer users selects is correct or incorrect
 function checkAnswer() {
 const correctAnswer = questions[currentQuestion].correct
     if (correctAnswer.checked == true){
@@ -296,7 +299,7 @@ const correctAnswer = questions[currentQuestion].correct
   }
 }
 
-// answer is correct
+// Alert if user selects correct answer
 function correct() {
   Swal.fire({
   icon:'success',   
@@ -309,7 +312,7 @@ function correct() {
 })
 }
 
-// answer is incorrect
+// Alert if user selects incorrect answer
 function incorrect() {
   Swal.fire({
   icon:'error',
@@ -323,14 +326,16 @@ function incorrect() {
   
 }
 
+//Function when game is completed
 function endGame(){
     
 }
 
+//Leave the game at any time on the click of this button
  document.getElementById("leave").onclick = function () {
         location.href = "index.html";
     };
 
 
-console.log(questions[currentQuestion].correct);
+
   

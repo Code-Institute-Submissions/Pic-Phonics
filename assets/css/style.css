@@ -281,14 +281,13 @@ hr {
     margin-right: 30px;
 }
 
-#gameControls .btn-next, .btn-leave{
+#next, #leave, #submit{
     cursor: pointer;
     color:#0f8392;
     font-family: "Fredoka One", sans-serif;
     font-weight: bolder;
     font-size: 1.1rem;
     background-color: #f1e318 ;
-    display: flex;
     justify-content: center;
     align-self: right;
     margin-top: 10px;
@@ -313,6 +312,7 @@ hr {
 }
 
 .hide{
+
     display: none;
 }
 

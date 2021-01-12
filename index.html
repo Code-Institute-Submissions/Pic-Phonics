@@ -29,7 +29,7 @@
             </div>
         </nav>
         <!--/navigation-->
-        <!-- Modal -->
+        <!-- Instructions Modal -->
         <div class="modal fade" id="ModalCenterInstructions" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -70,14 +70,17 @@
         </div>
         </div>
         <div id="game" class="game-container hide">
+            <!--Score Count-->
             <span class="score-box" id="score">Score: 0</span>
             <div id="letterText"></div>
+            <!--Game Questions-->
             <div class="row">
                 <div class="col-md-4"></div>
                 <div id="qImage" class="col-md-4" ></div>
                 <div class="col-md-4"></div>
         <div id="question" class="question-container col-md-12"></div>
            </div>
+           <!--Game Choices-->
         <div id="answers" class="answers-container row">
             <div class="choice col-md-3" id="imageA"></div>
             <div class="col-md-3"><input type="radio" id="choiceA" name="choices" onclick="checkAnswer()">
@@ -92,11 +95,12 @@
             <div class="col-md-3"><input type="radio" id="choiceD" name="choices" onclick="checkAnswer()">
                 <label for="choiceD" id="D" onclick="checkAnswer()"></label></div>
         </div>
+        <!--Game Controls-->
         <div id="gameControls" class="btn-grid">
         <button type="button" id="leave" class="btn-leave">Leave Game <i class="far fa-frown"></i></button>
         <button type="button" id="next" class="btn-next">Next</button>
+        <button type="button" id="submit" class="btn-submit hide">Submit</button>
         </div>
-        <div id="progress"></div>
     </div>
         </section>
         <!--/game-->
