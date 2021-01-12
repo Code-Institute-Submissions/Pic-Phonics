@@ -216,7 +216,7 @@ choiceB: "MONKEY",
 choiceC: "ORANGE",
 choiceD: "GIRAFFE",
 
-correct: D
+correct: choiceD
 },
 ]
 
@@ -267,12 +267,16 @@ function renderQuestion(){
 
     scoreCount.innerHTML=`Score: ${score}`;
     }
+
 }
 
 
 function nextQuestion(){
 
     renderQuestion(questions[currentQuestion++])
+     if(currentQuestion == questions.length - 1){
+         nextButton.replaceWith("Submit");
+     }
 
 }
 
@@ -288,7 +292,6 @@ const correctAnswer = questions[currentQuestion].correct
 
   } else {
     // answer is incorrect
-    score --;
     incorrect();
   }
 }
@@ -318,6 +321,10 @@ function incorrect() {
   imageAlt: 'abc blocks',
 })
   
+}
+
+function endGame(){
+    
 }
 
  document.getElementById("leave").onclick = function () {
