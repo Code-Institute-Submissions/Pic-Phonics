@@ -78,14 +78,18 @@
         <div id="question" class="question-container col-md-12"></div>
            </div>
         <div id="answers" class="answers-container row">
-            <div class="choice col-md-3" id="A"></div>
-            <div id="textA" class=" choice-text col-md-3"></div>
-            <div class="choice col-md-3" id="B"></div>
-            <div id="textB" class=" choice-text col-md-3"></div>
-            <div class="choice col-md-3" id="C"></div>
-            <div id="textC" class=" choice-text col-md-3"></div>
-            <div class="choice col-md-3" id="D"></div>
-            <div id="textD" class="choice-text col-md-3"></div>
+            <div class="choice col-md-3" id="imageA"></div>
+            <div class="col-md-3"><input type="radio" id="choiceA" name="choices" onclick="checkAnswer()">
+                <label for="choiceA" id="A" onclick="checkAnswer()"></label></div>
+            <div class="choice col-md-3" id="imageB"></div>
+            <div class="col-md-3"><input type="radio" id="choiceB" name="choices" onclick="checkAnswer()">
+                <label for="choiceB" id="B" onclick="checkAnswer()"></label></div>
+            <div class="choice col-md-3" id="imageC"></div>
+            <div class="col-md-3"><input type="radio" id="choiceC" name="choices" onclick="checkAnswer()">
+                <label for="choiceC" id="C" onclick="checkAnswer()"></label></div>
+            <div class="choice col-md-3" id="imageD"></div>
+            <div class="col-md-3"><input type="radio" id="choiceD" name="choices" onclick="checkAnswer()">
+                <label for="choiceD" id="D" onclick="checkAnswer()"></label></div>
         </div>
         <div id="gameControls" class="btn-grid">
         <button type="button" id="leave" class="btn-leave">Leave Game <i class="far fa-frown"></i></button>

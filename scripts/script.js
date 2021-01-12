@@ -1,23 +1,21 @@
-
 const playButton = document.getElementById("playGame")
 const leaveButton = document.getElementById("leave")
 const nextButton = document.getElementById("next")
 const gameContainer = document.getElementById('game')
 const questionContainer = document.getElementById('question')
-const lText = document.getElementById("letterText");
 const qImg = document.getElementById("qImage");
-const choices = document.getElementsByName("choice")
-const images= document.getElementById("answers")
+const lText = document.getElementById("letterText");
 const answerContainer = document.getElementById('answers')
-const choiceA = document.getElementById("A");
-const textA = document.getElementById("textA");
-const choiceB = document.getElementById("B");
-const textB = document.getElementById("textB");
-const choiceC = document.getElementById("C");
-const textC = document.getElementById("textC");
-const choiceD = document.getElementById("D");
-const textD = document.getElementById("textD");
-const progress= document.getElementById("progress");
+const choices = document.getElementsByClassName("choice")
+const imageA = document.getElementById("imageA");
+const choiceA = document.getElementById("choiceA");
+const imageB = document.getElementById("imageB");
+const choiceB = document.getElementById("choiceB");
+const imageC = document.getElementById("imageC");
+const choiceC = document.getElementById("choiceC");
+const imageD = document.getElementById("imageD");
+const choiceD = document.getElementById("choiceD");
+const labels = document.getElementsByName("choices")
 
 const questions = [
 {
@@ -36,7 +34,7 @@ choices:[
     "HIPPO",
     "PUMPKIN"
 ],
-correct: "TREE"
+correct: 0
 
 },
 {
@@ -269,6 +267,8 @@ correct: "GIRAFFE"
 
 let currentQuestion = 0;
 const lastQuestion = questions.length - 1;
+
+
 playButton.addEventListener('click', playGame)
 nextButton.addEventListener('click', nextQuestion)
 
@@ -293,23 +293,24 @@ function renderQuestion(){
     
     qImg.innerHTML = `<img src= ${q.qimage} >`;
 
-    choiceA.innerHTML = `<img src = ${q.images[0]} >`;
+    imageA.innerHTML = `<img src = ${q.images[0]} >`;
 
-    textA.innerHTML =  `<input type= "radio" name = "choice" id="choiceA" value = correct/><label for="choiceA">${q.choices[0]}</label>`;
-            
-    choiceB.innerHTML = `<img src = ${q.images[1]} >`;
+    document.getElementById("A").innerHTML =  q.choices[0];
 
-    textB.innerHTML = `<input type= "radio" name ="choice"id="choiceB"/><label for="choiceB">${q.choices[1]}</label>`;
+    imageB.innerHTML = `<img src = ${q.images[1]} >`;
+    
+    document.getElementById("B").innerHTML =  q.choices[1];
 
-    choiceC.innerHTML = `<img src = ${q.images[2]} >`;
+    imageC.innerHTML = `<img src = ${q.images[2]} >`;
 
-    textC.innerHTML = `<input type= "radio" name="choice" id="choiceC"/><label for="choiceC">${q.choices[2]}</label>`;
+    document.getElementById("C").innerHTML =  q.choices[2];
 
-    choiceD.innerHTML = `<img src = ${q.images[3]} >`;
+    imageD.innerHTML = `<img src = ${q.images[3]} >`;
 
-    textD.innerHTML = `<input type= "radio" name "choice "id="choiceD"/><label for="choiceD">${q.choices[3]}</label>`;
+    document.getElementById("D").innerHTML =  q.choices[3];
     }
 }
+
 
 function nextQuestion(){
 
@@ -317,12 +318,10 @@ function nextQuestion(){
 
 }
 
-answerContainer.addEventListener('click', checkAnswer)
-let answer = questions[currentQuestion].correct.checked ===true
 
 function checkAnswer(selectedAnswer) {
 
-  if(selectedAnswer == questions[currentQuestion].correct){
+  if(selectedAnswer  === questions[currentQuestion].correct){
     // answer is correct
     
     // change progress color to green
@@ -367,3 +366,4 @@ function answerIsWrong() {
 
 
 console.log(questions[currentQuestion].correct);
+  

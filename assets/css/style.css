@@ -244,24 +244,17 @@ hr {
     padding-right: 10px;
 }
 
-#answers #A img,
-#B img,
-#C img,
-#D img{
+#imageA img,
+#imageB img,
+#imageC img ,
+#imageD img{
     width: 100%;
     height:100%;
     padding: 5px;
     cursor: pointer;
 }
 
-#A {
-  width: 100%;
-    height:100%;
-    padding: 5px;
-    cursor: pointer;
-}
-
-#answers label {
+#A,#B,#C,#D {
     color: #ffee00;
     letter-spacing: .5rem;
     font-family: "Sniglet",sans-serif;
