@@ -15,7 +15,7 @@ const imageC = document.getElementById("imageC");
 const choiceC = document.getElementById("choiceC");
 const imageD = document.getElementById("imageD");
 const choiceD = document.getElementById("choiceD");
-const labels = document.getElementsByName("choices")
+const selectedChoice = document.getElementsByName("choices")
 
 const questions = [
 {
@@ -34,7 +34,7 @@ choices:[
     "HIPPO",
     "PUMPKIN"
 ],
-correct: 0
+correct: choiceA
 
 },
 {
@@ -53,7 +53,7 @@ choices:[
     "SOCKS",
     "APPLE"
 ],
-correct:"APPLE"
+correct:choiceD
 },
 {
 letterText:"'S'",
@@ -71,7 +71,7 @@ choices:[
     "FLOWER",
     "DOLPHIN"
 ],
-correct: "SNAKE"
+correct: choiceB
 
 },
 {
@@ -90,7 +90,7 @@ choices:[
     "MOUSE",
     "BIKE",
 ],
-correct: "MOUSE"
+correct: choiceC
 
 },
 {
@@ -109,7 +109,7 @@ choices:[
     "DUCK",
     "ICE-CREAM"
 ],
-correct: "ICE-CREAM"
+correct: choiceD
 
 },
 {
@@ -128,7 +128,7 @@ choices:[
     "BIRD",
     "ALLIGATOR"
 ],
-correct: "HAT"
+correct: choiceA
 
 },
 {
@@ -147,7 +147,7 @@ choices:[
     "CAT",
     "SQUIRREL"
 ],
-correct: "CAT"
+correct: choiceC
 
 },
 {
@@ -166,7 +166,7 @@ choices:[
     "KITE",
     "TIGER"
 ],
-correct: "KITE"
+correct: choiceC
 
 },
 {
@@ -185,7 +185,7 @@ choices:[
     "IGUANA",
     "JELLYFISH"
 ],
-correct: "OCTOPUS"
+correct: choiceB
 
 },
 {
@@ -203,7 +203,7 @@ choices:[
     "LADYBIRD",
     "PIG"
 ],
-correct: "PIG"
+correct: choiceD
 
 },
 {
@@ -211,18 +211,18 @@ letterText:"'L'",
 question:"Choose the picture of the word that starts with the letter 'L'?",
 qimage:"assets/images/letters/Ll.jpg",
 images:[
+    "assets/images/words/lion.jpg",
     "assets/images/words/banana.jpg",
     "assets/images/words/dog.jpg",
-    "assets/images/words/lion.jpg",
     "assets/images/words/rainbow.jpg"
 ],
 choices:[
+    "LION",
     "BANANA",
     "DOG",
-    "LION",
     "RAINBOW"
 ],
-correct: "LION"
+correct: choiceA
 
 },
 {
@@ -230,18 +230,18 @@ letterText:"'E'",
 question:"Choose the picture of the word that starts with the letter 'E'?",
 qimage:"assets/images/letters/Ee.jpg",
 images:[
-    "assets/images/words/elephant.jpg",
     "assets/images/words/fish.jpg",
+    "assets/images/words/elephant.jpg",
     "assets/images/words/kangaroo.jpg",
     "assets/images/words/seal.jpg"
 ],
 choices:[
-    "ELEPHANT",
     "FISH",
+    "ELEPHANT",
     "KANGAROO",
     "SEAL"
 ],
-correct: "ELEPHANT"
+correct: choiceB
 
 },
 {
@@ -260,7 +260,7 @@ choices:[
     "ORANGE",
     "GIRAFFE"
 ],
-correct: "GIRAFFE" 
+correct: choiceD
 
 },
 ]
@@ -319,9 +319,9 @@ function nextQuestion(){
 }
 
 
-function checkAnswer(selectedAnswer) {
-
-  if(selectedAnswer  === questions[currentQuestion].correct){
+function checkAnswer() {
+const correctAnswer = questions[currentQuestion].correct
+    if (correctAnswer.checked == true){
     // answer is correct
     
     // change progress color to green
