@@ -7,15 +7,16 @@ const qImg = document.getElementById("qImage");
 const lText = document.getElementById("letterText");
 const answerContainer = document.getElementById('answers')
 const choices = document.getElementsByClassName("choice")
-const imageA = document.getElementById("imageA");
-const choiceA = document.getElementById("choiceA");
-const imageB = document.getElementById("imageB");
-const choiceB = document.getElementById("choiceB");
-const imageC = document.getElementById("imageC");
-const choiceC = document.getElementById("choiceC");
-const imageD = document.getElementById("imageD");
-const choiceD = document.getElementById("choiceD");
+const imageA = document.getElementById("imageA")
+const choiceA = document.getElementById("choiceA")
+const imageB = document.getElementById("imageB")
+const choiceB = document.getElementById("choiceB")
+const imageC = document.getElementById("imageC")
+const choiceC = document.getElementById("choiceC")
+const imageD = document.getElementById("imageD")
+const choiceD = document.getElementById("choiceD")
 const selectedChoice = document.getElementsByName("choices")
+const scoreCount = document.getElementById("score")
 let score = 0;
 const questions = [
 {
@@ -263,6 +264,8 @@ function renderQuestion(){
     imageD.innerHTML = `<img src = ${q.imageD} >`;
 
     document.getElementById("D").innerHTML =  q.choiceD;
+
+    scoreCount.innerHTML=`Score: ${score}`;
     }
 }
 
@@ -279,11 +282,13 @@ const correctAnswer = questions[currentQuestion].correct
     if (correctAnswer.checked == true){
     // answer is correct
     score ++;
+    
     correct();
     nextQuestion();
 
   } else {
     // answer is incorrect
+    score --;
     incorrect();
   }
 }
