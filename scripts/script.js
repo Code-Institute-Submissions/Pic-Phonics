@@ -7,7 +7,7 @@ const gameContainer = document.getElementById('game')
 const questionContainer = document.getElementById('question')
 const qImg = document.getElementById("qImage")
 const lText = document.getElementById("letterText")
-const audio = document.getElementById("sound")
+const sound = document.getElementById("sound")
 const answerContainer = document.getElementById('answers')
 const choices = document.getElementsByClassName("choice")
 const imageA = document.getElementById("imageA")
@@ -26,7 +26,7 @@ const questions = [
 letterText:"'T'",
 question:"Choose the picture of the word that starts with the letter 'T'?",
 qimage:"assets/images/letters/Tt.jpg",
-qaudio:"assets/audio/T.mp3",
+audio:"assets/audio/T.mp3",
 imageA: "assets/images/words/tree.jpg",
 imageB: "assets/images/words/watermelon.jpg",
 imageC: "assets/images/words/hippo.jpg",
@@ -43,10 +43,12 @@ correct: choiceA
 letterText:"'A'",
 question:"Choose the picture of the word that starts with the letter 'A'?",
 qimage: "assets/images/letters/Aa.jpg",
+audio:"assets/audio/A.mp3",
 imageA: "assets/images/words/umbrella.jpg",
 imageB: "assets/images/words/grapes.jpg",
 imageC: "assets/images/words/socks.jpg",
 imageD: "assets/images/words/apple.jpg",
+
 choiceA: "UMBRELLA",
 choiceB: "GRAPES",
 choiceC: "SOCKS",
@@ -254,7 +256,7 @@ function renderQuestion(){
     
     qImg.innerHTML = `<img src= ${q.qimage} >`;
 
-    audio.innerHTML=`<source src= ${q.qaudio} type="audio/mpeg"/>`;
+    sound.innerHTML=`<source src= ${q.audio} type="audio/mpeg"/>`;
 
     imageA.innerHTML = `<img src = ${q.imageA} >`;
 
