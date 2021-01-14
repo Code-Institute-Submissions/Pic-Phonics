@@ -268,20 +268,19 @@ hr {
 
 #A,#B,#C,#D {
     color: #ffee00;
-    letter-spacing: .5rem;
+    letter-spacing: .2rem;
     font-family: "Sniglet",sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    padding: 10px 1px;
+    padding: 5px 1px;
     background: transparent;
 }
 
 #answers input{
-    font-size: 5rem;
-    margin-right: 30px;
+    margin-right: 10px;
 }
 
-#next, #leave, #submit{
+#quizAgain, #exit,#certBtn, #submit{
     cursor: pointer;
     color:#0f8392;
     font-family: "Fredoka One", sans-serif;
@@ -305,6 +304,14 @@ hr {
 #gameControls.btn-grid {
   display: grid;
   grid-template-columns: repeat(1, auto);
+  gap: 10px;
+  margin: 0px 10px;
+  padding: 5px;
+}
+
+.btn-grid #finalBtns{
+display: grid;
+  grid-template-columns: repeat(3, auto);
   gap: 10px;
   margin: 0px 10px;
   padding: 5px;
