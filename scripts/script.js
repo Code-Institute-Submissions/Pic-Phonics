@@ -22,6 +22,7 @@ const selectedChoice = document.getElementsByName("choices")
 const scoreCount = document.getElementById("score")
 let score = 0;
 const resultsContainer = document.getElementById('result')
+const scoreContainer = document.getElementById('scoreContainer')
 const questions = [
 {
 letterText:"'T'",
@@ -313,27 +314,27 @@ if (document.querySelector('input[name = "choices"]:checked') == correctAnswer){
 
 // Alert if user selects correct answer
 function correct() {
-  Swal.fire({
-  icon:'success',   
-  title: 'Correct! Well Done',
-  text: 'Great Work',
-  imageUrl: 'assets/images/play-image.jpg',
-  imageWidth: 400,
-  imageHeight: 200,
-  imageAlt: 'abc blocks',
+
+Swal.fire({
+  position: 'center',
+  icon: 'success',
+  title: 'Correct! Well Done!',
+  text:'Keep up the good work!',
+  showConfirmButton: false,
+  timer: 2000
 })
+ 
 }
 
 // Alert if user selects incorrect answer
 function incorrect() {
-  Swal.fire({
-  icon:'error',
-  title: 'Oops...Try Again',
-  text: 'Wrong Answer',
-  imageUrl: 'assets/images/play-image.jpg',
-  imageWidth: 400,
-  imageHeight: 200,
-  imageAlt: 'abc blocks',
+Swal.fire({
+  position: 'center',
+  icon: 'error',
+  title: 'Incorrect',
+  text:'Do not worry you are just learning! Keep trying, you will get it next time.',
+  showConfirmButton: false,
+  timer: 2200
 })
   
 }
@@ -341,7 +342,8 @@ function incorrect() {
 function showResult( ){
     gameContainer.classList.add('hide');
     resultsContainer.classList.remove('hide');
-    resultsContainer.innerHTML = `<h2>${score} out of ${questions.length}</<h2>`;
+    let totalScore = (score/questions.length * 100).toFixed();
+    scoreContainer.innerHTML = `<h3> You  scored ${totalScore}% in Pic Phonics Initial Sounds Game</<h3>`;
 }
 
 //Function when game is completed
