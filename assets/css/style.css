@@ -201,7 +201,7 @@ hr {
     background-color:#ffee00 ;
 }
 
-.game-container {
+.game-container{
     background: #0f8392;
     color: #ffee00;
     height: auto;
@@ -289,7 +289,6 @@ hr {
     font-size: 1.1rem;
     background-color: #f1e318 ;
     justify-content: center;
-    align-self: right;
     margin-top: 10px;
     line-height: 2.5;
     overflow: hidden;
@@ -305,7 +304,7 @@ hr {
 
 #gameControls.btn-grid {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(1, auto);
   gap: 10px;
   margin: 0px 10px;
   padding: 5px;
@@ -315,6 +314,12 @@ hr {
 
     display: none;
 }
+
+ #result{
+     height: 100vh;
+     width: 100%;
+
+ }
 
 footer{
     background-color:#32cf4c;

@@ -9,7 +9,7 @@ const qImg = document.getElementById("qImage")
 const lText = document.getElementById("letterText")
 const sound = document.getElementById("sound")
 const answerContainer = document.getElementById('answers')
-const choices = document.getElementsByClassName("choice")
+const choices = document.querySelectorAll('input[name="choices"]')
 const imageA = document.getElementById("imageA")
 const choiceA = document.getElementById("choiceA")
 const imageB = document.getElementById("imageB")
@@ -21,6 +21,7 @@ const choiceD = document.getElementById("choiceD")
 const selectedChoice = document.getElementsByName("choices")
 const scoreCount = document.getElementById("score")
 let score = 0;
+const resultsContainer = document.getElementById('result')
 const questions = [
 {
 letterText:"'T'",
@@ -231,7 +232,7 @@ const lastQuestion = questions.length - 1;
 
 //Event Listeners
 playButton.addEventListener('click', playGame)
-nextButton.addEventListener('click', nextQuestion)
+//nextButton.addEventListener('click', nextQuestion)
 
 //Initiates the game
 function playGame() {
@@ -282,17 +283,21 @@ function renderQuestion(){
 function nextQuestion(){
  
      if(currentQuestion == questions.length - 1){
-         nextButton.classList.add('hide')
+         //nextButton.classList.add('hide')
          submitButton.classList.remove('hide');
      }
      else{
         renderQuestion(questions[currentQuestion++])
      }
 }
+
+
 // checks  if answer users selects is correct or incorrect
 function checkAnswer() {
+
 const correctAnswer = questions[currentQuestion].correct
-    if (correctAnswer.checked == true){
+if (document.querySelector('input[name = "choices"]:checked') == correctAnswer){
+    //if (correctAnswer.checked == true){
     // answer is correct
     score ++;
     
@@ -302,6 +307,7 @@ const correctAnswer = questions[currentQuestion].correct
   } else {
     // answer is incorrect
     incorrect();
+    nextQuestion();
   }
 }
 
@@ -332,15 +338,21 @@ function incorrect() {
   
 }
 
+function showResult( ){
+    gameContainer.classList.add('hide');
+    resultsContainer.classList.remove('hide');
+    resultsContainer.innerHTML = `<h2>${score} out of ${questions.length}</<h2>`;
+}
+
 //Function when game is completed
 function endGame(){
     
 }
 
 //Leave the game at any time on the click of this button
- document.getElementById("leave").onclick = function () {
-        location.href = "index.html";
-    };
+ //document.getElementById("leave").onclick = function () {
+       // location.href = "index.html";
+   // };
 
 
 

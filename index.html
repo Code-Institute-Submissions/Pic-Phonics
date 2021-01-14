@@ -88,25 +88,28 @@
            <!--Game Choices-->
         <div id="answers" class="answers-container row">
             <div class="choice col-md-3" id="imageA"></div>
-            <div class="col-md-3"><input type="radio" id="choiceA" name="choices" onclick="checkAnswer()">
-                <label for="choiceA" id="A" onclick="checkAnswer()"></label></div>
+            <div class="col-md-3"><input type="radio" id="choiceA" name="choices" value = "choiceA" onclick="checkAnswer()">
+                <label for="choiceA" id="A" ></label></div>
             <div class="choice col-md-3" id="imageB"></div>
-            <div class="col-md-3"><input type="radio" id="choiceB" name="choices" onclick="checkAnswer()">
-                <label for="choiceB" id="B" onclick="checkAnswer()"></label></div>
+            <div class="col-md-3"><input type="radio" id="choiceB" name="choices" value = "choiceB" onclick="checkAnswer()">
+                <label for="choiceB" id="B"></label></div>
             <div class="choice col-md-3" id="imageC"></div>
-            <div class="col-md-3"><input type="radio" id="choiceC" name="choices" onclick="checkAnswer()">
-                <label for="choiceC" id="C" onclick="checkAnswer()"></label></div>
+            <div class="col-md-3"><input type="radio" id="choiceC" name="choices" value = "choiceC" onclick="checkAnswer()">
+                <label for="choiceC" id="C" ></label></div>
             <div class="choice col-md-3" id="imageD"></div>
-            <div class="col-md-3"><input type="radio" id="choiceD" name="choices" onclick="checkAnswer()">
-                <label for="choiceD" id="D" onclick="checkAnswer()"></label></div>
+            <div class="col-md-3"><input type="radio" id="choiceD" name="choices" value = "choiceD" onclick="checkAnswer()">
+                <label for="choiceD" id="D"></label></div>
         </div>
         <!--Game Controls-->
         <div id="gameControls" class="btn-grid">
-        <button type="button" id="leave" class="btn-leave">Leave Game <i class="far fa-frown"></i></button>
-        <button type="button" id="next" class="btn-next">Next</button>
-        <button type="button" id="submit" class="btn-submit hide">Submit</button>
+        <!--<button type="button" id="leave" class="btn-leave hide">Leave Game <i class="far fa-frown"></i></button>
+        <button type="button" id="next" class="btn-next hide">Next</button>-->
+        <button type="button" id="submit" class="btn-submit hide" onclick="showResult()">Submit</button>
         </div>
     </div>
+    <div id="result" class="hide">
+            <h2>Result</h2>
+        </div>
         </section>
         <!--/game-->
         <!--Footer-->
