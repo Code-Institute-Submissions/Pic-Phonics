@@ -76,13 +76,10 @@
             <!--Game Questions-->
             <div class="row">
                 <div class="col-md-4"></div>
-                <div id="qImage" class="col-md-4" >
-                </div>
-                <div class="col-md-4">
-                    <audio id="sound" controls = "controls">
-            
-                    </audio>
-                </div>
+                <div id="qImage" class="col-md-4" ></div>
+                <div class="col-md-4" id="soundBar">
+                <audio id="sound" controls ="controls"></audio>
+            </div>
         <div id="question" class="question-container col-md-12"></div>
            </div>
            <!--Game Choices-->
@@ -110,16 +107,23 @@
     <div id="result" class="hide">
             <h2>Result</h2>
             <div id= "scoreContainer"></div>
-            <div>
+            <div class="form-container">
                 <form>
-                    <input type="text" value="fname" id="fname"><label for="fname"></label>
-                    <input type="text" value="lname" id="lname"><label for="lname"></label>
-                    <input type="number" value="score" id="totalScore"><label for="totalScore"></label>
-                </form>
+                    <div class="form-group">
+                    <div class="form-group">
+                    <label for="name">First Name:</label>
+                    <input type="text" class="form-control" id="name" required />
+                    </div>
+                    <div class="form-group">
+                    <label for="number">Last Name:</label>
+                    <input type="tel" class="form-control" id="number" />
+                    </div>
+                    </div>
+                    </form>
                 <div class="btn-grid" id="finalBtns">
-                <button id="quizAgain">Take Quiz Again</button>
-                <button id="cert">Get Certificate</button>
-                <button id= "exit">Exit Game</button>
+                    <button id="cert">Get Certificate</button>
+                    <button id= "exit">Exit Game</button>
+                    <button id="quizAgain">Take Quiz Again</button>
                 </div>
             </div>
         </div>
