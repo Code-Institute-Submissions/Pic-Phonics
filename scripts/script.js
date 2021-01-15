@@ -349,6 +349,8 @@ function showResult( ){
     resultsContainer.classList.remove('hide');
     let totalScore = (score/questions.length * 100).toFixed();
     scoreContainer.innerHTML = `<h3> You  scored ${totalScore}% in Pic Phonics Initial Sounds Game</<h3>`;
+
+        localStorage.setItem("score",totalScore);
 }
 
 //Function when game is completed
@@ -394,15 +396,17 @@ function restartQuiz(){
   
 //Cert Result JS
 function getName() {
-        var firstName = document.getElementById("fname").value;
-        var lastName = document.getElementById("lname").value;
+        let firstName = document.getElementById("fname").value;
+        let lastName = document.getElementById("lname").value;
         localStorage.setItem("fname", firstName);
         localStorage.setItem("lname", lastName);
       }
       function loadName() {
-        var firstName = localStorage.getItem("fname");
+        let firstName = localStorage.getItem("fname");
         document.getElementById("fname").value = firstName;
 
-        var lastName = localStorage.getItem("lname");
+       let lastName = localStorage.getItem("lname");
          document.getElementById("lname").value = lastName;
       }
+
+     
