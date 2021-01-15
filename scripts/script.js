@@ -23,6 +23,7 @@ const scoreCount = document.getElementById("score")
 let score = 0;
 const resultsContainer = document.getElementById('result')
 const scoreContainer = document.getElementById('scoreContainer')
+const exit = document.getElementById("exit")
 const questions = [
 {
 letterText:"'T'",
@@ -347,8 +348,18 @@ function showResult( ){
 }
 
 //Function when game is completed
-function endGame(){
-    
+exit.addEventListener("click", exitGame);
+
+function exitGame() {
+    Swal.fire({
+  title: 'Are you sure you want to leave?',
+  showCancelButton: true,
+  confirmButtonText: `Leave`,
+}).then((result) => {
+  /* Read more about isConfirmed, isDenied below */
+  if (result.isConfirmed) {
+    location.href= "index.html"
+}});
 }
 
 //Leave the game at any time on the click of this button
