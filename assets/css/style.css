@@ -205,8 +205,8 @@ hr {
     background: #0f8392;
     color: #ffee00;
     height: auto;
-    margin: 30px 5px;
-    padding: 30px 5px;
+    margin: 10px 5px;
+    padding: 20px 10px;
 }
 
 #score.score-box{
@@ -254,11 +254,8 @@ hr {
     width: 200px;
     height: 50px;
     padding: 15px;
-    
-}
-
-#soundBar{
-   margin: 0 auto;
+    margin: 0 auto; 
+    display: block   
 }
 
 .answers-container{
@@ -295,7 +292,7 @@ hr {
     margin-right: 10px;
 }
 
-#quizAgain, #exit,#cert, #submit{
+#submit{
     cursor: pointer;
     color:#0f8392;
     font-family: "Fredoka One", sans-serif;
@@ -324,12 +321,12 @@ hr {
   padding: 5px;
 }
 
-.btn-grid #finalBtns{
-display: grid;
-  grid-template-columns: repeat(3, auto);
-  gap: 10px;
-  margin: 0px 10px;
-  padding: 5px;
+.btn-block#exit, .btn-block#quizRepeat{
+display: inline-block;
+width: 50%;
+justify-content: center;
+margin: 10px 10px;
+padding: 5px;
 }
 
 .hide{
@@ -343,27 +340,62 @@ display: grid;
 
  }
 
+ #result h2{
+     text-align: center;
+ }
+
  .form-container {
     width: 100%;
     height: auto;
-    background: #ffee00;
+    background: #29838f;
     text-align: center;
+}
+
+#formTitle{
+    color: #ffee00;
+    font-family: "Fredoka One", sans-serif;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 25px 10px;
+    margin: 20px;
+    letter-spacing: .1rem;
+}
+
+#fname, #lname{
+    display: inline-block;
+    width: 50%;
 }
 
 .form-group {
     font-family: "Sniglet",sans-serif;
     font-weight: 700;
-    font-size: 1.2rem;
-    color: #29838f;
+    font-size: 1.3rem;
+    color: #ffee00;
     margin-bottom: 1.5rem;
-    text-align: left;
-    padding: 10px;
+    text-align: center;
+}
+
+.form-group label{
+    padding: 5px;
+    font-size: 1.1rem;
 }
 
 form {
     margin-top: 40px;
     line-height: 1.5;
     
+}
+
+#quizRepeat, #exit, #cert{
+    cursor: pointer;
+    color: #0f8392;
+    font-family: "Fredoka One", sans-serif;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    background-color: #f1e318;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-bottom: 15px;
 }
 
 footer{

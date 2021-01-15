@@ -141,14 +141,14 @@ question:"Choose the picture of the word that starts with the letter 'K'?",
 qimage:"assets/images/letters/Kk.jpg",
 imageA: "assets/images/words/ball.jpg",
 imageB: "assets/images/words/fox.jpg",
-imageC: "assets/images/words/kite.jpg",
-imageD: "assets/images/words/tiger.jpg",
+imageC: "assets/images/words/tiger.jpg",
+imageD: "assets/images/words/kite.jpg",
 choiceA: "BALL",
 choiceB: "FOX",
-choiceC: "KITE",
-choiceD: "TIGER",
+choiceC: "TIGER",
+choiceD: "KITE",
 
-correct: choiceC
+correct: choiceD
 
 },
 {
