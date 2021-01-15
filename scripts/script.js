@@ -26,7 +26,6 @@ const scoreContainer = document.getElementById('scoreContainer')
 const exit = document.getElementById("exit")
 const restart = document.getElementById("quizRepeat")
 const cert = document.getElementById("cert")
-const form = document.getElementById("certForm")
 const questions = [
 {
 letterText:"'T'",
