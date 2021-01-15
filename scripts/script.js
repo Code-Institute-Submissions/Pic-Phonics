@@ -26,6 +26,8 @@ const scoreContainer = document.getElementById('scoreContainer')
 const exit = document.getElementById("exit")
 const restart = document.getElementById("quizRepeat")
 const cert = document.getElementById("cert")
+const certScore = document.getElementById("certScore")
+const form = document.getElementById("certForm")
 const questions = [
 {
 letterText:"'T'",
@@ -390,3 +392,17 @@ function restartQuiz(){
     resetGame();
 }
   
+//Cert Result JS
+function getName() {
+        var firstName = document.getElementById("fname").value;
+        var lastName = document.getElementById("lname").value;
+        localStorage.setItem("fname", firstName);
+        localStorage.setItem("lname", lastName);
+      }
+      function loadName() {
+        var firstName = localStorage.getItem("fname");
+        document.getElementById("fname").value = firstName;
+
+        var lastName = localStorage.getItem("lname");
+         document.getElementById("lname").value = lastName;
+      }
