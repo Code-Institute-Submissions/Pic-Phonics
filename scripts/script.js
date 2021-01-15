@@ -24,6 +24,7 @@ let score = 0;
 const resultsContainer = document.getElementById('result')
 const scoreContainer = document.getElementById('scoreContainer')
 const exit = document.getElementById("exit")
+const restart = document.getElementById("quizRepeat")
 const questions = [
 {
 letterText:"'T'",
@@ -285,7 +286,6 @@ function renderQuestion(){
 function nextQuestion(){
  
      if(currentQuestion == questions.length - 1){
-         //nextButton.classList.add('hide')
          submitButton.classList.remove('hide');
      }
      else{
@@ -295,6 +295,7 @@ function nextQuestion(){
 
 
 // checks  if answer users selects is correct or incorrect
+
 function checkAnswer() {
 
 const correctAnswer = questions[currentQuestion].correct
@@ -356,17 +357,24 @@ function exitGame() {
   showCancelButton: true,
   confirmButtonText: `Leave`,
 }).then((result) => {
-  /* Read more about isConfirmed, isDenied below */
   if (result.isConfirmed) {
     location.href= "index.html"
 }});
 }
 
-//Leave the game at any time on the click of this button
- //document.getElementById("leave").onclick = function () {
-       // location.href = "index.html";
-   // };
+restart.addEventListener("click", restartQuiz)
 
+function restartQuiz(){
+     gameContainer.classList.remove('hide');
+    resultsContainer.classList.add('hide');
 
-
+    
+    function resetGame() {
+         submitButton.classList.add('hide');
+        currentQuestion = 0;
+        score = 0
+        playGame()
+    };
+    resetGame();
+}
   
