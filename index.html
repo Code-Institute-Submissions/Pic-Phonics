@@ -108,7 +108,7 @@
             <h2>Result</h2>
             <div id= "scoreContainer"></div>
             <div class="form-container">
-                <form>
+                <form id="certForm" method="get" action="certificate.html">
                     <div class="form-group">
                         <h2 id="formTitle">Fill in details below to get your certificate:</h2>
                     <div class="form-group">
@@ -117,9 +117,9 @@
                     </div>
                     <div class="form-group">
                     <label for="lname">Last Name:</label>
-                    <input type="text" class="form-control" id="lname" />
+                    <input type="text" class="form-control" id="lname" required />
                     </div>
-                    <button id="cert">Get Certificate</button>
+                    <button type="submit" id="cert">Get Certificate</button>
                     </div>
                     </form>
                 <div id="finalBtns">

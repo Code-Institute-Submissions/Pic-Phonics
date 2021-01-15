@@ -25,6 +25,8 @@ const resultsContainer = document.getElementById('result')
 const scoreContainer = document.getElementById('scoreContainer')
 const exit = document.getElementById("exit")
 const restart = document.getElementById("quizRepeat")
+const cert = document.getElementById("cert")
+const form = document.getElementById("certForm")
 const questions = [
 {
 letterText:"'T'",
@@ -361,6 +363,17 @@ function exitGame() {
     location.href= "index.html"
 }});
 }
+
+    //Bootstrap Form Validation
+    cert.addEventListener('click', function(validate) {
+        if (cert.checkValidity() === false) {
+          validate.preventDefault();
+          validate.stopPropagation();
+        }
+       else{
+form.classList.add('was-validated');
+       }
+    });
 
 restart.addEventListener("click", restartQuiz)
 

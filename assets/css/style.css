@@ -409,3 +409,57 @@ footer{
      font-size: 1.5rem;
     font-family: "Fredoka One",sans-serif;
 }
+
+/*Certificate CSS*/
+@import url('https://fonts.googleapis.com/css2?family=Sniglet&family=Fredoka+One&display=swap');
+
+
+body{
+    font-family: "Sniglet", sans-serif;
+    font-size: 16px;
+}
+
+.cert-wrapper{
+width: 1024px;
+height: 680px;
+padding: 0px;
+margin: auto;
+text-align: center;
+border: 5px solid #fffb00;
+justify-content: center;
+}
+
+.title-box{
+    background-color: #098edba4; 
+    height:150px; 
+    padding-top: 50px; 
+    color:#fffb00;
+    letter-spacing: .1rem;
+    
+}
+
+#certTitle{
+    font-size:50px;
+    font-family: "Fredoka One", sans-serif; 
+    font-weight:bold
+}
+
+.cert-text{
+    color: #000;
+}
+
+.certify{
+    font-size: 20px;
+}
+
+.name, .end-score, .quiz-name{
+    font-size: 20px;
+}
+
+.company-name{
+    color: #fffb00;
+    font-weight: bolder;
+    font-size: 40px;
+    background-color: #098edba4;
+    margin: 0px 100px;
+}
