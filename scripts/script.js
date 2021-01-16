@@ -33,7 +33,7 @@ const questions = [
 letterText:"'T'",
 question:"Choose the picture of the word that starts with the letter 'T'?",
 qimage:"assets/images/letters/Tt.jpg",
-audio:"assets/audio/T.mp3",
+audio: "assets/audio/t.mp3",
 imageA: "assets/images/words/tree.jpg",
 imageB: "assets/images/words/watermelon.jpg",
 imageC: "assets/images/words/hippo.jpg",
@@ -50,7 +50,7 @@ correct: choiceA
 letterText:"'A'",
 question:"Choose the picture of the word that starts with the letter 'A'?",
 qimage: "assets/images/letters/Aa.jpg",
-audio:"assets/audio/A.mp3",
+audio: "assets/audio/a.mp3",
 imageA: "assets/images/words/umbrella.jpg",
 imageB: "assets/images/words/grapes.jpg",
 imageC: "assets/images/words/socks.jpg",
@@ -67,6 +67,7 @@ correct:choiceD
 letterText:"'S'",
 question:"Choose the picture of the word that starts with the letter 'S'?",
 qimage:"assets/images/letters/Ss.jpg",
+audio: "assets/audio/s.mp3",
 imageA: "assets/images/words/car.jpg",
 imageB: "assets/images/words/snake.jpg",
 imageC: "assets/images/words/flower.jpg",
@@ -83,6 +84,7 @@ correct: choiceB
 letterText:"'M'",
 question:"Choose the picture of the word that starts with the letter 'M'?",
 qimage: "assets/images/letters/Mm.jpg",
+audio: "assets/audio/m.mp3",
 imageA: "assets/images/words/rabbit.jpg",
 imageB: "assets/images/words/carrot.jpg",
 imageC: "assets/images/words/mouse.jpg",
@@ -99,6 +101,7 @@ correct: choiceC
 letterText:"'I'",
 question:"Choose the picture of the word that starts with the letter 'I'?",
 qimage:"assets/images/letters/Ii.jpg",
+audio: "assets/audio/i.mp3",
 imageA: "assets/images/words/teddy.jpg",
 imageB: "assets/images/words/books.jpg",
 imageC: "assets/images/words/duck.jpg",
@@ -114,6 +117,7 @@ correct: choiceD
 letterText:"'H'",
 question:"Choose the picture of the word that starts with the letter 'H'?",
 qimage:"assets/images/letters/Hh.jpg",
+audio: "assets/audio/h.mp3",
 imageA: "assets/images/words/hat.jpg",
 imageB: "assets/images/words/eggs.jpg",
 imageC: "assets/images/words/bird.jpg",
@@ -129,6 +133,7 @@ correct: choiceA
 letterText:"'C'",
 question:"Choose the picture of the word that starts with the letter 'C'?",
 qimage:"assets/images/letters/Cc.jpg",
+audio: "assets/audio/c.mp3",
 imageA: "assets/images/words/dinosaur.jpg",
 imageB: "assets/images/words/zebra.jpg",
 imageC: "assets/images/words/cat.jpg",
@@ -144,6 +149,7 @@ correct: choiceC
 letterText:"'K'",
 question:"Choose the picture of the word that starts with the letter 'K'?",
 qimage:"assets/images/letters/Kk.jpg",
+audio: "assets/audio/k.mp3",
 imageA: "assets/images/words/ball.jpg",
 imageB: "assets/images/words/fox.jpg",
 imageC: "assets/images/words/tiger.jpg",
@@ -160,6 +166,7 @@ correct: choiceD
 letterText:"'O'",
 question:"Choose the picture of the word that starts with the letter 'O'?",
 qimage:"assets/images/letters/Oo.jpg",
+audio: "assets/audio/o.mp3",
 imageA: "assets/images/words/bear.jpg",
 imageB: "assets/images/words/octopus.jpg",
 imageC: "assets/images/words/iguana.jpg",
@@ -175,6 +182,7 @@ correct: choiceB
 letterText:"'P'",
 question:"Choose the picture of the word that starts with the letter 'P'?",
 qimage:"assets/images/letters/Pp.jpg",
+audio: "assets/audio/p.mp3",
 imageA: "assets/images/words/leaf.jpg",
 imageB: "assets/images/words/cake.jpg",
 imageC: "assets/images/words/ladybird.jpg",
@@ -190,6 +198,7 @@ correct: choiceD
 letterText:"'L'",
 question:"Choose the picture of the word that starts with the letter 'L'?",
 qimage:"assets/images/letters/Ll.jpg",
+audio: "assets/audio/l.mp3",
 imageA: "assets/images/words/lion.jpg",
 imageB: "assets/images/words/banana.jpg",
 imageC: "assets/images/words/dog.jpg",
@@ -205,6 +214,7 @@ correct: choiceA
 letterText:"'E'",
 question:"Choose the picture of the word that starts with the letter 'E'?",
 qimage:"assets/images/letters/Ee.jpg",
+audio: "assets/audio/e.mp3",
 imageA: "assets/images/words/fish.jpg",
 imageB: "assets/images/words/elephant.jpg",
 imageC: "assets/images/words/kangaroo.jpg",
@@ -220,6 +230,7 @@ correct: choiceB
 letterText:"'G'",
 question:"Choose the picture of the word that starts with the letter 'G'?",
 qimage:"assets/images/letters/Gg.jpg",
+audio: "assets/audio/g.mp3",
 imageA: "assets/images/words/penguin.jpg",
 imageB: "assets/images/words/monkey.jpg",
 imageC: "assets/images/words/orange.jpg",
@@ -249,6 +260,7 @@ function playGame() {
   score = 0
   gameContainer.classList.remove('hide')
   renderQuestion()
+  playAudio(questions[currentQuestion].audio);
     }
 
 //Renders questions and answers to the screen
@@ -256,14 +268,13 @@ function renderQuestion(){
     for(let i=0; i<questions.length; i++){
 
     let q = questions[currentQuestion];
-
+        
     lText.innerHTML = `<h3> This is the letter ${q.letterText} </h3>`;
 
     question.innerHTML = `<h3> ${q.question} </h3>`;
     
     qImg.innerHTML = `<img src= ${q.qimage} >`;
-
-    sound.innerHTML=`<source src= ${q.audio} type="audio/mpeg"/>`;
+    sound.innerHTML =`<source src=${q.audio} type="audio/mpeg"></source>""`;
 
     imageA.innerHTML = `<img src = ${q.imageA} >`;
 
@@ -282,8 +293,12 @@ function renderQuestion(){
     document.getElementById("D").innerHTML =  q.choiceD;
 
     scoreCount.innerHTML=`Score: ${score}`;
+    
     }
+    playAudio(questions[currentQuestion].audio);
 }
+
+
 
 //Next Question function
 function nextQuestion(){
@@ -292,11 +307,22 @@ function nextQuestion(){
          submitButton.classList.remove('hide');
      }
      else{
-        renderQuestion(questions[currentQuestion++])
+        renderQuestion(questions[currentQuestion++] + questions[currentQuestion].audio) 
+        
      }
 }
 
-
+function playAudio(file){
+    let playFile = new Audio(file);
+    playFile.play();
+  }
+  
+let audioFile = questions[currentQuestion].audio
+  function setAudio(){
+    let audioFile = questions[currentQuestion].audio
+    let sound = "playAudio(\'" + audioFile + "\')";
+    document.getElementById('sound').setAttribute('onclick', sound);
+  }
 // checks  if answer users selects is correct or incorrect
 
 function checkAnswer() {
@@ -307,13 +333,16 @@ if (document.querySelector('input[name = "choices"]:checked') == correctAnswer){
     // answer is correct
     score ++;
     
+    
     correct();
     nextQuestion();
+
 
   } else {
     // answer is incorrect
     incorrect();
     nextQuestion();
+    
   }
 }
 
