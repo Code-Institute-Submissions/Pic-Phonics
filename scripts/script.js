@@ -7,7 +7,7 @@ const gameContainer = document.getElementById('game')
 const questionContainer = document.getElementById('question')
 const qImg = document.getElementById("qImage")
 const lText = document.getElementById("letterText")
-const sound = document.getElementById("sound")
+//const sound = document.getElementById("sound")
 const answerContainer = document.getElementById('answers')
 const choices = document.querySelectorAll('input[name="choices"]')
 const imageA = document.getElementById("imageA")
@@ -260,7 +260,7 @@ function playGame() {
   score = 0
   gameContainer.classList.remove('hide')
   renderQuestion()
-  playAudio(questions[currentQuestion].audio);
+
     }
 
 //Renders questions and answers to the screen
@@ -274,7 +274,6 @@ function renderQuestion(){
     question.innerHTML = `<h3> ${q.question} </h3>`;
     
     qImg.innerHTML = `<img src= ${q.qimage} >`;
-    sound.innerHTML =`<source src=${q.audio} type="audio/mpeg"></source>""`;
 
     imageA.innerHTML = `<img src = ${q.imageA} >`;
 
@@ -295,7 +294,8 @@ function renderQuestion(){
     scoreCount.innerHTML=`Score: ${score}`;
     
     }
-    playAudio(questions[currentQuestion].audio);
+    //playAudio(questions[currentQuestion].audio);
+    setAudio();
 }
 
 
@@ -307,8 +307,8 @@ function nextQuestion(){
          submitButton.classList.remove('hide');
      }
      else{
-        renderQuestion(questions[currentQuestion++] + questions[currentQuestion].audio) 
-        
+        renderQuestion(questions[currentQuestion++]); //+ questions[currentQuestion].audio) 
+        setAudio();
      }
 }
 
@@ -317,11 +317,10 @@ function playAudio(file){
     playFile.play();
   }
   
-let audioFile = questions[currentQuestion].audio
   function setAudio(){
     let audioFile = questions[currentQuestion].audio
-    let sound = "playAudio(\'" + audioFile + "\')";
-    document.getElementById('sound').setAttribute('onclick', sound);
+    let sounds = "playAudio(\'" + audioFile + "\')";
+    document.getElementById('sound').setAttribute('onclick', sounds);
   }
 // checks  if answer users selects is correct or incorrect
 
