@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sniglet&family=Fredoka+One&display=swap');
 
+/*General*/
+
 *{
 margin: 0;
 padding: 0;
@@ -35,6 +37,13 @@ hr {
     margin-bottom: 2rem;
     border: 0;
 }
+
+.hide{
+
+    display: none;
+}
+
+/*Navbar*/
 
 .navbar{
     font-family: "Fredoka One", sans-serif;
@@ -76,6 +85,8 @@ hr {
     background-size: 100% 100%;
     border: none;
 }
+
+/*Modal*/
 
 #ModalCenterInstructions .modal-body{
     color: #ffee00;
@@ -145,6 +156,8 @@ hr {
     border: none;
 }
 
+/*Homepage*/
+
 .home-container{
     background-color: #29838f;
     color: #ffee00;
@@ -195,6 +208,7 @@ hr {
      animation: glowing 1300ms infinite;
 }
 
+/*Glow Effect on PlayGame button - code snippet from W3Docs*/ 
 @keyframes glowing {
         0% {
           background-color: #f1e318;
@@ -214,6 +228,8 @@ hr {
     color: rgb(1, 83, 190);
     background-color:#ffee00 ;
 }
+
+/*Game Container*/
 
 .game-container{
     background: #0f8392;
@@ -330,12 +346,7 @@ label{
     overflow: hidden;
 }
 
-.btn-leave i {
-    font-weight: bold;
-    line-height: 2.5;
-    padding-left: .5rem;
-    font-size: 1.15rem;
-}
+/*Game Buttons*/
 
 #gameControls.btn-grid {
   display: grid;
@@ -353,10 +364,7 @@ margin: 10px 10px;
 padding: 5px;
 }
 
-.hide{
-
-    display: none;
-}
+/*Results Container*/
 
  #result{
      height: 100vh;
@@ -367,6 +375,8 @@ padding: 5px;
  #result h2{
      text-align: center;
  }
+
+ /*Form to generate certificate*/
 
  .form-container {
     width: 100%;
@@ -421,6 +431,8 @@ form {
     padding: 10px 20px;
     margin-bottom: 15px;
 }
+
+/*Footer*/
 
 footer{
     background-color:#32cf4c;
@@ -483,4 +495,24 @@ justify-content: center;
     font-size: 40px;
     background-color: #098edba4;
     margin: 0px 100px;
+}
+
+/*Media Queries*/
+
+/****Phones***/
+
+@media (min-width:320px){
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media screen and (min-width: 768px){
+
+}
+
+/*Large devices (desktops, 992px and up)*/
+
+@media (min-width: 992px){
+
 }

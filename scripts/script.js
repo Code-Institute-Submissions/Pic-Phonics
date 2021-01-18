@@ -27,6 +27,7 @@ const certScore = document.getElementById("certScore")
 const form = document.getElementById("certForm")
 let score = 0;
 
+//Questions Object Array
 const questions = [
 {
 letterText:"'T'",
@@ -291,6 +292,7 @@ function renderQuestion(){
     scoreCount.innerHTML=`Score: ${score}`;
     
     }
+    //Hides radio button labels text
     document.getElementById("A").style.display = 'none';
     document.getElementById("B").style.display = 'none';
     document.getElementById("C").style.display = 'none';
@@ -299,7 +301,7 @@ function renderQuestion(){
     setAudio();
 }
 
-//Next Question function
+//Renders the next question in the quiz
 function nextQuestion(){
      if(currentQuestion == questions.length - 1){
          submitButton.classList.remove('hide');
@@ -310,6 +312,7 @@ function nextQuestion(){
      }
 }
 
+//Functions to locate and play audio files
 function playAudio(file){
     let playFile = new Audio(file);
     playFile.play();
@@ -331,11 +334,12 @@ if (document.querySelector('input[name = "choices"]:checked') == correctAnswer){
     score ++;
       
     correct();
-
+    //Reveals radio button labels when answer is selected
     document.getElementById("A").style.display = 'block';
     document.getElementById("B").style.display = 'block';
     document.getElementById("C").style.display = 'block';
     document.getElementById("D").style.display = 'block';
+    //Sets timeout delay before next question is rendered
     setTimeout(function(){
         nextQuestion();
     }, 4000); 
@@ -347,6 +351,7 @@ if (document.querySelector('input[name = "choices"]:checked') == correctAnswer){
     document.getElementById("B").style.display = 'block';
     document.getElementById("C").style.display = 'block';
     document.getElementById("D").style.display = 'block';
+    //Sets a time delay before next question is rendered
      setTimeout(function(){
         nextQuestion();
     }, 4000); 
@@ -381,6 +386,7 @@ Swal.fire({
   
 }
 
+//Shows the users result on completion of the quiz in percentage format
 function showResult( ){
     gameContainer.classList.add('hide');
     resultsContainer.classList.remove('hide');
@@ -390,7 +396,7 @@ function showResult( ){
         localStorage.setItem("score",totalScore);
 }
 
-//Function when game is completed
+//Function to exit the game when all questions are completed
 exit.addEventListener("click", exitGame);
 
 function exitGame() {
