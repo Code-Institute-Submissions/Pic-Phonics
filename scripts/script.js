@@ -7,7 +7,6 @@ const gameContainer = document.getElementById('game')
 const questionContainer = document.getElementById('question')
 const qImg = document.getElementById("qImage")
 const lText = document.getElementById("letterText")
-//const sound = document.getElementById("sound")
 const answerContainer = document.getElementById('answers')
 const choices = document.querySelectorAll('input[name="choices"]')
 const imageA = document.getElementById("imageA")
@@ -18,9 +17,7 @@ const imageC = document.getElementById("imageC")
 const choiceC = document.getElementById("choiceC")
 const imageD = document.getElementById("imageD")
 const choiceD = document.getElementById("choiceD")
-const selectedChoice = document.getElementsByName("choices")
 const scoreCount = document.getElementById("score")
-let score = 0;
 const resultsContainer = document.getElementById('result')
 const scoreContainer = document.getElementById('scoreContainer')
 const exit = document.getElementById("exit")
@@ -28,6 +25,8 @@ const restart = document.getElementById("quizRepeat")
 const cert = document.getElementById("cert")
 const certScore = document.getElementById("certScore")
 const form = document.getElementById("certForm")
+let score = 0;
+
 const questions = [
 {
 letterText:"'T'",
@@ -38,7 +37,6 @@ imageA: "assets/images/words/tree.jpg",
 imageB: "assets/images/words/watermelon.jpg",
 imageC: "assets/images/words/hippo.jpg",
 imageD: "assets/images/words/pumpkin.jpg",
-
 choiceA:"TREE",
 choiceB:"WATERMELON",
 choiceC:"HIPPO",
@@ -55,7 +53,6 @@ imageA: "assets/images/words/umbrella.jpg",
 imageB: "assets/images/words/grapes.jpg",
 imageC: "assets/images/words/socks.jpg",
 imageD: "assets/images/words/apple.jpg",
-
 choiceA: "UMBRELLA",
 choiceB: "GRAPES",
 choiceC: "SOCKS",
@@ -261,7 +258,7 @@ function playGame() {
   gameContainer.classList.remove('hide')
   renderQuestion()
 
-    }
+ }
 
 //Renders questions and answers to the screen
 function renderQuestion(){
@@ -294,11 +291,13 @@ function renderQuestion(){
     scoreCount.innerHTML=`Score: ${score}`;
     
     }
+    document.getElementById("A").style.display = 'none';
+    document.getElementById("B").style.display = 'none';
+    document.getElementById("C").style.display = 'none';
+    document.getElementById("D").style.display = 'none';
     //playAudio(questions[currentQuestion].audio);
     setAudio();
 }
-
-
 
 //Next Question function
 function nextQuestion(){
@@ -306,7 +305,7 @@ function nextQuestion(){
          submitButton.classList.remove('hide');
      }
      else{
-        renderQuestion(questions[currentQuestion++]); //+ questions[currentQuestion].audio) 
+        renderQuestion(questions[currentQuestion++]); //+ questions[currentQuestion].audio)
         setAudio();
      }
 }
@@ -321,8 +320,8 @@ function playAudio(file){
     let sounds = "playAudio(\'" + audioFile + "\')";
     document.getElementById('sound').setAttribute('onclick', sounds);
   }
-// checks  if answer users selects is correct or incorrect
 
+// Checks  if answer users selects is correct or incorrect
 function checkAnswer() {
 
 const correctAnswer = questions[currentQuestion].correct
@@ -330,22 +329,28 @@ if (document.querySelector('input[name = "choices"]:checked') == correctAnswer){
     //if (correctAnswer.checked == true){
     // answer is correct
     score ++;
-    
-    
+      
     correct();
+
+    document.getElementById("A").style.display = 'block';
+    document.getElementById("B").style.display = 'block';
+    document.getElementById("C").style.display = 'block';
+    document.getElementById("D").style.display = 'block';
     setTimeout(function(){
         nextQuestion();
-    }, 5000); 
-
+    }, 4000); 
 
   } else {
     // answer is incorrect
     incorrect();
+    document.getElementById("A").style.display = 'block';
+    document.getElementById("B").style.display = 'block';
+    document.getElementById("C").style.display = 'block';
+    document.getElementById("D").style.display = 'block';
      setTimeout(function(){
         nextQuestion();
-    }, 5000); 
-
-    
+    }, 4000); 
+ 
   }
 }
 
@@ -399,7 +404,7 @@ function exitGame() {
 }});
 }
 
-    //Bootstrap Form Validation
+//Bootstrap Form Validation
     cert.addEventListener('click', function(validate) {
         if (cert.checkValidity() === false) {
           validate.preventDefault();
@@ -410,6 +415,7 @@ form.classList.add('was-validated');
        }
     });
 
+//Restarts Quiz
 restart.addEventListener("click", restartQuiz)
 
 function restartQuiz(){
@@ -417,7 +423,7 @@ function restartQuiz(){
     resultsContainer.classList.add('hide');
 
     
-    function resetGame() {
+function resetGame() {
          submitButton.classList.add('hide');
         currentQuestion = 0;
         score = 0
@@ -426,7 +432,7 @@ function restartQuiz(){
     resetGame();
 }
   
-//Cert Result JS
+//Cert Result JS - Gets input values and inserts onto certificate html
 function getName() {
         let firstName = document.getElementById("fname").value;
         let lastName = document.getElementById("lname").value;

@@ -265,8 +265,8 @@ hr {
 
 .answers-container{
     text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .choice{
@@ -286,7 +286,7 @@ hr {
 #A,#B,#C,#D {
     color: #ffee00;
     font-family: "Sniglet",sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     padding: 15px 1px;
     background: transparent;
