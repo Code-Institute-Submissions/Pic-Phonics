@@ -302,7 +302,6 @@ function renderQuestion(){
 
 //Next Question function
 function nextQuestion(){
- 
      if(currentQuestion == questions.length - 1){
          submitButton.classList.remove('hide');
      }
@@ -334,13 +333,18 @@ if (document.querySelector('input[name = "choices"]:checked') == correctAnswer){
     
     
     correct();
-    nextQuestion();
+    setTimeout(function(){
+        nextQuestion();
+    }, 5000); 
 
 
   } else {
     // answer is incorrect
     incorrect();
-    nextQuestion();
+     setTimeout(function(){
+        nextQuestion();
+    }, 5000); 
+
     
   }
 }
