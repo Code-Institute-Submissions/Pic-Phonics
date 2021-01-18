@@ -30,13 +30,11 @@ h3 {
     text-align: center;
 }
 
-
 hr {
     margin-top: 1rem;
     margin-bottom: 2rem;
     border: 0;
 }
-
 
 .navbar{
     font-family: "Fredoka One", sans-serif;
@@ -65,7 +63,7 @@ hr {
 }
 
 .nav-item {
-    padding: .5rem;
+    padding: .5rem 1rem;
 }
 
 .navbar-toggler-icon {
@@ -194,7 +192,9 @@ hr {
     font-weight: bolder;
     font-size: 1.6rem;
     background-color: #f1e318 ;
+     animation: glowing 1300ms infinite;
 }
+
 @keyframes glowing {
         0% {
           background-color: #f1e318;
@@ -208,9 +208,6 @@ hr {
           background-color: #ffee00;
           box-shadow: 0 0 5px #ffee00;
         }
-      }
-      #playGame {
-        animation: glowing 1300ms infinite;
       }
 
 #playGame:hover{
@@ -340,7 +337,6 @@ label{
     font-size: 1.15rem;
 }
 
-
 #gameControls.btn-grid {
   display: grid;
   grid-template-columns: repeat(1, auto);
@@ -439,9 +435,6 @@ footer{
 }
 
 /*Certificate CSS*/
-@import url('https://fonts.googleapis.com/css2?family=Sniglet&family=Fredoka+One&display=swap');
-
-
 body{
     font-family: "Sniglet", sans-serif;
     font-size: 16px;
