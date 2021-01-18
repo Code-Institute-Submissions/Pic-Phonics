@@ -195,6 +195,23 @@ hr {
     font-size: 1.6rem;
     background-color: #f1e318 ;
 }
+@keyframes glowing {
+        0% {
+          background-color: #f1e318;
+          box-shadow: 0 0 5px #f1e318;
+        }
+        50% {
+          background-color: #f5e400;
+          box-shadow: 0 0 20px #f5e400;
+        }
+        100% {
+          background-color: #ffee00;
+          box-shadow: 0 0 5px #ffee00;
+        }
+      }
+      #playGame {
+        animation: glowing 1300ms infinite;
+      }
 
 #playGame:hover{
     color: rgb(1, 83, 190);
