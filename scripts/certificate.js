@@ -1,0 +1,2 @@
+document.getElementById("name").innerHTML = localStorage.getItem("fname") + " " + localStorage.getItem("lname");
+document.getElementById("certScore").innerHTML = "with a total score of" + " " + localStorage.getItem("score") + "%";
