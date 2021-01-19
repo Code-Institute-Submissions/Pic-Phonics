@@ -1,7 +1,8 @@
 //Variables for game
 const playButton = document.getElementById("playGame")
-const leaveButton = document.getElementById("leave")
-const nextButton = document.getElementById("next")
+const playLink = document.getElementById("play")
+const exitLink = document.getElementById("leave")
+//const nextButton = document.getElementById("next")
 const submitButton = document.getElementById("submit")
 const gameContainer = document.getElementById('game')
 const questionContainer = document.getElementById('question')
@@ -397,6 +398,7 @@ function showResult( ){
 }
 
 //Function to exit the game when all questions are completed
+exitLink.addEventListener("click", exitGame)
 exit.addEventListener("click", exitGame);
 
 function exitGame() {
@@ -422,6 +424,7 @@ form.classList.add('was-validated');
     });
 
 //Restarts Quiz
+playLink.addEventListener("click", restartQuiz)
 restart.addEventListener("click", restartQuiz)
 
 function restartQuiz(){
