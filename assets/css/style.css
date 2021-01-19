@@ -52,6 +52,7 @@ hr {
     font-weight: bold;
     background-color:#1a8796ee;
     margin-bottom: 0;
+    z-index: 2;
 }
 
 #navbarLogo a {
@@ -167,7 +168,7 @@ hr {
     width: 100vw;
     background: url('../images/abc-image.jpg') no-repeat center center fixed;
     background-size: cover;
-    padding-bottom: 20px;
+
 }
 
 .opaque-overlay {
@@ -232,6 +233,17 @@ hr {
     background-color:#ffee00 ;
 }
 
+.background-container{
+    background-color: #29838f;
+    color: #ffee00;
+    height: auto;
+    width: 100vw;
+    background: url('../images/abc-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding-bottom: 20px;
+    padding-top:20px;
+}
+
 /*Game Container*/
 
 .game-container{
@@ -240,6 +252,7 @@ hr {
     height: auto;
     padding: 15px 5px;
     margin-top: 20px;
+    position: relative;
    
 }
 
@@ -278,7 +291,7 @@ hr {
    font-family: "Fredoka One", sans-serif;
     font-size: 1.5rem; 
     letter-spacing: .1rem;
-    padding-top: 10px;    
+    padding-top: 15px;    
 
 }
 
@@ -387,7 +400,7 @@ padding: 5px;
 /*Results Container*/
 
  #result{
-     height: 110vh;
+     height: 100vh;
      width: 100%;
 
  }
@@ -540,13 +553,13 @@ justify-content: center;
 }
 /* Medium devices (tablets, 768px and up) */
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 767px){
 
 #home{
     padding-top: 150px;
 }
 
-.home-container{
+.background-container{
     height: 100vh;
     padding: 10px 0;
 }
@@ -554,13 +567,9 @@ justify-content: center;
 h2{
     font-size: 3rem;
 }
-.container-fluid{
-    padding-right: 30px;
-}
 
 .game-container {
     padding: 20px 10px;
-    margin-left: 15px;
     margin-top: 100px;
 }
 
@@ -595,6 +604,8 @@ h2{
 #fname, #lname {
     width: 90%;
 }
+
+
 #quizRepeat, #exit, #submit{
     padding: 10px 50px;
     margin: 20px 0;
@@ -613,7 +624,7 @@ h2{
     padding-top: 200px;
 }
 
-.home-container {
+.background-container {
     height: auto;
 }
 
@@ -648,7 +659,6 @@ h2{
 
     .game-container {
     padding: 30px 10px;
-    margin-top: 180px;
     }
 
 #imageA img, #imageB img, #imageC img, #imageD img {
