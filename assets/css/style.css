@@ -542,8 +542,6 @@ justify-content: center;
 #result h3 {
     font-size: 1.3rem;
 }
-
-
 }
 
 @media screen and (min-width:400px){
@@ -555,12 +553,13 @@ justify-content: center;
     margin: 10px 0;
 }
 }
+
 /* Medium devices (tablets, 768px and up) */
 
 @media screen and (min-width: 767px){
 
 #home{
-    padding-top: 150px;
+    padding-top: 100px;
 }
 
 .background-container{
