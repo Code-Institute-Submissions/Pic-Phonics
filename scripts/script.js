@@ -255,7 +255,7 @@ function playGame() {
   playButton.classList.add('hide')
   document.getElementById("home").classList.add('hide')
   document.getElementById("overlay").classList.add('hide')
-  document.getElementById("background").classList.remove('hide')
+  document.getElementById("backgroundGame").classList.remove('hide')
   currentQuestionIndex = 0
   score = 0
   gameContainer.classList.remove('hide')
@@ -391,6 +391,7 @@ Swal.fire({
 //Shows the users result on completion of the quiz in percentage format
 function showResult( ){
     gameContainer.classList.add('hide');
+    document.getElementById("background").classList.add('hide')
     resultsContainer.classList.remove('hide');
     let totalScore = (score/questions.length * 100).toFixed();
     scoreContainer.innerHTML = `<h3> You  scored ${totalScore}% in Pic Phonics Initial Sounds Game</<h3>`;

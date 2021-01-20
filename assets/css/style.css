@@ -237,7 +237,7 @@ hr {
     background-color: #29838f;
     color: #ffee00;
     height: auto;
-    width: 100vw;
+    width: auto;
     background: url('../images/abc-image.jpg') no-repeat center center fixed;
     background-size: cover;
     padding-bottom: 20px;
@@ -296,10 +296,11 @@ hr {
 }
 
 #qImage img{
-    width: 100%;
+    width: 90%;
     height: 90%;
     padding: 10px;
     margin: 0 auto;
+    display: flex;
     
 }
 
@@ -317,8 +318,6 @@ hr {
 
 .answers-container{
     text-align: center;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 .choice{
@@ -329,7 +328,7 @@ hr {
 #imageB img,
 #imageC img ,
 #imageD img{
-    width: 95%;
+    width: 80%;
     height: 90%;
 }
 
@@ -390,11 +389,11 @@ padding: 5px;
     color: #0f8392;
     font-family: "Fredoka One", sans-serif;
     font-weight: bolder;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     background-color: #f1e318;
     border-radius: 5px;
     padding: 10px 10px;
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
 /*Results Container*/
@@ -407,9 +406,9 @@ padding: 5px;
 
  #result h2{
      text-align: center;
-     padding: 15px;
+     padding-top: 15px;
      margin: 10px;
-     font-size: 2rem;
+     font-size: 2.5rem;
  }
 
  #result h3{
@@ -433,10 +432,10 @@ h2#formTitle{
     font-size: 1.1rem;
     color: #ffee00;
     font-family: "Fredoka One", sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
+    padding: 15px 2px;
+    margin: 5px;
     text-align: center;
-    padding: 25px 10px;
-    margin: 20px;
     letter-spacing: .1rem;
 }
 
@@ -453,7 +452,7 @@ h2#formTitle{
     color: #ffee00;
     margin-bottom: 1.5rem;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 5px;
 }
 
 .form-group label{
@@ -539,6 +538,12 @@ justify-content: center;
 #home{
     padding-top: 25px;
 }
+
+#result h3 {
+    font-size: 1.3rem;
+}
+
+
 }
 
 @media screen and (min-width:400px){
@@ -547,8 +552,7 @@ justify-content: center;
 }
 
 .form-group {
-    padding: 20px 0;
-    margin: 0;
+    margin: 10px 0;
 }
 }
 /* Medium devices (tablets, 768px and up) */
@@ -561,6 +565,7 @@ justify-content: center;
 
 .background-container{
     height: 100vh;
+    width: auto;
     padding: 10px 0;
 }
 
@@ -582,12 +587,17 @@ h2{
     height:auto;
 }
 
+.answers-container{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 #imageA img,
 #imageB img,
 #imageC img ,
 #imageD img{
     width: 100%;
-    height:100%;
+    height:90%;
     margin-left: 25px;
 }
 
@@ -607,12 +617,32 @@ h2{
 
 
 #quizRepeat, #exit, #submit{
-    padding: 10px 50px;
-    margin: 20px 0;
+    /*padding: 10px 50px;
+    margin: 20px 0;*/
     font-size: 1.4rem;
 }
+
+#result h2 {
+    font-size: 3rem;
+    margin-top: 40px;
+}
+
+#result h3 {
+    font-size: 1.8rem;
+}
+
+h2#formTitle {
+    margin: 15px;
+    font-size: 1.3rem;
+}
+
+#cert {
+    font-size: 1.3rem;
+    margin: 5px 0;
+}
+
 .btn-block#exit, .btn-block#quizRepeat {
-    width: 25%;
+    width: 50%;
     margin: 15px 15px;
 }
 }
@@ -622,6 +652,24 @@ h2{
 @media screen and (min-width: 992px){
 #home{
     padding-top: 200px;
+}
+
+h2 {
+    padding-top: 100px;
+}
+
+#home p {
+   padding-left:30px ;
+   padding-right: 30px;
+}
+
+.game-container {
+    padding: 30px 10px;
+}
+
+#imageA img, #imageB img, #imageC img, #imageD img {
+    padding-bottom: 30px;
+    padding-top: 15px;
 }
 
 .background-container {
@@ -648,21 +696,9 @@ h2{
 }
 }
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1500px){
     #home {
         padding-top: 100px;
     }
     
-    h2{
-        padding-top: 15px;
-    }
-
-    .game-container {
-    padding: 30px 10px;
-    }
-
-#imageA img, #imageB img, #imageC img, #imageD img {
-    padding-bottom: 30px;
-    padding-top: 15px;
-}
 }
