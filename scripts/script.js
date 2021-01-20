@@ -255,7 +255,7 @@ function playGame() {
   playButton.classList.add('hide')
   document.getElementById("home").classList.add('hide')
   document.getElementById("overlay").classList.add('hide')
-  document.getElementById("backgroundGame").classList.remove('hide')
+  document.getElementById("background").classList.remove('hide')
   currentQuestionIndex = 0
   score = 0
   gameContainer.classList.remove('hide')

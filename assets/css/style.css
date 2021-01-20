@@ -19,7 +19,7 @@ h2 {
     font-size: 2.5rem;
     font-weight: bold;
     letter-spacing: .1rem;
-    padding-top: 0;
+    padding-top: 40px;
     padding-bottom: 10px;
     margin-top: 30px;
 }
@@ -188,7 +188,7 @@ hr {
 #home p{
     color:  #f1e318;
     font-family: "Sniglet", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
     letter-spacing: .1rem;
     padding-top: 0;
@@ -617,8 +617,6 @@ h2{
 
 
 #quizRepeat, #exit, #submit{
-    /*padding: 10px 50px;
-    margin: 20px 0;*/
     font-size: 1.4rem;
 }
 
@@ -650,13 +648,6 @@ h2#formTitle {
 /*Large devices (desktops, 992px and up)*/
 
 @media screen and (min-width: 992px){
-#home{
-    padding-top: 200px;
-}
-
-h2 {
-    padding-top: 100px;
-}
 
 #home p {
    padding-left:30px ;
