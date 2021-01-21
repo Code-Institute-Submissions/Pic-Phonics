@@ -2,22 +2,16 @@
 const playButton = document.getElementById("playGame")
 const playLink = document.getElementById("play")
 const exitLink = document.getElementById("leave")
-//const nextButton = document.getElementById("next")
 const submitButton = document.getElementById("submit")
+const questionImageDirectory = "assets/images/letters/"
+const choiceImageDirectory = "assets/images/words/"
 const gameContainer = document.getElementById('game')
 const questionContainer = document.getElementById('question')
 const qImg = document.getElementById("qImage")
 const lText = document.getElementById("letterText")
-const answerContainer = document.getElementById('answers')
-const choices = document.querySelectorAll('input[name="choices"]')
-const imageA = document.getElementById("imageA")
-const choiceA = document.getElementById("choiceA")
-const imageB = document.getElementById("imageB")
-const choiceB = document.getElementById("choiceB")
-const imageC = document.getElementById("imageC")
-const choiceC = document.getElementById("choiceC")
-const imageD = document.getElementById("imageD")
-const choiceD = document.getElementById("choiceD")
+const choiceContainer = document.getElementById('answers')
+const answerContainer = document.getElementsByClassName('choice')
+const answer = document.querySelectorAll('input[name="choices"]')
 const scoreCount = document.getElementById("score")
 const resultsContainer = document.getElementById('result')
 const scoreContainer = document.getElementById('scoreContainer')
@@ -33,213 +27,316 @@ const questions = [
 {
 letterText:"'T'",
 question:"Choose the picture of the word that starts with the letter 'T'?",
-qimage:"assets/images/letters/Tt.jpg",
+qimage:"Tt.jpg",
 audio: "assets/audio/t.mp3",
-imageA: "assets/images/words/tree.jpg",
-imageB: "assets/images/words/watermelon.jpg",
-imageC: "assets/images/words/hippo.jpg",
-imageD: "assets/images/words/pumpkin.jpg",
-choiceA:"TREE",
-choiceB:"WATERMELON",
-choiceC:"HIPPO",
-choiceD:"PUMPKIN",
-correct: choiceA
-
+choices:[
+    {
+        imageFile:"tree.jpg",
+        choiceText: "TREE",
+    },
+    {
+        imageFile:"watermelon.jpg",
+        choiceText: "WATERMELON",
+    },
+    {
+        imageFile:"hippo.jpg",
+        choiceText: "HIPPO",
+    },
+    {
+        imageFile:"pumpkin.jpg",
+        choiceText: "PUMPKIN",
+    },
+]
 },
 {
 letterText:"'A'",
 question:"Choose the picture of the word that starts with the letter 'A'?",
-qimage: "assets/images/letters/Aa.jpg",
+qimage: "Aa.jpg",
 audio: "assets/audio/a.mp3",
-imageA: "assets/images/words/umbrella.jpg",
-imageB: "assets/images/words/grapes.jpg",
-imageC: "assets/images/words/socks.jpg",
-imageD: "assets/images/words/apple.jpg",
-choiceA: "UMBRELLA",
-choiceB: "GRAPES",
-choiceC: "SOCKS",
-choiceD:"APPLE",
-
-correct:choiceD
+choices: [
+    {
+        imageFile:"umbrella.jpg",
+        choiceText: "UMBRELLA",
+    },
+    {
+        imageFile:"grapes.jpg",
+        choiceText: "GRAPES",
+    },
+    {
+        imageFile:"socks.jpg",
+        choiceText: "SOCKS",
+    },
+    {
+        imageFile:"apple.jpg",
+        choiceText: "APPLE",
+    }
+]
 },
 {
 letterText:"'S'",
 question:"Choose the picture of the word that starts with the letter 'S'?",
-qimage:"assets/images/letters/Ss.jpg",
+qimage:"Ss.jpg",
 audio: "assets/audio/s.mp3",
-imageA: "assets/images/words/car.jpg",
-imageB: "assets/images/words/snake.jpg",
-imageC: "assets/images/words/flower.jpg",
-imageD: "assets/images/words/dolphin.jpg",
-choiceA: "CAR",
-choiceB: "SNAKE",
-choiceC: "FLOWER",
-choiceD: "DOLPHIN",
-
-correct: choiceB
-
+choices: [
+    {
+        imageFile:"car.jpg",
+        choiceText: "CAR",
+    },
+    {
+        imageFile:"snake.jpg",
+        choiceText: "SNAKE",
+    },
+    {
+        imageFile:"flower.jpg",
+        choiceText: "FLOWER",
+    },
+    {
+        imageFile:"dolphin.jpg",
+        choiceText: "DOLPHIN",
+    }
+]
 },
 {
 letterText:"'M'",
 question:"Choose the picture of the word that starts with the letter 'M'?",
-qimage: "assets/images/letters/Mm.jpg",
+qimage: "Mm.jpg",
 audio: "assets/audio/m.mp3",
-imageA: "assets/images/words/rabbit.jpg",
-imageB: "assets/images/words/carrot.jpg",
-imageC: "assets/images/words/mouse.jpg",
-imageD: "assets/images/words/bike.jpg",
-choiceA: "RABBIT",
-choiceB: "CARROT",
-choiceC: "MOUSE",
-choiceD: "BIKE",
-
-correct: choiceC
-
+choices: [
+    {
+        imageFile:"rabbit.jpg",
+        choiceText: "RABBIT",
+    },
+    {
+        imageFile:"carrot.jpg",
+        choiceText: "CARROT",
+    },
+    {
+        imageFile:"mouse.jpg",
+        choiceText: "Mouse",
+    },
+    {
+        imageFile:"bike.jpg",
+        choiceText: "BIKE",
+    }
+]
 },
 {
 letterText:"'I'",
 question:"Choose the picture of the word that starts with the letter 'I'?",
-qimage:"assets/images/letters/Ii.jpg",
+qimage:"Ii.jpg",
 audio: "assets/audio/i.mp3",
-imageA: "assets/images/words/teddy.jpg",
-imageB: "assets/images/words/books.jpg",
-imageC: "assets/images/words/duck.jpg",
-imageD: "assets/images/words/icecream.jpg",
-choiceA: "TEDDY",
-choiceB: "BOOKS",
-choiceC: "DUCK",
-choiceD: "ICE-CREAM",
-
-correct: choiceD
+choices: [
+    {
+        imageFile:"teddy.jpg",
+        choiceText: "TEDDY",
+    },
+    {
+        imageFile:"books.jpg",
+        choiceText: "BOOKS",
+    },
+    {
+        imageFile:"duck.jpg",
+        choiceText: "DUCK",
+    },
+    {
+        imageFile:"icecream.jpg",
+        choiceText: "ICE-CREAM",
+    }
+]
 },
 {
 letterText:"'H'",
 question:"Choose the picture of the word that starts with the letter 'H'?",
-qimage:"assets/images/letters/Hh.jpg",
+qimage:"Hh.jpg",
 audio: "assets/audio/h.mp3",
-imageA: "assets/images/words/hat.jpg",
-imageB: "assets/images/words/eggs.jpg",
-imageC: "assets/images/words/bird.jpg",
-imageD: "assets/images/words/alligator.jpg",
-choiceA: "HAT",
-choiceB: "EGGS",
-choiceC: "BIRD",
-choiceD: "ALLIGATOR",
-
-correct: choiceA
+choices: [
+    {
+        imageFile:"hat.jpg",
+        choiceText: "HAT",
+    },
+    {
+        imageFile:"eggs.jpg",
+        choiceText: "EGGS",
+    },
+    {
+        imageFile:"bird.jpg",
+        choiceText: "BIRD",
+    },
+    {
+        imageFile:"alligator.jpg",
+        choiceText: "ALLIGATOR",
+    }
+]
 },
 {
 letterText:"'C'",
 question:"Choose the picture of the word that starts with the letter 'C'?",
-qimage:"assets/images/letters/Cc.jpg",
+qimage:"Cc.jpg",
 audio: "assets/audio/c.mp3",
-imageA: "assets/images/words/dinosaur.jpg",
-imageB: "assets/images/words/zebra.jpg",
-imageC: "assets/images/words/cat.jpg",
-imageD: "assets/images/words/squirrel.jpg",
-choiceA: "DINOSAUR",
-choiceB: "ZEBRA",
-choiceC: "CAT",
-choiceD: "SQUIRREL",
-
-correct: choiceC
+choices: [
+    {
+        imageFile:"dinosaur.jpg",
+        choiceText: "DINOSAUR",
+    },
+    {
+        imageFile:"zebra.jpg",
+        choiceText: "ZEBRA",
+    },
+    {
+        imageFile:"cat.jpg",
+        choiceText: "CAT",
+    },
+    {
+        imageFile:"squirrel.jpg",
+        choiceText: "Squirrel",
+    }
+]
 },
 {
 letterText:"'K'",
 question:"Choose the picture of the word that starts with the letter 'K'?",
-qimage:"assets/images/letters/Kk.jpg",
+qimage:"Kk.jpg",
 audio: "assets/audio/k.mp3",
-imageA: "assets/images/words/ball.jpg",
-imageB: "assets/images/words/fox.jpg",
-imageC: "assets/images/words/tiger.jpg",
-imageD: "assets/images/words/kite.jpg",
-choiceA: "BALL",
-choiceB: "FOX",
-choiceC: "TIGER",
-choiceD: "KITE",
-
-correct: choiceD
-
+choices: [
+    {
+        imageFile:"ball.jpg",
+        choiceText: "Ball",
+    },
+    {
+        imageFile:"fox.jpg",
+        choiceText: "FOX",
+    },
+    {
+        imageFile:"tiger.jpg",
+        choiceText: "TIGER",
+    },
+    {
+        imageFile:"kite.jpg",
+        choiceText: "KITE",
+    }
+]
 },
 {
 letterText:"'O'",
 question:"Choose the picture of the word that starts with the letter 'O'?",
-qimage:"assets/images/letters/Oo.jpg",
+qimage:"Oo.jpg",
 audio: "assets/audio/o.mp3",
-imageA: "assets/images/words/bear.jpg",
-imageB: "assets/images/words/octopus.jpg",
-imageC: "assets/images/words/iguana.jpg",
-imageD: "assets/images/words/jellyfish.jpg",
-choiceA: "BEAR",
-choiceB: "OCTOPUS",
-choiceC: "IGUANA",
-choiceD: "JELLYFISH",
-
-correct: choiceB
+choices: [
+    {
+        imageFile:"bear.jpg",
+        choiceText: "BEAR",
+    },
+    {
+        imageFile:"octopus.jpg",
+        choiceText: "OCTOPUS",
+    },
+    {
+        imageFile:"iguana.jpg",
+        choiceText: "IGUANA",
+    },
+    {
+        imageFile:"jellyfish.jpg",
+        choiceText: "JELLYFISH",
+    }
+]
 },
 {
 letterText:"'P'",
 question:"Choose the picture of the word that starts with the letter 'P'?",
-qimage:"assets/images/letters/Pp.jpg",
+qimage:"Pp.jpg",
 audio: "assets/audio/p.mp3",
-imageA: "assets/images/words/leaf.jpg",
-imageB: "assets/images/words/cake.jpg",
-imageC: "assets/images/words/ladybird.jpg",
-imageD: "assets/images/words/pig.jpg",
-choiceA: "LEAF",
-choiceB: "CAKE",
-choiceC: "LADYBIRD",
-choiceD: "PIG",
+choices: [
+    {
+        imageFile:"leaf.jpg",
+        choiceText: "LEAF",
+    },
+    {
+        imageFile:"cake.jpg",
+        choiceText: "CAKE",
+    },
+    {
+        imageFile:"ladybird.jpg",
+        choiceText: "LADYBIRD",
+    },
+    {
+        imageFile:"pig.jpg",
+        choiceText: "PIG",
+    }
+]
 
-correct: choiceD
 },
 {
 letterText:"'L'",
 question:"Choose the picture of the word that starts with the letter 'L'?",
-qimage:"assets/images/letters/Ll.jpg",
+qimage:"Ll.jpg",
 audio: "assets/audio/l.mp3",
-imageA: "assets/images/words/lion.jpg",
-imageB: "assets/images/words/banana.jpg",
-imageC: "assets/images/words/dog.jpg",
-imageD: "assets/images/words/rainbow.jpg",
-choiceA: "LION",
-choiceB: "BANANA",
-choiceC: "DOG",
-choiceD: "RAINBOW",
-
-correct: choiceA
+choices: [
+    {
+        imageFile:"lion.jpg",
+        choiceText: "LION",
+    },
+    {
+        imageFile:"banana.jpg",
+        choiceText: "BANANA",
+    },
+    {
+        imageFile:"dog.jpg",
+        choiceText: "DOG",
+    },
+    {
+        imageFile:"rainbow.jpg",
+        choiceText: "RAINBOW",
+    }
+],
+correct: "tree.jpg"
 },
 {
 letterText:"'E'",
 question:"Choose the picture of the word that starts with the letter 'E'?",
-qimage:"assets/images/letters/Ee.jpg",
+qimage:"Ee.jpg",
 audio: "assets/audio/e.mp3",
-imageA: "assets/images/words/fish.jpg",
-imageB: "assets/images/words/elephant.jpg",
-imageC: "assets/images/words/kangaroo.jpg",
-imageD: "assets/images/words/seal.jpg",
-choiceA: "FISH",
-choiceB: "ELEPHANT",
-choiceC: "KANGAROO",
-choiceD: "SEAL",
-
-correct: choiceB
+choices: [
+    {
+        imageFile:"fish.jpg",
+        choiceText: "FISH",
+    },
+    {
+        imageFile:"elephant.jpg",
+        choiceText: "ELEPHANT",
+    },
+    {
+        imageFile:"kangaroo.jpg",
+        choiceText: "KANGAROO",
+    },
+    {
+        imageFile:"seal.jpg",
+        choiceText: "SEAL",
+    }
+]
 },
 {
 letterText:"'G'",
 question:"Choose the picture of the word that starts with the letter 'G'?",
-qimage:"assets/images/letters/Gg.jpg",
+qimage:"Gg.jpg",
 audio: "assets/audio/g.mp3",
-imageA: "assets/images/words/penguin.jpg",
-imageB: "assets/images/words/monkey.jpg",
-imageC: "assets/images/words/orange.jpg",
-imageD: "assets/images/words/giraffe.jpg",
-choiceA: "PENGUIN",
-choiceB: "MONKEY",
-choiceC: "ORANGE",
-choiceD: "GIRAFFE",
-
-correct: choiceD
+choices: [
+    {
+        imageFile:"penguin.jpg",
+        choiceText: "PENGUIN"
+    },
+    {
+        imageFile:"monkey.jpg",
+        choiceText: "MONKEY"
+    },
+    {
+        imageFile:"orange.jpg",
+        choiceText: "ORANGE"
+    },
+    {
+        imageFile:"giraffe.jpg",
+        choiceText: "GIRAFFE"
+    }
+]
 },
 ]
 
@@ -256,52 +353,44 @@ function playGame() {
   document.getElementById("home").classList.add('hide')
   document.getElementById("overlay").classList.add('hide')
   document.getElementById("background").classList.remove('hide')
-  currentQuestionIndex = 0
+  currentQuestion = 0
   score = 0
   gameContainer.classList.remove('hide')
   renderQuestion()
 
  }
-
 //Renders questions and answers to the screen
 function renderQuestion(){
-    for(let i=0; i<questions.length; i++){
-
+   
+    for(let question of questions){
     let q = questions[currentQuestion];
-        
     lText.innerHTML = `<h3> This is the letter ${q.letterText} </h3>`;
 
-    question.innerHTML = `<h3> ${q.question} </h3>`;
+    questionContainer.innerHTML = `<h3> ${q.question} </h3>`;
     
-    qImg.innerHTML = `<img src= ${q.qimage} >`;
-
-    imageA.innerHTML = `<img src = ${q.imageA} >`;
-
-    document.getElementById("A").innerHTML =  q.choiceA;
-
-    imageB.innerHTML = `<img src = ${q.imageB} >`;
+    qImg.innerHTML = `<img src= ${questionImageDirectory}${q.qimage} >`;
+        
+    for (let choice of question.choices) {
     
-    document.getElementById("B").innerHTML =  q.choiceB;
+           $('.choice').append(`<label><img src= ${choiceImageDirectory}${choice.imageFile} alt=${choice.choiceText}/></label><h3 class = ""choice-text>${choice.choiceText}</h3>`)
+      
+    // render image for choice using:
+  
+}
 
-    imageC.innerHTML = `<img src = ${q.imageC} >`;
+  scoreCount.innerHTML=`Score: ${score}`;
 
-    document.getElementById("C").innerHTML =  q.choiceC;
-
-    imageD.innerHTML = `<img src = ${q.imageD} >`;
-
-    document.getElementById("D").innerHTML =  q.choiceD;
-
-    scoreCount.innerHTML=`Score: ${score}`;
-    
-    }
-    //Hides radio button labels text
+  /*  //Hides radio button labels text
     document.getElementById("A").style.display = 'none';
     document.getElementById("B").style.display = 'none';
     document.getElementById("C").style.display = 'none';
     document.getElementById("D").style.display = 'none';
-    //playAudio(questions[currentQuestion].audio);
+    //playAudio(questions[currentQuestion].audio);*/
     setAudio();
 }
+
+}
+
 
 //Renders the next question in the quiz
 function nextQuestion(){
