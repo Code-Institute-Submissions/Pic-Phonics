@@ -1,25 +1,25 @@
 //Variables for game
-const playButton = document.getElementById("playGame")
-const playLink = document.getElementById("play")
-const exitLink = document.getElementById("leave")
-const nextButton = document.getElementById("btn-next")
-const submitButton = document.getElementById("submit")
-const questionImageDirectory = "assets/images/letters/"
-const choiceImageDirectory = "assets/images/words/"
-const gameContainer = document.getElementById('game')
-const questionContainer = document.getElementById('question')
-const qImg = document.getElementById("qImage")
-const lText = document.getElementById("letterText")
-const answerContainer = document.getElementsByClassName('choice')
-const answer = document.querySelectorAll('input[name="choices"]')
-const scoreCount = document.getElementById("score")
-const resultsContainer = document.getElementById('result')
-const scoreContainer = document.getElementById('scoreContainer')
-const exit = document.getElementById("exit")
-const restart = document.getElementById("quizRepeat")
-const cert = document.getElementById("cert")
-const certScore = document.getElementById("certScore")
-const form = document.getElementById("certForm")
+const playButton = document.getElementById("playGame");
+const playLink = document.getElementById("play");
+const exitLink = document.getElementById("leave");
+const nextButton = document.getElementById("btn-next");
+const submitButton = document.getElementById("submit");
+const questionImageDirectory = "assets/images/letters/";
+const choiceImageDirectory = "assets/images/words/";
+const gameContainer = document.getElementById('game');
+const questionContainer = document.getElementById('question');
+const qImg = document.getElementById("qImage");
+const lText = document.getElementById("letterText");
+const answerContainer = document.getElementsByClassName('choice');
+const answer = document.querySelectorAll('input[name="choices"]');
+const scoreCount = document.getElementById("score");
+const resultsContainer = document.getElementById('result');
+const scoreContainer = document.getElementById('scoreContainer');
+const exit = document.getElementById("exit");
+const restart = document.getElementById("quizRepeat");
+const cert = document.getElementById("cert");
+const certScore = document.getElementById("certScore");
+const form = document.getElementById("certForm");
 let score = 0;
 
 //Questions Object Array
@@ -351,25 +351,25 @@ correct:choice2
 ],
 correct:choice4,
 }
-]
+];
 
 let currentQuestion = 0;
 const lastQuestion = questions.length - 1;
 
 //Event Listeners
-playButton.addEventListener('click', playGame)
+playButton.addEventListener('click', playGame);
 //nextButton.addEventListener('click', nextQuestion)
 
 //Initiates the game
 function playGame() {
-  playButton.classList.add('hide')
-  document.getElementById("home").classList.add('hide')
-  document.getElementById("overlay").classList.add('hide')
-  document.getElementById("background").classList.remove('hide')
-  currentQuestionIndex = 0
-  score = 0
-  gameContainer.classList.remove('hide')
-  renderQuestion()
+  playButton.classList.add('hide');
+  document.getElementById("home").classList.add('hide');
+  document.getElementById("overlay").classList.add('hide');
+  document.getElementById("background").classList.remove('hide');
+  currentQuestionIndex = 0;
+  score = 0;
+  gameContainer.classList.remove('hide');
+  renderQuestion();
 
  }
 
@@ -387,10 +387,10 @@ function renderQuestion(){
     qImg.innerHTML = `<img src= ${questionImageDirectory}${q.qimage} >`;
 
     //Choices 
-    const choice1 = document.getElementById("choice1")
-    const choice2 = document.getElementById("choice2")
-    const choice3 = document.getElementById("choice3")
-    const choice4 = document.getElementById("choice4")
+    const choice1 = document.getElementById("choice1");
+    const choice2 = document.getElementById("choice2");
+    const choice3 = document.getElementById("choice3");
+    const choice4 = document.getElementById("choice4");
        
     choice1.innerHTML = `<label><img src = ${choiceImageDirectory}${q.choices[0].imageFile}><input type="radio" id = "choice1" name="choices" value="choice1"/></label><h3 id = text1>${q.choices[0].choiceText}</h3>`;  
     choice2.innerHTML = `<label><img src = ${choiceImageDirectory}${q.choices[1].imageFile}><input type="radio" id = "choice2" name="choices" value="choice2"/></label><h3 id = text2>${q.choices[1].choiceText}</h3>`;  
@@ -440,7 +440,7 @@ function playAudio(file){
 // Checks  if answer users selects is correct or incorrect
 function checkAnswer() {
 
-const correctAnswer = questions[currentQuestion].correct
+const correctAnswer = questions[currentQuestion].correct;
 if (document.querySelector('input[name = "choices"]:checked') == correctAnswer){
     //if (correctAnswer.checked == true){
     // answer is correct
@@ -482,7 +482,7 @@ Swal.fire({
   text:'Keep up the good work!',
   showConfirmButton: false,
   timer: 2000
-})
+});
  
 }
 
@@ -495,14 +495,14 @@ Swal.fire({
   text:'Do not worry you are just learning! Keep trying, you will get it next time.',
   showConfirmButton: false,
   timer: 2200
-})
+});
   
 }
 
 //Shows the users result on completion of the quiz in percentage format
 function showResult( ){
     gameContainer.classList.add('hide');
-    document.getElementById("background").classList.add('hide')
+    document.getElementById("background").classList.add('hide');
     resultsContainer.classList.remove('hide');
     let totalScore = (score/questions.length * 100).toFixed();
     scoreContainer.innerHTML = `<h3> You  scored ${totalScore}% in Pic Phonics Initial Sounds Game</<h3>`;
@@ -511,7 +511,7 @@ function showResult( ){
 }
 
 //Function to exit the game when all questions are completed
-exitLink.addEventListener("click", exitGame)
+exitLink.addEventListener("click", exitGame);
 exit.addEventListener("click", exitGame);
 
 function exitGame() {
@@ -521,7 +521,7 @@ function exitGame() {
   confirmButtonText: `Leave`,
 }).then((result) => {
   if (result.isConfirmed) {
-    location.href= "index.html"
+    location.href= "index.html";
 }});
 }
 
@@ -537,8 +537,8 @@ form.classList.add('was-validated');
     });
 
 //Restarts Quiz
-playLink.addEventListener("click", restartQuiz)
-restart.addEventListener("click", restartQuiz)
+playLink.addEventListener("click", restartQuiz);
+restart.addEventListener("click", restartQuiz);
 
 function restartQuiz(){
      gameContainer.classList.remove('hide');
@@ -548,9 +548,9 @@ function restartQuiz(){
 function resetGame() {
          submitButton.classList.add('hide');
         currentQuestion = 0;
-        score = 0
-        playGame()
-    };
+        score = 0;
+        playGame();
+    }
     resetGame();
 }
   
