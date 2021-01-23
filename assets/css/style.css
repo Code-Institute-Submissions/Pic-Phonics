@@ -605,6 +605,10 @@ h2{
     margin-left: 20px;
 }
 
+#answers img{
+    width: 100%;
+}
+
 #A, #B, #C, #D {
     font-size: 1.3rem;
     margin-left: 20px;
