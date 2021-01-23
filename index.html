@@ -97,11 +97,19 @@
                     <div id="question" class="question-container col-md-12"></div>
                 </div>
                 <!--Game Choices-->
-                <div id="answers" class="answers-container row">
-                    <div id="choice1" class="col-md-6"></div>
-                    <div id="choice2" class="col-md-6"></div>
-                    <div id="choice3" class="col-md-6"></div>
-                    <div id="choice4" class = "col-md-6"></div>
+               <div id="answers" class="answers-container row">
+                <div class="choice col-md-3" id="imageA"></div>
+                <div class="col-md-3"><input type="radio" id="choiceA" name="choices" value = "choiceA" onclick="checkAnswer()">
+                    <label for="choiceA" id="A" ></label></div>
+                <div class="choice col-md-3" id="imageB"></div>
+                <div class="col-md-3"><input type="radio" id="choiceB" name="choices" value = "choiceB" onclick="checkAnswer()">
+                    <label for="choiceB" id="B"></label></div>
+                <div class="choice col-md-3" id="imageC"></div>
+                <div class="col-md-3"><input type="radio" id="choiceC" name="choices" value = "choiceC" onclick="checkAnswer()">
+                    <label for="choiceC" id="C" ></label></div>
+                <div class="choice col-md-3" id="imageD"></div>
+                <div class="col-md-3"><input type="radio" id="choiceD" name="choices" value = "choiceD" onclick="checkAnswer()">
+                    <label for="choiceD" id="D"></label></div>
                 </div>
                 <!--Game Controls-->
                 <div id="gameControls" class="btn-grid">
