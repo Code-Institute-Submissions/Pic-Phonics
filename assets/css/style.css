@@ -324,6 +324,19 @@ hr {
     padding: 5px;
 }
 
+/* hide the radio button */
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* hover cursor on image */
+[type=radio] + img {
+  cursor: pointer;
+}
+
 #imageA img,
 #imageB img,
 #imageC img ,
