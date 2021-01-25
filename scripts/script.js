@@ -217,7 +217,7 @@ audio: "assets/audio/k.mp3",
 choices: [
     {
         imageFile:"ball.jpg",
-        choiceText: "Ball",
+        choiceText: "BALL",
     },
     {
         imageFile:"fox.jpg",
@@ -390,7 +390,7 @@ function renderQuestion(){
      //Questions   
     lText.innerHTML = `<h3> This is the letter ${q.letterText} </h3>`;
     question.innerHTML = `<h3> ${q.question} </h3>`;
-    qImg.innerHTML = `<img src= ${questionImageDirectory}${q.qimage} >`;
+    qImg.innerHTML = `<img src= ${questionImageDirectory}${q.qimage} alt = ${q.letterText} >`;
 
     //Choices
     imageA.src = `${choiceImageDirectory}${q.choices[0].imageFile}`;
@@ -513,7 +513,7 @@ Swal.fire({
 //Shows the users result on completion of the quiz in percentage format
 function showResult( ){
     gameContainer.classList.add('hide');
-    document.getElementById("background").classList.add('hide');
+    //document.getElementById("background").classList.add('hide');
     resultsContainer.classList.remove('hide');
     let totalScore = (score/questions.length * 100).toFixed();
     scoreContainer.innerHTML = `<h3> You  scored ${totalScore}% in Pic Phonics Initial Sounds Game</<h3>`;

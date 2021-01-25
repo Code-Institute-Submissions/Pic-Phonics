@@ -85,7 +85,7 @@
     <!--/Modal-->
 
     <!--Game-->
-    <section class="container-fluid home-container">
+    <div class="container-fluid home-container">
         <div id="overlay" class="opaque-overlay">&nbsp;</div>
         <div class="row">
             <div class="col-12">
@@ -100,17 +100,17 @@
                 </div>
             </div>
         </div>
-
+        </div>
         <div id="background" class="container-fluid background-container hide">
-            <section id="game" class="game-container container-fluid hide">
+            <div id="game" class="game-container container-fluid hide">
                 <!--Score Count-->
                 <span class="score-box" id="score">Score: 0</span>
                 <div id="letterText"></div>
                 <!--Game Questions-->
                 <div class="row">
-                    <div class="col-md-4"></div>
-                    <div id="qImage" class="col-md-4"></div>
-                    <div class="col-md-4" id="soundBar">
+                    <div class="col-md-3"></div>
+                    <div id="qImage" class="col-md-6"></div>
+                    <div class="col-md-3" id="soundBar">
                         <button id="sound" type="button" onclick="setAudio()">Click for the Letter Sound!</button>
                     </div>
                     <div id="question" class="question-container col-md-12"></div>
@@ -157,10 +157,8 @@
                         <button type="button" id="submit" class="btn-submit hide" onclick="showResult()">Submit</button>
                     </div>
                 </div>
-            </section>
-        </div>
-
-        <section id="result" class="hide">
+            </div>
+        <div id="result" class="hide">
             <h2>Result</h2>
             <div id="scoreContainer"></div>
             <div class="form-container">
@@ -181,8 +179,8 @@
                     <button id="quizRepeat" class="btn-block">Take Quiz Again</button>
                 </div>
             </div>
-        </section>
-    </section>
+        </div>
+        </div>
     <!--/game-->
 
     <!--Footer-->

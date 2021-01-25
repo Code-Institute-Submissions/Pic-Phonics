@@ -298,7 +298,6 @@ hr {
 #qImage img{
     width: 90%;
     height: 90%;
-    padding: 10px;
     margin: 0 auto;
     display: flex;
     
@@ -337,44 +336,34 @@ hr {
   cursor: pointer;
 }
 
-#imageA img,
-#imageB img,
-#imageC img ,
-#imageD img{
-    width: 80%;
-    height: 90%;
+#imageA,
+#imageB,
+#imageC,
+#imageD{
+    width: 90%;
+    height: 100%;
 }
 
 #A,#B,#C,#D {
-    color: #ffee00;
     font-family: "Sniglet",sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
-    padding: 15px 1px;
-    background: transparent;
-    cursor: grab;
-}
-
-#answers input{
-    width: 1.3rem;
-    height: 1.3rem;
-    margin-bottom: 20px;
 }
 
 label{
     display: block;
 }
 
-#submit{
+#submit {
     cursor: pointer;
-    color:#0f8392;
+    color: #0f8392;
     font-family: "Fredoka One", sans-serif;
     font-weight: bolder;
     font-size: 1.1rem;
-    background-color: #f1e318 ;
-    justify-content: center;
-    margin-top: 10px;
-    line-height: 2.5;
+    background-color: #f1e318;
+    line-height: 2;
+    padding: 0 70px;
+    border-radius: 5px;
     overflow: hidden;
 }
 
@@ -384,7 +373,7 @@ label{
   display: grid;
   grid-template-columns: repeat(1, auto);
   gap: 10px;
-  margin: 0px 10px;
+  margin: 0px auto;
   padding: 5px;
 }
 
@@ -575,18 +564,18 @@ justify-content: center;
     padding-top: 100px;
 }
 
+.game-container {
+    padding: 15px 10px;
+
+}
+
 .background-container{
-    height: 100vh;
+    height: auto;
     width: auto;
-    padding: 10px 0;
 }
 
 h2{
     font-size: 3rem;
-}
-
-#sound{
-    width: 150px;
 }
 
 #qImage img{
@@ -599,33 +588,22 @@ h2{
     padding-right: 15px;
 }
 
-#imageA img,
-#imageB img,
-#imageC img ,
-#imageD img{
+#imageA,
+#imageB,
+#imageC,
+#imageD{
     width: 100%;
-    height:90%;
-    margin-left: 25px;
+    height:100%;
 }
 
-#answers input {
-    margin-top: 35px;
-    margin-left: 20px;
-}
-
-#answers img{
-    width: 100%;
-}
-
-#A, #B, #C, #D {
-    font-size: 1.3rem;
-    margin-left: 20px;
+.form-container {
+    width: 90%;
+    height: auto;
 }
 
 #fname, #lname {
     width: 90%;
 }
-
 
 #quizRepeat, #exit, #submit{
     font-size: 1.4rem;
@@ -669,10 +647,6 @@ h2#formTitle {
     padding: 30px 10px;
 }
 
-#imageA img, #imageB img, #imageC img, #imageD img {
-    padding-bottom: 30px;
-    padding-top: 15px;
-}
 
 .background-container {
     height: auto;
@@ -690,17 +664,4 @@ h2#formTitle {
 .question-container h3 {
     font-size: 1.75rem;
 }
-
- #answers input{
-    margin-top: 80px;
-    width: 1.8rem;
-    height: 1.8rem;
-}
-}
-
-@media screen and (min-width: 1500px){
-    #home {
-        padding-top: 100px;
-    }
-    
 }
