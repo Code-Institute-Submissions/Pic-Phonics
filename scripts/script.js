@@ -10,7 +10,6 @@ const choiceImageDirectory = "assets/images/words/";
 const questionContainer = document.getElementById('question');
 const qImg = document.getElementById("qImage");
 const lText = document.getElementById("letterText");
-const answerContainer = document.getElementById('answers');
 const TextA = document.getElementById('A');
 const TextB = document.getElementById('B');
 const TextC = document.getElementById('C');
@@ -441,7 +440,8 @@ function playAudio(file){
     document.getElementById('sound').setAttribute('onclick', sounds);
   }
 
-const allChoices = document.querySelectorAll(".choice");
+const choiceContainer = document.querySelector("#answers");
+const allChoices = choiceContainer.querySelectorAll("input","img")
 allChoices.forEach((choice) => {
     choice.addEventListener("click", checkAnswer);
 });
