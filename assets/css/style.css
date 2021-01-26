@@ -182,7 +182,7 @@ hr {
 #home{
     text-align: center;
     height: 100vh;
-    padding-top: 30px;
+    padding-top: 50px;
 }
 
 #home p{
@@ -268,7 +268,7 @@ hr {
     height: auto;
     width: 100%;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .question-container h3 {
@@ -287,9 +287,10 @@ hr {
 }
 
 #qImage img{
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
+    padding: 10px 5px;
     display: flex;  
 }
 
@@ -359,21 +360,19 @@ label {
 }
 
 /*Game Buttons*/
-
-#gameControls.btn-grid {
-  display: grid;
-  grid-template-columns: repeat(1, auto);
-  gap: 10px;
-  margin: 0px auto;
-  padding: 5px;
+#gameControls{
+    margin: 0 auto;
 }
 
-.btn-block#exit, .btn-block#quizRepeat{
-display: inline-block;
-width: 90%;
-justify-content: center;
-margin: 10px 10px;
-padding: 5px;
+#finalBtns.btn-grid {
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 0px auto;
+    padding: 5px;
+    text-align: center;
+    display: block;
+    margin: 10px 10px; 
+    padding: 5px;
 }
 
 #quizRepeat, #exit, #cert{
@@ -384,7 +383,7 @@ padding: 5px;
     font-size: 1.2rem;
     background-color: #f1e318;
     border-radius: 5px;
-    padding: 10px 10px;
+    padding: 5px 5px;
     margin: 10px 0;
 }
 
@@ -406,11 +405,9 @@ padding: 5px;
  /*Form to generate certificate*/
 
  .form-container {
-    width: 100%;
-    height: auto;
     background: #29838f;
     text-align: center;
-    margin: 0 auto;
+    margin: 40px auto;
     padding-bottom: 10px;
 }
 
@@ -419,8 +416,7 @@ h2#formTitle{
     color: #ffee00;
     font-family: "Fredoka One", sans-serif;
     font-size: 1.1rem;
-    padding: 15px 2px;
-    margin: 5px;
+    padding: 10px 2px;
     text-align: center;
     letter-spacing: .1rem;
 }
@@ -430,7 +426,6 @@ h2#formTitle{
     font-weight: 700;
     font-size: 1.3rem;
     color: #ffee00;
-    margin-bottom: 1.5rem;
     text-align: center;
     padding: 5px 5px;
 }
@@ -439,6 +434,11 @@ h2#formTitle{
     padding: 5px;
     font-size: 1.1rem;
 }
+
+.form-control {
+    border-radius: .5rem;
+    font-size: 1.1rem;
+}  
 
 form {
     margin-top: 40px;
@@ -514,7 +514,15 @@ justify-content: center;
 /*Media Queries*/
 
 /*Phones*/
-@media screen and (min-width:320px){
+@media screen and (max-width:320px){
+#home{
+    padding: 20px;
+}
+
+#playGame{
+    font-size: 1.3rem;
+}
+
 #result h3 {
     font-size: 1.3rem;
 }
@@ -524,17 +532,8 @@ justify-content: center;
 
 @media screen and (min-width: 767px){
 
-#home{
-    padding-top: 70px;
-}
-
 .game-container {
-    padding: 15px 10px;
-}
-
-.background-container{
-    height: auto;
-    width: auto;
+    padding: 10px 10px;
 }
 
 h2{
@@ -554,21 +553,8 @@ h2{
     font-size:1.8rem;
 }
 
-#qImage img{
-    width:100%;
-    height:auto;
-}
-
 .answers-container{
    padding: 0;
-}
-
-#imageA,
-#imageB,
-#imageC,
-#imageD{
-    width: 100%;
-    height:100%;
 }
 
 #A, 
@@ -578,45 +564,38 @@ h2{
     font-size: 1.8rem;
 }
 
-.form-container {
-    width: 90%;
-    height: auto;
-}
-
 .form-group{
     padding: 5px 30px;
 }
 
-#quizRepeat, #exit, #submit{
-    font-size: 1.5rem;
-}
 #result{
 height: 100vh;
+padding-top: 30px;
 }
 
 #result h2 {
     font-size: 3rem;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 #result h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    margin-top: 20px;
 }
 
 h2#formTitle {
     margin: 15px;
-    font-size: 1.3rem;
-}
-
-#cert {
     font-size: 1.5rem;
-    margin: 5px 0;
 }
 
-.btn-block#exit, .btn-block#quizRepeat {
-    width: 50%;
-    margin: 15px 15px;
+#finalBtns.btn-grid {
+    display: flex; 
 }
+
+#quizRepeat, #exit, #cert {
+    font-size: 1.7rem;
+}
+
 }
 
 /*Large devices (desktops, 992px and up)*/
@@ -654,6 +633,10 @@ h2#formTitle {
 #C, 
 #D {
     font-size: 2rem;
+}
+
+#quizRepeat, #exit, #submit {
+    font-size: 1.8rem;
 }
 
 .form-group{
