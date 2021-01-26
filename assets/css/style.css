@@ -168,7 +168,6 @@ hr {
     width: auto;
     background: url('../images/abc-image.jpg') no-repeat center center fixed;
     background-size: cover;
-
 }
 
 .opaque-overlay {
@@ -183,6 +182,7 @@ hr {
 #home{
     text-align: center;
     height: 100vh;
+    padding-top: 30px;
 }
 
 #home p{
@@ -195,11 +195,6 @@ hr {
     padding-bottom: 10px;
 }
 
-.btn-lg {
-    line-height: 1.5;
-    border-radius: .3rem;
-}
-
 #playGame{
     cursor: pointer;
     padding-left: 50px;
@@ -208,8 +203,10 @@ hr {
     font-family: "Fredoka One", sans-serif;
     font-weight: bolder;
     font-size: 1.6rem;
+    line-height: 1.5;
+    border-radius: .3rem;
     background-color: #f1e318 ;
-     animation: glowing 1300ms infinite;
+    animation: glowing 1300ms infinite;
 }
 
 /*Glow Effect on PlayGame button - code snippet from W3Docs*/ 
@@ -252,14 +249,13 @@ hr {
     height: auto;
     padding: 15px 5px;
     margin-top: 20px;
-    position: relative;
-   
+    position: relative; 
 }
 
 #score.score-box{
     border-radius: 50px;
     padding: 5px 5px;
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: bolder;
     background-color: #f5e400;
     color: #29838f;
@@ -283,31 +279,25 @@ hr {
     margin: 0;
 }
 
-.image-container{
-   padding: 10px;
-}
-
 #letterText h3{
    font-family: "Fredoka One", sans-serif;
     font-size: 1.5rem; 
     letter-spacing: .1rem;
     padding-top: 15px;    
-
 }
 
 #qImage img{
     width: 90%;
     height: 90%;
     margin: 0 auto;
-    display: flex;
-    
+    display: flex;  
 }
 
 #sound{
     color:#0f8392;
     font-family: "Fredoka One", sans-serif;
     font-weight: bolder;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     background-color: #f1e318 ;
     border-radius: 10px;
     padding: 10px 10px;
@@ -315,12 +305,9 @@ hr {
     display: block   
 }
 
-.answers-container{
+.answers-container {
     text-align: center;
-}
-
-.choice{
-    padding: 5px;
+    padding: 5px 5px;
 }
 
 /* hide the radio button */
@@ -340,18 +327,22 @@ hr {
 #imageB,
 #imageC,
 #imageD{
-    width: 90%;
+    width: 100%;
     height: 100%;
 }
 
-#A,#B,#C,#D {
+#A,
+#B,
+#C,
+#D {
     font-family: "Sniglet",sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
 }
 
-label{
-    display: block;
+label {
+    display: inline-block;
+    margin-bottom: 1rem;
 }
 
 #submit {
@@ -383,7 +374,6 @@ width: 90%;
 justify-content: center;
 margin: 10px 10px;
 padding: 5px;
-
 }
 
 #quizRepeat, #exit, #cert{
@@ -403,7 +393,6 @@ padding: 5px;
  #result{
      height: 100vh;
      width: 100%;
-
  }
 
  #result h2{
@@ -537,22 +526,8 @@ justify-content: center;
 
 /*Phones*/
 @media screen and (min-width:320px){
-#home{
-    padding-top: 25px;
-}
-
 #result h3 {
     font-size: 1.3rem;
-}
-}
-
-@media screen and (min-width:400px){
-#home{
-    padding-top: 75px;
-}
-
-.form-group {
-    margin: 10px 0;
 }
 }
 
@@ -566,7 +541,6 @@ justify-content: center;
 
 .game-container {
     padding: 15px 10px;
-
 }
 
 .background-container{
@@ -575,7 +549,20 @@ justify-content: center;
 }
 
 h2{
-    font-size: 3rem;
+    font-size: 3.5rem;
+}
+
+#home p {
+    font-size: 1.6rem;
+}
+
+#score.score-box {
+    font-size: 1.4rem;
+}
+
+#letterText h3,
+.question-container h3{
+    font-size:1.8rem;
 }
 
 #qImage img{
@@ -584,8 +571,7 @@ h2{
 }
 
 .answers-container{
-    padding-left: 15px;
-    padding-right: 15px;
+   padding: 0;
 }
 
 #imageA,
@@ -594,6 +580,13 @@ h2{
 #imageD{
     width: 100%;
     height:100%;
+}
+
+#A, 
+#B, 
+#C, 
+#D {
+    font-size: 1.8rem;
 }
 
 .form-container {
@@ -637,10 +630,18 @@ h2#formTitle {
 /*Large devices (desktops, 992px and up)*/
 
 @media screen and (min-width: 992px){
+h2 {
+    font-size: 3.5rem;
+}
 
 #home p {
    padding-left:30px ;
    padding-right: 30px;
+   font-size: 1.8rem;
+}
+
+#playGame{
+    font-size: 2rem;
 }
 
 .game-container {
@@ -652,16 +653,28 @@ h2#formTitle {
     height: auto;
 }
 
+#score.score-box {
+    font-size: 1.8rem;
+}
+
+#letterText h3,
+.question-container h3{
+    font-size:2rem;
+}
+
+#sound{
+    font-size: 1.6rem;
+}
+
+#A, 
+#B, 
+#C, 
+#D {
+    font-size: 2rem;
+}
+
 #fname, #lname {
     padding: 20px; 
 }
 
-#letterText h3{
-    font-size: 1.75rem; 
-    
-}
-
-.question-container h3 {
-    font-size: 1.75rem;
-}
 }
