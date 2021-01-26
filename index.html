@@ -19,17 +19,16 @@
             <span id="navbarLogo" class="navbar-brand text-uppercase">
                 <a href="index.html"> Pic Phonics</a>
             </span>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <!--Code snippet from Stackoverflow to solve issue of hamburger menu closing once link is clicked, taken from Orel Eliyahu' on Stack Overflow - https://stackoverflow.com/questions/36405991/bootstrap-toggle-menu-on-one-page-site-does-not-uncollapse-when-clicked-->
-                    <button type="button" id="instructionButton" class="btn btn-primary nav-item"
-                        data-toggle="modal" data-target="#ModalCenterInstructions">
-                        INSTRUCTIONS
-                    </button>
+                    <li class="nav-item" id="instructionButton" data-toggle="collapse" data-target=".navbar-collapse">
+                    <a href="#" class="nav-link" data-toggle="modal" data-target="#ModalCenterInstructions">
+                        INSTRUCTIONS</a>
+                    </li>
                     <li class="nav-item" id="play" data-toggle="collapse" data-target=".navbar-collapse">
                         <a class="nav-link" href="#">PLAY</a>
                     </li>
@@ -43,8 +42,7 @@
     <!--/navigation-->
 
     <!-- Instructions Modal -->
-    <div class="modal fade" id="ModalCenterInstructions" tabindex="-1" role="dialog"
-        aria-labelledby="ModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="ModalCenterInstructions" tabindex="-1" role="dialog" aria-labelledby="ModalCenterInstructions" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -94,9 +92,9 @@
                     <p>An fun interactive game to learn initial phonics sounds</p>
                     <p>Enjoy and have fun!</p>
                     <hr>
-                    <a type="button" href="#" class="btn btn-lg btn-warning play-btn" id="playGame">
+                    <button type="button" class="btn btn-lg btn-warning play-btn" id="playGame">
                         LET'S PLAY! <i class="far fa-smile"></i>
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -122,7 +120,7 @@
                     <div class="choice col-md-6">
                         <label for="choiceA">
                             <input type="radio" name="choices" value="choiceA" id="choiceA">
-                            <img id="imageA" alt="choiceA">
+                            <img src="#" id="imageA" alt="choiceA">
                             <span id="A"></span>
                         </label>
                     </div>
@@ -131,7 +129,7 @@
                     <div class="choice col-md-6">
                         <label for="choiceB">
                             <input type="radio" name="choices" value="choiceB" id="choiceB">
-                            <img id="imageB" alt="choiceB">
+                            <img src="#" id="imageB" alt="choiceB">
                             <span id="B"></span>
                         </label>
                     </div>
@@ -139,7 +137,7 @@
                     <div class="choice col-md-6">
                         <label for="choiceC">
                             <input type="radio" name="choices" value="choiceC" id="choiceC">
-                            <img id="imageC" alt="choiceC">
+                            <img src="#" id="imageC" alt="choiceC">
                             <span id="C"></span>
                         </label>
                     </div>
@@ -147,7 +145,7 @@
                     <div class="choice col-md-6">
                         <label for="choiceD">
                             <input type="radio" name="choices" value="choiceD" id="choiceD">
-                            <img id="imageD" alt="choiceD">
+                            <img src="#" id="imageD" alt="choiceD">
                             <span id="D"></span>
                         </label>
                     </div>
