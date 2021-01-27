@@ -23,82 +23,205 @@ experience. It is a single page
 
 
 ## _Consumer Objectives_
-1. Want child to enjoy a fun, visual and interactive learning experience.
-2. Increase 
+1. For children to have fun and enjoyable experience while learning.
+2. Useful resource to bring ICT elements into the classroom.
+3. Create consistency between school and home learning.
+4. Provide knowledge to parents of classroom learning concepts.
+5. Increase parents engagement in the child's learning experience.
+6. Access to a learning resource that can be used on a variety of different devices.
+7. Access to learning resources that caters for all learning abilities and styles.
+7. Encourage active learning.
+
+### Future Goals 
+1. To have addition levels catering for different age groups.
+2. Add a drawing capability so children can practice writing the letter and words.
+3. Additional resources such as reading materials(access to e-books), songs, rhymes, stories etc.
+4. Including other activities to the platform such as fill in the blanks and audio games to guess the sound/word.
+5. Create a forum space where parents and teachers can discuss phonics and ask questions.
+6. Ability to set up a user account to track and keep a record of progress made.
 
 ## UX
 
-This website was designed as an interactive educational tool for both teachers and parents to help children learn the initial phonics sounds.
+This website was designed as an interactive educational tool for both teachers and parents to help children learn the initial phonics sounds. 
+The look and feel is vibrant and inviting. The website is created as to be userfriendly, easy to navigate, and provide a multisensory learning experience
+to cater for a variety of different learning styles.
 
 ### _User Stories_
-Not enough phonics resources freely available onlinePart of curriculum to incorporate ICT and active learning in the classroom and at home.
-### _Strategy Plane_
-
-### _Scope Plane_
-
-### _Structure Plane_
-
-### Skeleton Plane
-
-### Surface Plane
-
-
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
-
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-
 As a user type, I want to perform an action, so that I can achieve a goal.
 This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
 
+Not enough phonics resources freely available onlinePart of curriculum to incorporate ICT and active learning in the classroom and at home.
+### _Strategy Plane_
+ - Goal of project
+ - Design Vision
+
+### _Scope Plane_
+- Time frame and skills,
+- Easy navigation
+- What website includes/offers
+- Description of features
+
+### _Structure Plane_
+- Structure of website
+- Call to actions
+- What is provided, where why?
+
+### Skeleton Plane
+- It is a one page website with a separate page for the certificate that is generated at the end of the game. It includes 3 different sections,
+when each section is displayed the other sections are hidden until they need to be accessed.
+These sections are as follows:
+- Homepage Section
+- Game Section
+- Results Section
+- Certificate (if the user wishes to generate a certificate after the game is completed)
+
+#### Wireframes mockups
+- [Wireframes](wireframes/wireframes_alldevices.pdf)
+- The initial design for this site has always been the same, simple but vibrant and inviting website with lots of vivid imagery
+, many calls to action, minimal text and easy access to information at any time for ease of use for the user.
+
+### Surface Plane
+#### Colours
+- 
+- 
+
+#### Typography
+- 
+- 
+
+#### Images
+- 
+- 
+
 ## Features
 
-Instructions
-Play game
-Certificate by email
+### Homepage
 
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
+
+
+### Game Page
+
+
+
+
+### Results Page
+
+
+
+### Certificate
+
 
 ## Existing Features
-Feature 1 - allows users X to achieve Y, by having them fill out Z
-...
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+### Navigation Bar & Footer
+
+### Homepage
+
+### Game Page
+
+### Results Page
+
+### Certificate
 
 ## Features Left to Implement
 
-Additional Phonics sounds - other levels
-Additional educational learning games
-Able to select different level functions
+- Additional Phonics sounds - other levels
+- Additional educational learning games
+- Able to select different level functions
 
 ## Technologies Used
-
+### Languages
 HTML5
 CSS 
 JavaScript
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+### Frameworks/Integrations
+- Bootstrap4: Used for the grid layout for the website
+- Font Awesome: Used to add icons to my footer and sections of the website
+- Google Fonts: Used to select the font styles used on the website for the section heading and body.
+- JQuery
+- SweetAlert2: Used to create the alerts for 'correct' and 'incorrect' responses within the game and also as an alert when the user decides to leave the game,
+asking them if they are sure before executing the exitGame function.
 
-JQuery
-The project uses JQuery to simplify DOM manipulation.
-Testing
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+### Workspace
+- GitHub: - (IDE) Integrated Development Environment
+- Gitpod: - Cloud based hosting platform for managing my repositories, tracking changes and storing files.
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+### Other
+- Tinyjpeg: This was used to compress the images used on the website.
+- Balsamiq Wireframes: Used to create wireframes for this project
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+## Testing
 
-Contact form:
-Go to the "Contact Us" page
-Try to submit the empty form and verify that an error message about the required fields appears
-Try to submit the form with an invalid email address and verify that a relevant error message appears
-Try to submit the form with all inputs valid and verify that a success message appears.
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+Validation W3C HTML Markup Validator
+W3C CSS Validator
+JSHint
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+### Tests Carried Out
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+#### User Story Tests
+
+#### Navigation Bar
+
+Navigation links
+
+Navigation bar responsiveness
+
+Navigation Logo link
+
+Hamburger menu closing after link has been selected.
+
+#### Homepage
+Homepage Hero Image Responsiveness
+
+Callout
+
+Let's Play: Call to action
+
+Instructions Modal
+
+Instruction Modal: Scroll Functionality
+
+#### Game Section
+Game Section Responsiveness of images
+
+Game Section Functionality : Images and Text correct from array in JS
+
+Game Section audio
+Button click - Sound
+
+Game section: Select the correct image checkanswer function
+
+Game section: Score 
+
+Game section: Submit Button
+
+#### Results Section
+Results Page Form Validity - name valid
+
+
+Results Page : Background Image Cover
+
+Results Page: Buttons
+
+#### Certificate
+Score generated
+
+Name Generated
+
+#### Footer 
+
+#### General 
+
+Check alt text appears for all images
+Hover over images to see if there is clear alt text visible. 
+Button Functions
+Button Hover: colours
+Conducted spell check 
+Ran code through Autoprefixer and copied code back into css file.
+Ran code on Mobile Friendly Test page and passed all tests. 
+
 
 ## Deployment
 This project was developed using Gitpod IDE, then pushed to GitHub, where the repository is stored.
@@ -125,12 +248,15 @@ From here you can select to either download or clone to a desktop IDE using the 
 ## Credits
 ### Content
 CJ Fallon - Sounds Like Phonics Teachers Resource Book, CJ Fallon Website
+Orlagh Lomasney - Provided voice for the game audio and additional resources and advice on phonics learning
 
 ### Media
-TeachersPay teachers website
-Pexels.com
-The photos used in this site were obtained from ...
+TeachersPay teachers website - letter image from flashcards obtained from the site
+The photos used in this site were obtained from Unsplash.com & Pexels.com
+Audio provided by my sister Orlagh Lomasney
 
 ### Acknowledgements
 I received inspiration for this project from my sister, she is a primary school teacher based in Cork and had discussed with me the lack of available
-interactive resources freely available online for parents and teachers. 
+interactive resources freely available online for parents and teachers.
+My mentor Brian Macharia
+Tim from Tutor Support for his advice, help and guidance. 
