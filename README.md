@@ -82,16 +82,22 @@ These sections are as follows:
 
 ### Surface Plane
 #### Colours
-- 
-- 
+- The colours chosen for this project were based on research of colours that best facilitate children's ability to learn.
+Blue is described as unerverally the best colour to use in learning activities as it can enhance reading compreshension, it is also 
+a calming and relaxing colour and lighter shades create a lighter and positive vibe. Blue drives productivity, it is ideal for highly cognitive 
+and challenging tasks.
+Yellow is a vibrant colour and is shown to grab and maintain children's attention while learning. It generates positive energy and encourages creativity.
+- Other colours I have chosen to use are red and green. Red stimulates energy and green promotes a feeling of relaxation and ease.
 
 #### Typography
-- 
-- 
+- When choosing the typography for this project, I consulted with my sister who is a primary school teacher to get advice on the best typography to use
+when it comes to learning for children. It was important that the text was inviting and visually appealing with an easy to read typeface. In light of this
+advice, I decided to use 'Fredoka One' for the headers and buttons and 'Sniglet' for the body text.
 
 #### Images
-- 
-- 
+- The images for this project were obtained from a couple of different resources. The letter images for each question in the game were sourced from [TeachersPayTeachers.com](https://www.teacherspayteachers.com/Product/Large-Alphabet-Flash-Cards-Capital-Lowercase-1137338?st=1c42baaf6b98ba8c603c374104b2be5b)
+- The images for the choice options in the game were obtained from [Unsplash.com](https://unsplash.com/) and [Pexels.com](https://www.pexels.com/)
+- The background image for the containers was sourced from [Unsplash.com](https://unsplash.com/) 
 
 ## Features
 
