@@ -36,7 +36,7 @@ let score = 0;
 const questions = [
 {
 letterText:"'T'",
-question:"Choose the picture of the word that starts with the letter 'T'?",
+question:"Choose the picture that begins with the letter 'T'?",
 qimage:"Tt.jpg",
 audio: "assets/audio/t.mp3",
 choices:[
@@ -61,7 +61,7 @@ correct:choiceA
 },
 {
 letterText:"'A'",
-question:"Choose the picture of the word that starts with the letter 'A'?",
+question:"Choose the picture that begins with the letter 'A'?",
 qimage: "Aa.jpg",
 audio: "assets/audio/a.mp3",
 choices: [
@@ -86,7 +86,7 @@ correct: choiceD
 },
 {
 letterText:"'S'",
-question:"Choose the picture of the word that starts with the letter 'S'?",
+question:"Choose the picture that begins with the letter 'S'?",
 qimage:"Ss.jpg",
 audio: "assets/audio/s.mp3",
 choices: [
@@ -111,7 +111,7 @@ correct: choiceB
 },
 {
 letterText:"'M'",
-question:"Choose the picture of the word that starts with the letter 'M'?",
+question:"Choose the picture that begins with the letter 'M'?",
 qimage: "Mm.jpg",
 audio: "assets/audio/m.mp3",
 choices: [
@@ -136,7 +136,7 @@ correct:choiceC
 },
 {
 letterText:"'I'",
-question:"Choose the picture of the word that starts with the letter 'I'?",
+question:"Choose the picture that begins with the letter 'I'?",
 qimage:"Ii.jpg",
 audio: "assets/audio/i.mp3",
 choices: [
@@ -153,15 +153,15 @@ choices: [
         choiceText: "DUCK"
     },
     {
-        imageFile:"icecream.jpg",
-        choiceText: "ICE-CREAM",
+        imageFile:"iguana.jpg",
+        choiceText: "IGUANA",
     }
 ],
 correct:choiceD
 },
 {
 letterText:"'H'",
-question:"Choose the picture of the word that starts with the letter 'H'?",
+question:"Choose the picture that begins with the letter 'H'?",
 qimage:"Hh.jpg",
 audio: "assets/audio/h.mp3",
 choices: [
@@ -186,7 +186,7 @@ correct:choiceA
 },
 {
 letterText:"'C'",
-question:"Choose the picture of the word that starts with the letter 'C'?",
+question:"Choose the picture that begins with the letter 'C'?",
 qimage:"Cc.jpg",
 audio: "assets/audio/c.mp3",
 choices: [
@@ -211,7 +211,7 @@ correct:choiceC
 },
 {
 letterText:"'K'",
-question:"Choose the picture of the word that starts with the letter 'K'?",
+question:"Choose the picture that begins with the letter 'K'?",
 qimage:"Kk.jpg",
 audio: "assets/audio/k.mp3",
 choices: [
@@ -236,7 +236,7 @@ correct: choiceD
 },
 {
 letterText:"'O'",
-question:"Choose the picture of the word that starts with the letter 'O'?",
+question:"Choose the picture that begins with the letter 'O'?",
 qimage:"Oo.jpg",
 audio: "assets/audio/o.mp3",
 choices: [
@@ -249,8 +249,8 @@ choices: [
         choiceText: "OCTOPUS",
     },
     {
-        imageFile:"iguana.jpg",
-        choiceText: "IGUANA",
+        imageFile:"ant.jpg",
+        choiceText: "ANT",
     },
     {
         imageFile:"jellyfish.jpg",
@@ -261,7 +261,7 @@ correct:choiceB
 },
 {
 letterText:"'P'",
-question:"Choose the picture of the word that starts with the letter 'P'?",
+question:"Choose the picture that begins with the letter 'P'?",
 qimage:"Pp.jpg",
 audio: "assets/audio/p.mp3",
 choices: [
@@ -287,7 +287,7 @@ correct:choiceD
 },
 {
 letterText:"'L'",
-question:"Choose the picture of the word that starts with the letter 'L'?",
+question:"Choose the picture that begins with the letter 'L'?",
 qimage:"Ll.jpg",
 audio: "assets/audio/l.mp3",
 choices: [
@@ -312,7 +312,7 @@ correct:choiceA
 },
 {
 letterText:"'E'",
-question:"Choose the picture of the word that starts with the letter 'E'?",
+question:"Choose the picture that begins with the letter 'E'?",
 qimage:"Ee.jpg",
 audio: "assets/audio/e.mp3",
 choices: [
@@ -337,7 +337,7 @@ correct:choiceB
 },
 {
 'letterText':"'G'",
-'question':"Choose the picture of the word that starts with the letter 'G'?",
+'question':"Choose the picture that begins with the letter 'G'?",
 'qimage':"Gg.jpg",
 'audio': "assets/audio/g.mp3",
 'choices': [

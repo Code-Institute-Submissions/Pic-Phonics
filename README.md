@@ -1,40 +1,42 @@
 # Pic Phonics
-This project is a multisensory phonics game developed for children, designed to incorporate an auditory, visual and interactive learning experience.
+## Milestone Project 2 - Interactive Frontend development
+---
+## Project Description
+This project is a multisensory phonics game developed for children, designed to incorporate a visual, auditory, and interactive learning experience.
 The idea was developed as an educational tool for both parents and teachers in order to provide an interactive platform for learning phonics that is simple , easy to access, use and understand. It should help children to
 develop their reading comprehension and understanding of the relationship between written letters and spoken words. This game will encourage decoding, reading and writing skills for children of all language abilities.
+The game focuses on initial phonics aimed at chidren between the ages of 3 to 6, with plans to expand it to include options for different levels to allow children to prgress with the learning experience.
 This project combines technology with education in line with the primary school curriculum in Ireland, to incorporate ICT through active learning that makes the experience fun and engaging for children, providing a positive
-experience.
+experience. It is a single page 
 
-## Business Objectives
-- Help kids learn phonics
-- aid in childrens learning of relationships between written letter and spoken words
-- to help read unfamiliar words by themselves
-- provide link between unfamiliar print words to their spoken language
-- provide an interactive platform for interactive phonics learning thats simple, easy to unstand and access.
-- Help young readers develop their reading comprehension skills
-- Encourage parent/child engagement
-- Help parents support their child's learning through the use of active learning by incorporating ICT
-- To support teachers to work together with parents to see the same learning.
-- Combine technology with education
+### _Business Objectives_
+1. Help children to learn letter and sound knowledge using multiple senses.
+2. Assist with children's understanding of the connection between written letter and spoken words.
+3. Provide the necessary resources to allow them to read unfamiliar words by themselves.
+4. Provide a link between unfamiliar print words to their spoken language.
+5. Help young readers develop their reading comprehension skills.
+6. Offer an interactive platform for phonics education thats simple, easy to understand and access.
+7. Encourage parent/child engagement in early learning.
+8. Provide an easily accessible platform that parents can utilise at home to support their child's learning.
+9. To support teachers to bridge the gap between school and home learning.
+10. Incorporate Information & Communications Technology(ICT) through active learning.
 
 
-## Consumer Objectives
-- Want child to enjoy and play an educational game
-- Make learning fun, visual and interactive
-- engagement
-- Not enough phonics resources freely available onlinePart of curriculum to incorporate ICT and active learning in the classroom and at home.
+## _Consumer Objectives_
+1. Want child to enjoy a fun, visual and interactive learning experience.
+2. Increase 
 
 ## UX
 
 This website was designed as an interactive educational tool for both teachers and parents to help children learn the initial phonics sounds.
 
-## User Stories
+### _User Stories_
+Not enough phonics resources freely available onlinePart of curriculum to incorporate ICT and active learning in the classroom and at home.
+### _Strategy Plane_
 
-### Strategy Plane
+### _Scope Plane_
 
-### Scope Plane
-
-### Structure Plane
+### _Structure Plane_
 
 ### Skeleton Plane
 
