@@ -547,11 +547,11 @@ form.classList.add('was-validated');
        }
     });
 
-//Restarts Quiz
-playLink.addEventListener("click", restartQuiz);
-restart.addEventListener("click", restartQuiz);
+//Restarts Game
+playLink.addEventListener("click", restartGame);
+restart.addEventListener("click", restartGame);
 
-function restartQuiz(){
+function restartGame(){
      gameContainer.classList.remove('hide');
     resultsContainer.classList.add('hide');
 
