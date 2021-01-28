@@ -47,24 +47,50 @@ The look and feel is vibrant and inviting. The website is created as to be userf
 to cater for a variety of different learning styles.
 
 ### _User Stories_
-As a user type, I want to perform an action, so that I can achieve a goal.
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+- As a teacher, I would like to have access to an interactive learning platform that would allow me to incorporate ICT and active learning within the classroom. 
 
-Not enough phonics resources freely available onlinePart of curriculum to incorporate ICT and active learning in the classroom and at home.
+- As a teacher, there are not enough phonics resources freely available online that incorporate a multisensory approach to phonics.
+
+- As a teacher, I would like to show children that learning can be fun and enjoyable.
+
+- As a parent, my child like to play games after school on my tablet and I would like if there were more games that included learning aspects to enhance my child's development.
+
+- As a parent, I would like to engage more with my child's learning experience but I do not have the correct knowledge of how theses topics are meant to be taught.
+
+- As a teacher, I would like to strengthen the consistency of schoool and home learning.
+
+- As a parent, I would like to access learning activities for my child that are accessible on multiple device types.
+
 ### _Strategy Plane_
- - Goal of project
- - Design Vision
+ - The aim of the project was to develop a interactive phonics game as an educational tool to help children learn knowledge of the letter sounds. It was designed to be user friendly,
+ easy to navigate and achieved the purpose it was created for, learning initial phonics sounds and the words associated with these sounds. It was extremely important that it also
+ adopted a multisensory approach so that no matter what the learning style or abilities of the user, it had an element that helped them to grasp an understanding of phonics and aided them intheir learning process.
+ For this reason it was essential to include audio, visual and written elements within the game.
 
 ### _Scope Plane_
-- Time frame and skills,
-- Easy navigation
-- What website includes/offers
-- Description of features
+- The priority for this game was to make sure the game worked well, was easy to use and comprehend, achieved the learning outcomes of the phonics curriculum and that all elements 
+were executed to the best of my ability. Given my time frame and skills, I decided to focus on the first two units of the initial phonics sounds aimed at junior infant age range. 
+This includes the letters: T, A, S, M, I, H, C, K, O, P, L, E, and G. The design would be a one page website with an inviting and vibrant homepage with minimal text, a game section that would include 
+questions(letters) and 4 choices for each question using images as the choices and the choice words underneath each picture, it would also include a results section where 
+the user would be able to see the result they achieved on completion of the game and an option to obtain a certificate with their name and score at the end of the game, or
+if they wish, they could restart the game with the intention of learning and improving with each attempt.
+The idea of the certificate was as a reward element for users that they could print out if they wish. As the website is aimed at children it was importnat to make sure it easy to
+read, easy to navigate and the instructions were clear and easily accessible at any point in the game.
+- When it comes to learning, it is crucial to create a platform that caters for all different learning abilities and styles, which is why it was essential that it was a multisensory
+game which includes auditory, visual, written and interactive elements. The choices were designed as images that could be clicked instead of inserting radio buttons, a button is included so 
+users can hear the letter sound as well as see the letter as it would be written(in both upper and lower cases) and underneath the images text that revals the word that each picture represents.
 
 ### _Structure Plane_
-- Structure of website
-- Call to actions
-- What is provided, where why?
+- The structure of the website was designed to be inviting, vibrant and visually attractive to users. There is minimal text used and plenty of
+vivid imagery to capture the attention of the user. The homepage is bright and includes a simple and straightforward navigation bar,
+a full view height background image, a callout to give a brief introduction and tell the user the purpose of the website and a large glowing button
+that draws the attention of the user and invites them to begin the game. The game itself is mainly structured using clear and vibrant images as well as 
+brief text on what the user has to do, these images are clickable which encourages interactivity and enhance visual interpretation skills. The audio elements 
+provided at the click of a button. The has a clear description of it's purpose and allows the usser to hear how the letter sounds when spoken.
+- On completion of the game, a results page is displayed which includes a simple form for the user to complete if they wish to generate a certificate and two
+other buttons that allow the user to restart the game or exit the game if they wish. The instructions are always available on the navbar which is viewable at
+any stage of the game, and are displayed through a pop up scrollable modal.
+The certificate is an extra additon which will allow the user to generate a certificate showing their name and the score they received.
 
 ### Skeleton Plane
 - It is a one page website with a separate page for the certificate that is generated at the end of the game. It includes 3 different sections,
@@ -102,7 +128,11 @@ advice, I decided to use 'Fredoka One' for the headers and buttons and 'Sniglet'
 ## Features
 
 ### Homepage
-
+- The homepage consists of a fixed navigation bar that includes a logo to the left which acts as a link back to the homepage, and three navigation links
+to the right. These links are 'Instructions', 'Play', and 'Exit'. The instructions link when clicked opens up a pop up scrollable modal, which displays the step 
+by step instructions of how the game is to be played. The play link allows the user to start the quiz and the exit link acts as means to exit the game at any point 
+and return to the homepage, this includes an alert when clicked, that asks the user if they are sure they want to exit the game, incase this button was pressed by 
+accident they have the ability to cancel the exit request or confirm it. 
 
 
 
@@ -138,15 +168,15 @@ advice, I decided to use 'Fredoka One' for the headers and buttons and 'Sniglet'
 
 ## Technologies Used
 ### Languages
-HTML5
-CSS 
-JavaScript
+HTML5: This was used to create the structure for both the main page and the certificate that is generated at the end of the game.
+CSS: This was used to style all elements of the website
+JavaScript: This was used extensively to create the game section of the website
 
 ### Frameworks/Integrations
 - Bootstrap4: Used for the grid layout for the website
 - Font Awesome: Used to add icons to my footer and sections of the website
 - Google Fonts: Used to select the font styles used on the website for the section heading and body.
-- JQuery
+- JQuery: Used for the dropdown navigation and also for the modal created to display the game instructions.
 - SweetAlert2: Used to create the alerts for 'correct' and 'incorrect' responses within the game and also as an alert when the user decides to leave the game,
 asking them if they are sure before executing the exitGame function.
 
