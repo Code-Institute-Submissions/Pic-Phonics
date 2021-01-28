@@ -502,8 +502,8 @@ function incorrect() {
 Swal.fire({
   position: 'center',
   icon: 'error',
-  title: 'Incorrect',
-  text:'Do not worry you are just learning! Keep trying, you will get it next time.',
+  title: 'Incorrect...but do not worry',
+  text:'You are just learning! Keep trying, you will get it next time.',
   showConfirmButton: false,
   timer: 2200
 });
@@ -543,7 +543,7 @@ function exitGame() {
           validate.stopPropagation();
         }
        else{
-form.classList.add('was-validated');
+form.classList.add('was-validated'); 
        }
     });
 

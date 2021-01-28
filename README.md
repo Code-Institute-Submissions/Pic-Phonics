@@ -129,14 +129,18 @@ advice, I decided to use 'Fredoka One' for the headers and buttons and 'Sniglet'
 - The background image for the containers was sourced from [Unsplash.com](https://unsplash.com/) 
 
 ## Features
+### Navigation Bar & Footer
+The navigation bar is in a fixed position to make it easy for users to access the navigation elements of the website and allow them to view and access these at any point during or after the game.
+The navbar consists of a logo to the left which acts as a link back to the homepage, and three navigation links to the right. These links are 'Instructions', 'Play', and 'Exit'.logo text to the left 
+which acts as a link to the homepage. The navbar is responsive and the navigation menu collapses into a hamburger menu for both tablet and mobile devices. The footer is fixed at the bottom and contains 
+copyright information located in the center. 
 
 ### Homepage
-- The homepage consists of a fixed navigation bar that includes a logo to the left which acts as a link back to the homepage, and three navigation links
-to the right. These links are 'Instructions', 'Play', and 'Exit'. The instructions link when clicked opens up a pop up scrollable modal, which displays the step 
+- The homepage consists of  The instructions link when clicked opens up a pop up scrollable modal, which displays the step 
 by step instructions of how the game is to be played. The play link allows the user to start the quiz and the exit link acts as means to exit the game at any point 
 and return to the homepage, this includes an alert when clicked, that asks the user if they are sure they want to exit the game, incase this button was pressed by 
 accident they have the ability to cancel the exit request or confirm it. 
-- There is a full width height bright but subtle background image with a callout which is the title of the website and a brief introduction to the purpose of the website.
+- There is a full width height, responsive image. It is a bright but subtle background image with a callout which is the title of the website and a brief introduction to the purpose of the website.
 - Directly under the callout there is a large button 'Let's Play' which is styled to glow to draw  the attention of the user and when clicked takes the user to the 
 game section where the game begins.
 
@@ -144,7 +148,8 @@ game section where the game begins.
 - The game opens immediately when either the 'Let's Play' button or the 'Play' link on the navigation bar is clicked. The game section has the same background image as the homepage but with a blue container for the questions and answers.
 - The game container includes a scorebox where the users score is tracked, a brief sentence stating which letter this question refers to, an image of the letter in both upper and lower cases and adjacent to this is a yellow button 'Click for Letter Sound'
 is placed. This button, once clicked, allows the user to hear the sound of the letter using an audio clip. This functions as an auditory element to aid with linking the written letter with the spoken language.
-- The choices section comprises of a brief statement alerting users to what they must do to select an answer. Then the user is presented with 4 images, these are the choices that they will selct an answer from. These images have been programmed to be clickable.
+- The choices section comprises of a brief statement alerting users to what they must do to select an answer. Then the user is presented with 4 images, these are the choices that they will selct an answer from. The images are responsive and display as a 2 
+column display on larger screens and one column display on smaller devices such as phones. These images have been programmed to be clickable.
 Once a user has selcted an option, they will receive an alert which will be either a 'correct' alert or an 'incorrect' alert. Both alerts feature encouraging messages, so that the user not matter what choice they make will not be discouraged to continue. This is a learning process
 so it is essential to make the user feel at ease and supported through the process.
 - After the answer has been selected, the corresponding words for each image will be revealed to the user for a few seconds to give them a chance to see the words associated with each picture in writing. I chose to hide the text until an answer was selected, as
@@ -170,7 +175,12 @@ also populated into the certificate html file.
 
 ## Existing Features
 
-### Navigation Bar & Footer
+#### General
+The navigation bar is displayed as a fixed top element, and is located at the top of the page at all times for each section. 
+The navigation links are easily accessible and contain the company logo text as a link to the homepage on the far left side of the navigation bar and three navigation links to right hand side with links 'Instructions', 'Play' and 'Exit'.
+The instructions link opens a pop up scrollable modal dialog box containing the instruction for how to play the game, the play link takes the user to the beginning of the game and the exit link opens an alert asking if they want to leave and includes a cancel 
+and confirm button in the alert. If the user clicks cancel it will close the alert and if the user clicks yes to confirm, it directs the user back to the homepage.
+The footer is fixed at the bottom of the screen and contains copyright information displayed in the center of the footer.
 
 ### Homepage
 
