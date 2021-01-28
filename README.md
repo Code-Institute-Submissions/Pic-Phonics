@@ -7,7 +7,8 @@ The idea was developed as an educational tool for both parents and teachers in o
 develop their reading comprehension and understanding of the relationship between written letters and spoken words. This game will encourage decoding, reading and writing skills for children of all language abilities.
 The game focuses on initial phonics aimed at chidren between the ages of 3 to 6, with plans to expand it to include options for different levels to allow children to prgress with the learning experience.
 This project combines technology with education in line with the primary school curriculum in Ireland, to incorporate ICT through active learning that makes the experience fun and engaging for children, providing a positive
-experience. It is a single page 
+experience. Technology is a huge part of society today and children encounter technology at a very young age so it is important to utilise technology to encouage learning and understand that it can be used as a positive resource in
+a child's development. It can be a powerful tool in developing life skills.
 
 ### _Business Objectives_
 1. Help children to learn letter and sound knowledge using multiple senses.
@@ -53,9 +54,11 @@ to cater for a variety of different learning styles.
 
 - As a teacher, I would like to show children that learning can be fun and enjoyable.
 
+- As a teacher, I would like to see more interactive learning that incorporates aspects to fit individual learning needs.
+
 - As a parent, my child like to play games after school on my tablet and I would like if there were more games that included learning aspects to enhance my child's development.
 
-- As a parent, I would like to engage more with my child's learning experience but I do not have the correct knowledge of how theses topics are meant to be taught.
+- As a parent, in the middle of a pandemic, with all the schools closed, I would like to engage more with my child's learning experience but I do not have the correct knowledge of how theses topics are meant to be taught.
 
 - As a teacher, I would like to strengthen the consistency of schoool and home learning.
 
@@ -133,20 +136,37 @@ to the right. These links are 'Instructions', 'Play', and 'Exit'. The instructio
 by step instructions of how the game is to be played. The play link allows the user to start the quiz and the exit link acts as means to exit the game at any point 
 and return to the homepage, this includes an alert when clicked, that asks the user if they are sure they want to exit the game, incase this button was pressed by 
 accident they have the ability to cancel the exit request or confirm it. 
-
-
+- There is a full width height bright but subtle background image with a callout which is the title of the website and a brief introduction to the purpose of the website.
+- Directly under the callout there is a large button 'Let's Play' which is styled to glow to draw  the attention of the user and when clicked takes the user to the 
+game section where the game begins.
 
 ### Game Page
-
-
-
+- The game opens immediately when either the 'Let's Play' button or the 'Play' link on the navigation bar is clicked. The game section has the same background image as the homepage but with a blue container for the questions and answers.
+- The game container includes a scorebox where the users score is tracked, a brief sentence stating which letter this question refers to, an image of the letter in both upper and lower cases and adjacent to this is a yellow button 'Click for Letter Sound'
+is placed. This button, once clicked, allows the user to hear the sound of the letter using an audio clip. This functions as an auditory element to aid with linking the written letter with the spoken language.
+- The choices section comprises of a brief statement alerting users to what they must do to select an answer. Then the user is presented with 4 images, these are the choices that they will selct an answer from. These images have been programmed to be clickable.
+Once a user has selcted an option, they will receive an alert which will be either a 'correct' alert or an 'incorrect' alert. Both alerts feature encouraging messages, so that the user not matter what choice they make will not be discouraged to continue. This is a learning process
+so it is essential to make the user feel at ease and supported through the process.
+- After the answer has been selected, the corresponding words for each image will be revealed to the user for a few seconds to give them a chance to see the words associated with each picture in writing. I chose to hide the text until an answer was selected, as
+the written text will give the answer away and defeat the learning outcomes. 
+- I have programmed a set timeout function to give the user time to view the text before the next question is displayed on the screen.
+- When all questions have been answered and the game has come to a close, a 'Submit' button appears at the end of the container that will give the user the ability to submit their choices to receive a total score in percentage format.
 
 ### Results Page
-
-
+- The results section is displayed once the 'Submit' button has been clicked. This consists of the same background image on the homepage with a title 'Results'
+and directly underneath this, the user result is displayed. The result is shown as follows: "You have scored 70% in the Pic Phonics Initial Sounds Game".
+- Below this is a form container coloured blue that includes 2 input values: 'First Name' and 'Last Name', these inputs are required if the user decides they would like to generate a certificate of their results. This form is validated so the user will not be able to select the 'Get Certificate'
+button if these input fields are empty.
+- In order to generate a certificate of their results I have included a 'Get Certificate' button below the input fields, which has been programmed to get the input values inserted and the user's scoore and displayed this on a separate html document created in the form of a certificate.
+- Another feature that is included in the results section are two buttons displayed at the end of the container: One called 'Exit' and the other called 'Restart Game'.
+- The 'Exit' button when clicked will trigger an alert that will ask the user if they are sure they would like to leave the game. The alert then contains a cancel button and a confirm button. If the user confirms they would like to leave the game, then they will be taken directly back to the homepage.
+- The 'Restart Game' button when clicked, will take the user back to the beginning of the game and will display the game container and first question, this will also prompt the score to reset.
 
 ### Certificate
-
+- The certificate element of the game was designed to create a personalised certificate for each user and is populated using the input fields in the result section to identify and obtain the user's name and the user score that the user receives in the game is 
+also populated into the certificate html file. 
+- The user can then save this certificate as a pdf or can be printed directly from the browser, if the user wishes to do so.
+- The certificate contains the company name, the user name, the name of the game, the score and the company logo.
 
 ## Existing Features
 
