@@ -217,6 +217,12 @@ The certificate is optional for users and is only displayed if the user decides 
 - Additional Phonics sounds - other levels
 - Additional educational learning games
 - Able to select different level functions
+- Add a drawing capability so children can practice writing the letter and words.
+- Additional resources such as reading materials(access to e-books), songs, rhymes, stories etc.
+- Additional activities such as fill in the blanks and audio games to guess the sound/word.
+- Create a forum space where parents and teachers can discuss phonics and ask questions.
+- Ability to set up a user account to track and keep a record of progress made.
+
 
 ## Technologies Used
 ### Languages
@@ -258,7 +264,9 @@ The other error that was showing up was an undefined variable for the Swal varia
 
 ### Tests Carried Out
 
+
 #### User Story Tests
+
 
 #### Navigation Bar
 
@@ -287,6 +295,7 @@ Game Section Responsiveness of images
 Game Section Functionality : Images and Text correct from array in JS
 
 Game Section audio
+
 Button click - Sound
 
 Game section: Select the correct image checkanswer function
@@ -309,7 +318,7 @@ Score generated
 Name Generated
 
 #### Footer 
-
+Responsiveness of footer
 #### General 
 
 Check alt text appears for all images
@@ -320,6 +329,26 @@ Conducted spell check
 Ran code through Autoprefixer and copied code back into css file.
 Ran code on Mobile Friendly Test page and passed all tests. 
 
+#### Issues Encountered
+*Image Click to select an Answer*
+- I initially had set up the answers as radio buttons, but as this game is intended for children, I thought that having the ability to click the image would be more appealing and fun for them. So I attempted to add the image as a label for the radio button so that when clicked would also check the radio button element. However it was not working as I had set up the input in html and
+the label was being generated from the Javascript file and therefore not wrapping around the input tag in html. It was causing a bit of an issue so I contacted tutuor support for advice. From that discussion I decided to set up the label tag in the html file, which included the input, image tag and a span tag with the image text in it, within the label tag. I set up four of these inside 
+a div with a class of choice for the four options for each question. Then I was able to define the image src and alt tags from my Javascript file using the choices array to populate these choice containers. Using CSS I was able to hide the radio button element and this solved the first issue. Now when you click the image choice as an answer, the input tag is checked but this is hidden from browser.
+- Another element that needed to be addressed was that I had set up a for each loop on the node list within the choice container, which did what it was supposed to do but in order to check the answer, however it was causing the game to skip every second question. I did some research and identified that everytime I was looping through the node list the span item which is programmed to be hidden then 
+revealed on answer selection was causing the game to skip every second element in the questions array. I was able to rectify the issue by changing the for loop to only iterate through all images and inputs within the answers container. This worked and the game no longer is skipping any question. The solution was found on [MDN Web Docs](https://developer.mozilla.org/en-us/docs/web/API/Document/querySelectorAll)
+
+*Audio on Button Click (Game Section)*
+- While trying to set up the audio element for this project, I encountered an issue when testing the audio in the game. I included the audio files as part of my questions array of objects, however it would only play the first audio file no matter what question was being displayed. There was an issue, itterating through the arry of object to locate each audio file. 
+I decided to do some research on this as I had been informed that audio can be quite tricky to implement. So I came across a code snippet on [Stack Overflow](https://stackoverflow.com/questions/9419263/how-to-play-audio) and I created an audio element directly from Javascript using an Audio constructor and called the play method. I then set up a event listener on the 'Click for Letter Sound' button that would call the
+set Audio function when clicked. Each audio sound now plays with it's corresponding question when the button is pressed.
+
+*Certificate showing input values - separate js file*
+- I encountered an issue when trying to set up my certificate section of the game. I needed to store the input values from the form in the results container which I managed to set up using local storage and then getting the items and populating the certificate html with these inputs. However when I tried to call these from the script.js file it was not generating correctly to the certifcate so I decided to set up an indiviual 
+Javascript file for the certificate html called certificate.js. This solved the issue and now the cert is personalised with each users name and score when they complete the game and sign up if they wish for the optional certificate element.
+
+*Using 'for of' loop for questions array*
+- When I first started this project, I was had set up a standard for loop to iterate through my questions array. This worked as intended, however my mentor suggested that I use a for of loop as an alternative as it was a more proficient way to loop through the array. I did attempt to implement the 'for of' loop, however, I struggled to get it to work. The problems I was encountering were that the answer images were either showing up duplicated in each 
+choice container or only the last image would display for me. I did make several attempts to execute this change, but given my timeframe with my project deadline, it was taken up too much valuable time I needed to complete my project so I had to revert back to the original for loop that I had started the project with. It would have been nice to implement something new and hopefully will get to use this method in another project going forward.
 
 ## Deployment
 This project was developed using Gitpod IDE, then pushed to GitHub, where the repository is stored.
