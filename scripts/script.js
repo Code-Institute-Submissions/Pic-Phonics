@@ -9,6 +9,7 @@ const questionImageDirectory = "assets/images/letters/";
 const choiceImageDirectory = "assets/images/words/";
 const questionContainer = document.getElementById('question');
 const qImg = document.getElementById("qImage");
+const soundButton = document.getElementById("sound");
 const lText = document.getElementById("letterText");
 const TextA = document.getElementById('A');
 const TextB = document.getElementById('B');
@@ -28,9 +29,9 @@ const scoreContainer = document.getElementById('scoreContainer');
 const exit = document.getElementById("exit");
 const restart = document.getElementById("quizRepeat");
 const cert = document.getElementById("cert");
-const certScore = document.getElementById("certScore");
 const form = document.getElementById("certForm");
 let score = 0;
+let swal;
 
 //Questions Object Array
 const questions = [
@@ -363,7 +364,6 @@ correct:choiceD,
 ];
 
 let currentQuestion = 0;
-const lastQuestion = questions.length - 1;
 
 //Event Listeners
 playButton.addEventListener('click', playGame);
@@ -374,7 +374,6 @@ function playGame() {
   document.getElementById("home").classList.add('hide');
   document.getElementById("overlay").classList.add('hide');
   document.getElementById("background").classList.remove('hide');
-  currentQuestionIndex = 0;
   score = 0;
   gameContainer.classList.remove('hide');
   renderQuestion();
@@ -389,7 +388,7 @@ function renderQuestion(){
 
      //Questions   
     lText.innerHTML = `<h3> This is the letter ${q.letterText} </h3>`;
-    question.innerHTML = `<h3> ${q.question} </h3>`;
+    questionContainer.innerHTML = `<h3> ${q.question} </h3>`;
     qImg.innerHTML = `<img src= ${questionImageDirectory}${q.qimage} alt = ${q.letterText} >`;
 
     //Choices
@@ -414,7 +413,7 @@ function renderQuestion(){
     scoreCount.innerHTML=`Score: ${score}`;
     
     }
-    setAudio();
+    soundButton.addEventListener('click', setAudio);
 }
 
 //Renders the next question in the quiz
@@ -424,9 +423,8 @@ function nextQuestion(){
      }
      else{
         renderQuestion(questions[currentQuestion++]);
-        setAudio();
      }
-};
+}
 
 //Functions to locate and play audio files
 function playAudio(file){
@@ -435,13 +433,15 @@ function playAudio(file){
   }
   
   function setAudio(){
-    let audioFile = questions[currentQuestion].audio
-    let sounds = "playAudio(\'" + audioFile + "\')";
-    document.getElementById('sound').setAttribute('onclick', sounds);
+    let audioFile = questions[currentQuestion].audio;
+    let sounds = playAudio(audioFile);
   }
 
+  
+
+//For each loop on choices
 const choiceContainer = document.querySelector("#answers");
-const allChoices = choiceContainer.querySelectorAll("input","img")
+const allChoices = choiceContainer.querySelectorAll("input","img");
 allChoices.forEach((choice) => {
     choice.addEventListener("click", checkAnswer);
 });
@@ -509,6 +509,8 @@ Swal.fire({
 });
   
 }
+//Event Listener for showing results on Submit button click
+submitButton.addEventListener('click', showResult);
 
 //Shows the users result on completion of the quiz in percentage format
 function showResult( ){
@@ -532,7 +534,7 @@ function exitGame() {
   confirmButtonText: `Leave`,
 }).then((result) => {
   if (result.isConfirmed) {
-    location.href= "index.html"
+    location.href= "index.html";
 }});
 }
 
@@ -559,19 +561,21 @@ function restartGame(){
 function resetGame() {
          submitButton.classList.add('hide');
         currentQuestion = 0;
-        score = 0
-        playGame()
-    };
+        score = 0;
+        playGame();
+    }
     resetGame();
 }
   
 //Cert Result JS - Gets input values and inserts onto certificate html
+cert.addEventListener('click', getName);
+
 function getName() {
         let firstName = document.getElementById("fname").value;
         let lastName = document.getElementById("lname").value;
         localStorage.setItem("fname", firstName);
         localStorage.setItem("lname", lastName);
-      }
+      
       function loadName() {
         let firstName = localStorage.getItem("fname");
         document.getElementById("fname").value = firstName;
@@ -579,5 +583,6 @@ function getName() {
        let lastName = localStorage.getItem("lname");
          document.getElementById("lname").value = lastName;
       }
-
+      loadName();
+    }
      

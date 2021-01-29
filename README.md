@@ -96,7 +96,7 @@ any stage of the game, and are displayed through a pop up scrollable modal.
 The certificate is an extra additon which will allow the user to generate a certificate showing their name and the score they received.
 
 ### Skeleton Plane
-- It is a one page website with a separate page for the certificate that is generated at the end of the game. It includes 3 different sections,
+It is a one page website with a separate page for the certificate that is generated at the end of the game. It includes 3 different sections,
 when each section is displayed the other sections are hidden until they need to be accessed.
 These sections are as follows:
 - Homepage Section
@@ -176,14 +176,14 @@ also populated into the certificate html file.
 ## Existing Features
 
 #### General
-The navigation bar is displayed as a fixed top element, and is located at the top of the page at all times for each section. 
-The navigation links are easily accessible and contain the company logo text as a link to the homepage on the far left side of the navigation bar and three navigation links to right hand side with links 'Instructions', 'Play' and 'Exit'.
-The instructions link opens a pop up scrollable modal dialog box containing the instruction for how to play the game, the play link takes the user to the beginning of the game and the exit link opens an alert asking if they want to leave 
+- The navigation bar is displayed as a fixed top element, and is located at the top of the page at all times for each section. 
+- The navigation links are easily accessible and contain the company logo text as a link to the homepage on the far left side of the navigation bar and three navigation links to right hand side with links 'Instructions', 'Play' and 'Exit'.
+- The instructions link opens a pop up scrollable modal dialog box containing the instruction for how to play the game, the play link takes the user to the beginning of the game and the exit link opens an alert asking if they want to leave 
 and includes a cancel and confirm button in the alert. If the user clicks cancel it will close the alert and if the user clicks yes to confirm, it directs the user back to the homepage.
-The footer is fixed at the bottom of the screen and contains copyright information displayed in the center of the footer.
+- The footer is fixed at the bottom of the screen and contains copyright information displayed in the center of the footer.
 
 ### Homepage
-The homepage is designed with a full width height hero image of letter blocks with an opaque overlay, a callout that provides a brief introduction to the user about the purpose of the game and a large glowing button labeled 'Let's Play', that draws the attention of the user
+- The homepage is designed with a full width height hero image of letter blocks with an opaque overlay, a callout that provides a brief introduction to the user about the purpose of the game and a large glowing button labeled 'Let's Play', that draws the attention of the user
 and once clicked starts the game by taking the user to the game section and displaying the first question.
 
 ### Game Section
@@ -241,10 +241,19 @@ asking them if they are sure before executing the exitGame function.
 - Balsamiq Wireframes: Used to create wireframes for this project
 
 ## Testing
-
 Validation W3C HTML Markup Validator
+- Ran code through the HTML validator and it was displaying an error with using a a tag with a button type so I changed the html file to make the nav link an a tag and removed type = button.
+The 'Let's Play' button was showing the same error so I removed the a tag and left it as a button tag which resolved both issues.
+- The other error that was showing up was that there was no source for the image tags. The src attributes for the image tags in the html document were being allocated from the Javascript file.
+I did some research on this and found a solution on [StackOverflow](https://stackoverflow.com/questions/30658663/bad-value-for-attribute-src-on-element-img-must-be-non-empty-for-dynamically) and 
+added a '#' to the src in the html which is then populated with the correct image source from the Javascript file.
+- I ran my updated code back through the HTML validator and I found no errors.
+
 W3C CSS Validator
+- I ran my CSS code through the validator and it found no errors.
+
 JSHint
+- 
 
 ### Tests Carried Out
 
