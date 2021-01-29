@@ -241,7 +241,7 @@ asking them if they are sure before executing the exitGame function.
 - Balsamiq Wireframes: Used to create wireframes for this project
 
 ## Testing
-Validation W3C HTML Markup Validator
+*_ Validation W3C HTML Markup Validator_*
 - Ran code through the HTML validator and it was displaying an error with using a a tag with a button type so I changed the html file to make the nav link an a tag and removed type = button.
 The 'Let's Play' button was showing the same error so I removed the a tag and left it as a button tag which resolved both issues.
 - The other error that was showing up was that there was no source for the image tags. The src attributes for the image tags in the html document were being allocated from the Javascript file.
@@ -253,7 +253,8 @@ W3C CSS Validator
 - I ran my CSS code through the validator and it found no errors.
 
 JSHint
-- 
+- When I first ran my Javascript code through JS Hint, it showed a few errors with unused variables, so I removed any unnecessary variables that were still in my code and these eroors were rectified.
+The other error that was showing up was an undefined variable for the Swal variable used in my sweet alert messages.
 
 ### Tests Carried Out
 

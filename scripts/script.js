@@ -31,7 +31,6 @@ const restart = document.getElementById("quizRepeat");
 const cert = document.getElementById("cert");
 const form = document.getElementById("certForm");
 let score = 0;
-let swal;
 
 //Questions Object Array
 const questions = [
@@ -434,10 +433,8 @@ function playAudio(file){
   
   function setAudio(){
     let audioFile = questions[currentQuestion].audio;
-    let sounds = playAudio(audioFile);
+    playAudio(audioFile);
   }
-
-  
 
 //For each loop on choices
 const choiceContainer = document.querySelector("#answers");
@@ -486,7 +483,7 @@ function checkAnswer() {
 // Alert if user selects correct answer
 function correct() {
 
-    Swal.fire({
+ Swal.fire({
     position: 'center',
     icon: 'success',
     title: 'Correct! Well Done!',
@@ -499,13 +496,13 @@ function correct() {
 
 // Alert if user selects incorrect answer
 function incorrect() {
-Swal.fire({
-  position: 'center',
-  icon: 'error',
-  title: 'Incorrect...but do not worry',
-  text:'You are just learning! Keep trying, you will get it next time.',
-  showConfirmButton: false,
-  timer: 2200
+ Swal.fire({
+    position: 'center',
+    icon: 'error',
+    title: 'Incorrect...but do not worry',
+    text:'You are just learning! Keep trying, you will get it next time.',
+    showConfirmButton: false,
+    timer: 2200
 });
   
 }
@@ -529,12 +526,12 @@ exit.addEventListener("click", exitGame);
 
 function exitGame() {
     Swal.fire({
-  title: 'Are you sure you want to leave?',
-  showCancelButton: true,
-  confirmButtonText: `Leave`,
+        title: 'Are you sure you want to leave?',
+        showCancelButton: true,
+        confirmButtonText: `Leave`,
 }).then((result) => {
   if (result.isConfirmed) {
-    location.href= "index.html";
+        location.href= "index.html";
 }});
 }
 
