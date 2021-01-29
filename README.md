@@ -23,7 +23,7 @@ a child's development. It can be a powerful tool in developing life skills.
 10. Incorporate Information & Communications Technology(ICT) through active learning.
 
 
-## _Consumer Objectives_
+### _Consumer Objectives_
 1. For children to have fun and enjoyable experience while learning.
 2. Useful resource to bring ICT elements into the classroom.
 3. Create consistency between school and home learning.
@@ -144,7 +144,7 @@ accident they have the ability to cancel the exit request or confirm it.
 - Directly under the callout there is a large button 'Let's Play' which is styled to glow to draw  the attention of the user and when clicked takes the user to the 
 game section where the game begins.
 
-### Game Page
+### Game Section
 - The game opens immediately when either the 'Let's Play' button or the 'Play' link on the navigation bar is clicked. The game section has the same background image as the homepage but with a blue container for the questions and answers.
 - The game container includes a scorebox where the users score is tracked, a brief sentence stating which letter this question refers to, an image of the letter in both upper and lower cases and adjacent to this is a yellow button 'Click for Letter Sound'
 is placed. This button, once clicked, allows the user to hear the sound of the letter using an audio clip. This functions as an auditory element to aid with linking the written letter with the spoken language.
@@ -157,7 +157,7 @@ the written text will give the answer away and defeat the learning outcomes.
 - I have programmed a set timeout function to give the user time to view the text before the next question is displayed on the screen.
 - When all questions have been answered and the game has come to a close, a 'Submit' button appears at the end of the container that will give the user the ability to submit their choices to receive a total score in percentage format.
 
-### Results Page
+### Results Section
 - The results section is displayed once the 'Submit' button has been clicked. This consists of the same background image on the homepage with a title 'Results'
 and directly underneath this, the user result is displayed. The result is shown as follows: "You have scored 70% in the Pic Phonics Initial Sounds Game".
 - Below this is a form container coloured blue that includes 2 input values: 'First Name' and 'Last Name', these inputs are required if the user decides they would like to generate a certificate of their results. This form is validated so the user will not be able to select the 'Get Certificate'
@@ -178,17 +178,39 @@ also populated into the certificate html file.
 #### General
 The navigation bar is displayed as a fixed top element, and is located at the top of the page at all times for each section. 
 The navigation links are easily accessible and contain the company logo text as a link to the homepage on the far left side of the navigation bar and three navigation links to right hand side with links 'Instructions', 'Play' and 'Exit'.
-The instructions link opens a pop up scrollable modal dialog box containing the instruction for how to play the game, the play link takes the user to the beginning of the game and the exit link opens an alert asking if they want to leave and includes a cancel 
-and confirm button in the alert. If the user clicks cancel it will close the alert and if the user clicks yes to confirm, it directs the user back to the homepage.
+The instructions link opens a pop up scrollable modal dialog box containing the instruction for how to play the game, the play link takes the user to the beginning of the game and the exit link opens an alert asking if they want to leave 
+and includes a cancel and confirm button in the alert. If the user clicks cancel it will close the alert and if the user clicks yes to confirm, it directs the user back to the homepage.
 The footer is fixed at the bottom of the screen and contains copyright information displayed in the center of the footer.
 
 ### Homepage
+The homepage is designed with a full width height hero image of letter blocks with an opaque overlay, a callout that provides a brief introduction to the user about the purpose of the game and a large glowing button labeled 'Let's Play', that draws the attention of the user
+and once clicked starts the game by taking the user to the game section and displaying the first question.
 
-### Game Page
+### Game Section
+- The game section is a container that has a score container which is full width at the top which displays the user's score throughout the game. Undernath this there is a statement that declares which letter is being shown in the image directly below it. This image is located within 
+a three column display with the first column empty, the second column containing the letter image in both upper and lower case and the third column holds the audio button ' Click to hear letter sound'. This button when pressed allows the user to hear audio of their
+letter sound spoken.
+- Underneath this, is the question container, which is a brief description in text, telling the user what is required to answer the question.
+- The answers container is displayed below this which contains 4 images. It is designed using four columns, one per image, each 50% width of the game container. On larger screens it will be displayed showing 2 images side by side on top and 2 images side by side on the bottom, a grid of four images.
+On smaller screens the images are displayed in a one column block formation one after the other. The answers were designed as radio buttons with the image, input and span text wrapped inside a label tag and using CSS the radioo button element was hidden. This allows the image to act as a radio button,
+when the image is clicked, the radio button element is also checked.
+- When a user selects an answer by clicking an image, the span text revealing the item in the image in text format, there is a brief timeout set and then the next question is displayed automatically. If the user selects the correct answer, they will receive an alert, and also a score of 1 will be added to the score box at the top of the game container.
+- If the user selects the incorrect answer, they will also receive an alert, however no score points will be added to the score container. Both alerts contain positive feedback messages encouraging the user to continue in the game.
+- At the final question, after the user selects an answer, a 'Submit' button is displayed at the end of the game container. This when clicked, will take the user directly to the results section of the website.
 
-### Results Page
+### Results Section
+- The results section has a background container that displays the same background image as the homepage, with a section header 'Result' displayed at the top of the page. Directly underneath this, there is a brief statement telling the user the overall result they scored, in percentage format from the game. This statement is 'You have scored 70% in the
+Pic Phonics Initial Sounds Game'
+- Below this is a form container that has a sub-heading stating that the user can fill in their details if they wish to generate a certificate for their game results. This form has two input fields: 'First Name' and 'Last Name' and a 'Get Certificate' submit button. This button is only functional if the user completes both input fields, otherwsie they will 
+be prompted to complete each field in order to generate the certificate. If they input fields are filled in correctly then the 'Get Certificate' button when pressed will take the user directly to the certificate page, which will open in a blank tab for user convenience. This certificate is populated with the user input name and the score they received.
+- Also include in the results section at the bottom of the section, is a 2 button grid that contains a 'Exit Game' button and a 'Restart Game' button. The 'Exit Game' button, if selected will create a pop up alert asking the user if they wish to leave the game. The user has a choice to cancel the request by selecting the cancel button on the alert, or the choice 
+to confirm the request by selecting the 'yes' button on the alert. Upon confirmation to leave the game, the user will be taken directly back to the homepage. The 'Restart Game' button, if selected will automatically reset the game container, which will clear the previous score and begin the game again by displaying game container and the first question in the game.
 
 ### Certificate
+The certificate is a separate html file created and designed to display as a certificate specifically for the game. It is populated using Javascript local storage to store the user input values in the form container in the results section and also obtain the user score results.
+The input values are stored using local storage and a separate Javascript file was created to get these items and display them in the certifcate html.
+The certificate is a personalised addition to the game which will show the users name and their individual score each time they want to generate a certificate for their result.
+The certificate is optional for users and is only displayed if the user decides they wish to complete the form in the results container and after they have selected the 'Get Certificate' button underneath the form inputs.
 
 ## Features Left to Implement
 
@@ -198,9 +220,9 @@ The footer is fixed at the bottom of the screen and contains copyright informati
 
 ## Technologies Used
 ### Languages
-HTML5: This was used to create the structure for both the main page and the certificate that is generated at the end of the game.
-CSS: This was used to style all elements of the website
-JavaScript: This was used extensively to create the game section of the website
+- HTML5: This was used to create the structure for both the main page and the certificate that is generated at the end of the game.
+- CSS: This was used to style all elements of the website
+- JavaScript: This was used extensively to create the game section of the website
 
 ### Frameworks/Integrations
 - Bootstrap4: Used for the grid layout for the website
@@ -294,32 +316,44 @@ This project was developed using Gitpod IDE, then pushed to GitHub, where the re
 
 ### Project Deployment
 
-The following steps outline how the project was deployed to GitHub pages:
+##### The following steps outline how the project was deployed to GitHub pages:
 
-Logged on to GitHub
-Opened the repository Lomasney-Motors-1.0
-Clicked on the settings tab on the right-hand side of menu.
-Scrolled down the page until I reached the GitHub Pages section.
-Under 'source' I selected the branch drop-down menu.
-I selected the 'Master' branch and clicked the 'Save' button.
-This allowed the site to be published to GitHub pages and url for the site was displayed in a box above the source section.
-The deployed version and the development version of this project are the same.
+1. Logged on to GitHub
+2. Opened the repository Lomasney-Motors-1.0
+3. Clicked on the settings tab on the right-hand side of menu.
+4. Scrolled down the page until I reached the GitHub Pages section.
+5. Under 'source' I selected the branch drop-down menu.
+6. I selected the 'Master' branch and clicked the 'Save' button.
+7. This allowed the site to be published to GitHub pages and url for the site was displayed in a box above the source section.
+8. The deployed version and the development version of this project are the same.
 
-To run the project locally:
+##### To run the project locally:
 
-Open this link to the Project Repository
-Click on the 'Code' button at the top.
-From here you can select to either download or clone to a desktop IDE using the url provided.
+1. Open this link to the Project Repository
+2. Click on the 'Code' button at the top.
+3. From here you can select to either download or clone to a desktop IDE using the url provided.
 
 ## Credits
 ### Content
-CJ Fallon - Sounds Like Phonics Teachers Resource Book, CJ Fallon Website
-Orlagh Lomasney - Provided voice for the game audio and additional resources and advice on phonics learning
+- CJ Fallon - Sounds Like Phonics Teachers Resource Book, CJ Fallon Website
+- Orlagh Lomasney - Provided voice for the game audio and additional resources and advice on phonics learning
 
 ### Media
-TeachersPay teachers website - letter image from flashcards obtained from the site
-The photos used in this site were obtained from Unsplash.com & Pexels.com
-Audio provided by my sister Orlagh Lomasney
+- TeachersPay teachers website - letter image from flashcards obtained from the site
+- The photos used in this site were obtained from Unsplash.com & Pexels.com
+- Audio provided by my sister Orlagh Lomasney
+
+### Resources
+- Code Institute Content
+- Slack Community
+- Bootstrap Documentation
+- WW3 Schools
+- Stack Overflow 
+- YouTube
+- Balsamiq Wireframes
+- CSS Tricks 
+- Orlagh Lomasney - primary school teacher
+- Sounds Like Phonics - CJ Fallon 
 
 ### Acknowledgements
 I received inspiration for this project from my sister, she is a primary school teacher based in Cork and had discussed with me the lack of available
