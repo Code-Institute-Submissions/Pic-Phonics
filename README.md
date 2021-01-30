@@ -1,7 +1,7 @@
 # Pic Phonics
 
 You can check out Pic Phonics website here:
-## **Milestone Project 2 - Interactive Frontend development**
+## **_Milestone Project 2 - Interactive Frontend development_**
 ---
 ## **Project Description**
 This project is a multisensory phonics game developed for children, designed to incorporate a visual, auditory, and interactive learning experience.
@@ -278,113 +278,281 @@ The other error that was showing up was an undefined variable for the Swal varia
 
 #### User Story Tests
 **_As a teacher, I would like to have access to an interactive learning platform that would allow me to incorporate ICT and active learning within the classroom._**
+
+
 This website provides an interactive phonics game that can be incorporate into classroom phonics lesson. It has the ability to hear the sound as spoken in the English language, see and touch the images and read the associated written words.
 
 **_As a teacher, there are not enough phonics resources freely available online that incorporate a multisensory approach to phonics._**
+
+
 This website is easily accessible, currently free to access and uses audio, visual, interactive and written elements as part of the design.
 
 **_As a teacher, I would like to show children that learning can be fun and enjoyable._**
+
+
 The website is a designed as an educational game where the users can learn phonics while also enjoying the experience by immerseing themselves in the interactive elements provided.i.e clicking images, ability to hear audio at the click of a button  while also learning 
 different sounds and words, getting familiar with using technology and developing important life skills.
 
 **_As a teacher, I would like to see more interactive learning that incorporates aspects to fit individual learning needs._**
+
+
 This objective has been met as the project includes a variety of elements that help the user to learn. By including a range of audio, visual, interactive and written elements, it allows for a variety of different learning styles that can aid users understand and develop their reading comprehension
 and build on their letter and sound knowledge.
 
 **_As a parent, my child like to play games after school on my tablet and I would like if there were more games that included learning aspects to enhance my child's development._**
+
+
 Children today are introduced to technology at a very early stage and spending time on tablets and playing games has become a daily part of their lives. However not all games provide an educational aspect to them and that's why this website using technology as an educational tool so that users 
 can enjoy the online game aspect while also helping to develop their cognitive skills. The game acts as a regular game with a scoring element and questions but the content is teaching them the intial phonics sounds.
 
 **_As a parent, in the middle of a pandemic, with all the schools closed, I would like to engage more with my child's learning experience but I do not have the correct knowledge of how theses topics are meant to be taught._**
+
+
 In this current climate with COVID-19, it is the perfect opportunity to develop a platform like this one as many parents have found themselves in a situation where children needs to be taught from home. Most parents are unaware of the correct way to teach these elements in a home setting.
 This game provides parents with an educational tool that has been developed with the school curriculum knowledge that will aid in their ability to continue the classroom learning at home and encourage their children that learning should be enjoyable. 
 
 **_As a teacher, I would like to strengthen the consistency of schoool and home learning._**
+
+
 This platform can be utilised anywhere, both in a classroom and home setting. With the hope to implement my future goals for this project such as adding a forum and additional activities, this will allow for a more cohesive structure and strengthen the
 consistency of school and home education.
 
 **_As a parent, I would like to access learning activities for my child that are accessible on multiple device types._**
+
+
 This website is accessible on all devices, large and small. It is a responsive and versatile website that can be utilised while on the go through mobile or tablet devices or from desktop devices.
 
-#### Navigation Bar
+### Navigation Bar
 
-Navigation links
-
-Navigation bar responsiveness
-
-Navigation Logo link
-
-Hamburger menu closing after link has been selected.
-
-#### Homepage
-Homepage Hero Image Responsiveness
-
-Callout
-
-Let's Play: Call to action
-
-Instructions Modal
-
-Instruction Modal: Scroll Functionality
-
-#### Game Section
-Game Section Responsiveness of images
-
-Game Section Functionality : Images and Text correct from array in JS
-
-Game Section audio
-
-Button click - Sound
-
-Game section: Select the correct image checkanswer function
-
-Game section: Score 
-
-Game section: Submit Button
-
-#### Results Section
-Results Page Form Validity - name valid
+**_Navigation links_**
 
 
-Results Page : Background Image Cover
+_All navigation links should take the user to the correct targeted section._
+- The navigation links all work as intended and operate correctly.
 
-Results Page: Buttons
+_The exit navigation link should call an alert to ask the user if they are sure they want to exit the game._
+- This exit link works correctly and prompts the user to confirm or cancel their request to leave the game. This link
+then takes the user directly to the homepage. This link is working correctly.
 
-#### Certificate
-Score generated
+**_Navigation bar responsiveness_**
 
-Name Generated
+
+_Check responsiveness of navigation bar using Chrome DevTools to check if it worked across all devices._
+- The navigation bar is fully responsive, it shows three links to the right hand side: 'Instructions', 'Play' and 'Exit' on larger screens
+and collapses into a hamburger menu on medium and smaller devices. This is working correctly and is responsive.
+
+**_Navigation Logo link_**
+
+
+_Check that navigation logo link directs user to homepage when clicked._
+- The navigation logo link is functioning as expected  and when clicked, takes the user back to the homepage.
+
+**_Navigation Links Hover Function: red colour_**
+
+_Check that when mouse hovers over navigation links the text changes to red colour_
+- When any of the navigation links on the navigation bar are hovered over with the mouse, they should change to a red colour.
+All buttons function as expected and no issues were found.
+
+**_Hamburger menu closing after link has been selected._**
+
+
+_Check that hamburger toggle menu automatically closes after a link has been selected_
+- The hamburger menu toggles to show the three links provided and closes on selection of
+any of the provided link. I had an issue with this on a previous project and had found the solution for this on 
+[StackOverflow](https://stackoverflow.com/questions/36405991/bootstrap-toggle-menu-on-one-page-site-does-not-uncollapse-when-clicked),
+which I used in this project to ensure the issue did not occur.
+
+**_Instructions Link_**
+
+
+_Check that modal function when instructions link is selected._
+- When a user selects the 'Instructions' link, a modal pop up dialog box is displayed with instructions on how to play the game in a numbered format.
+This modal has close button which works corectly and closes the modal box. This modal pops up at any time the instructions link is selected even while 
+playing the game. This link works correctly and is visible and functional on all device sizes.
+
+**_Instruction Modal: Scroll Functionality_**
+
+
+_Check to make sure that user can scroll through content in modal dialog box._
+- The scroll function on the modal works as intended and scrolls through the modal content as expected.
+
+### Homepage
+
+**_Homepage Hero Image Responsiveness_**
+
+
+_Check that homepage background image is responsive and scales up and down depending on the device being used._
+- I ran a test for this using DevTools on Google Chrome, to show how the site looks on different devices. I expanded and reduced the screen size to make sure the image fits the 
+full width of the screen on all devices.The homepage hero image is fully responsive across all devices.
+
+**_Callout_**
+
+
+_Verify that callout is responsive and that text is displayed well on all devices._
+- I ran a test using Google Chrome Dev Tools to ensure that the callout description and button were responsive and would scale up and down depending on the device being used.
+The callout text is responsive and the text size changes slightly depending on the device being used.
+
+**_Let's Play: Call to action_**
+
+_Test to see if this call to action button works and directs the user to the begin the game._
+- The call to action button 'Let's Play' functions correctly and when clicked, opens up the game container displaying the first question of the game.
+
+### Game Section
+
+**_Responsiveness of images_**
+
+
+_Test to check if images in the game are responsive on all devices_
+- I ran the test for this using Google Chrome Dev Tools. The choices section of the game should show 2 columns on top of 2 columns with an image in each column in larger screens and tablet devices, and
+on mobile devices, should align in 1 column block elements displayed one after the other. This test was successful and images are responsive.
+
+**_Functionality : Images and Text correct from array in JS_**
+
+
+_Test to make sure that the correct images and text are being populated for each of the questions in the game._
+- To test this I completed the game, going through each question, and checked all choice images and text, and question images and text against my questions array
+to make sure they were all displaying correctly. There were no issues found and all questions had the correct images and text that each question was assigned from the
+questions array.
+
+**_Audio_**
+
+
+_Test to check if the audio letter sound plays when the 'Click for Letter Sound' button is pressed_
+- To complete this test, I weent through each individual question in the game and clicked the 'Click for Letter Sound' button on each
+to check that the audio was playing and the correct letter sound was heard. This test was successful and the button functions as expected, 
+no issues were found.
+
+**_Alerting User on selection of either 'correct or 'incorrect' answers._**
+
+
+_Test that the right alert is displayed if user selects a 'correct' or 'incorrect' answer choice_
+- I verified this by playing the game and selecting a variety of right and wrong answers to check if the right response is received and the user 
+gets the proper alert for their choice. This test passed and when the user selects the correct answer, an alert 'Correct' is displayed as designed.
+If a user selects an incorrect answer then an alert 'Incorrect' is displayed as designed. No issues were found.
+
+**_Score Generated from correct answers_**
+
+_Check that score counter functions correctly_
+- Again for this test, I played the game and selected a range of correct and incorrect answers. This test passed and the score counter generates the score 
+as expected. The user recieves 1 point for each right answer and 0 points for an incorrect answer.  
+
+
+**_Submit Button: revealed_**
+
+
+_Test to check if the submit button is revealed after final question_
+- The submit button should be revealed after the user selects an answer to the final question. There should be a brief pause and then the submit button should be 
+revealed at the end of the game container. This works as expected, the test was successful and there are no issues with the submit button at the end of the game.
+
+**_Submit Button: Functionality_**
+
+
+_Check that the 'Submit' button take the user to the targeted Section_
+- Once all questions have been answered in the game, the submit button is revealed. When this is clicked it should take the user directly to the result's section.
+The result was the submit button functions exactly as expected, there are no no issues with this button, it works correctly.
+
+### Results Section
+**_Results Section Form Validity - required fields_**
+
+
+_Check that the user is alerted if input fields are not filled in._
+- If you try to submit the form with only one of the fields complete, an error will occur
+and prompt you to populate all the other required fields before the user can submit the form.
+The form cannot be submitted without the required fields populated. And the 'Get Certificate' button will navigationdirect the user
+to the certificate html page.
+
+**_Storing Input Values in Local Storage_**
+
+
+_ Check that the input values are stored using local storage
+- I ran a test using Google Chrome Developer Tools where I filled in a first and last name to the input fields in the results container
+and then selected application, then storage and then local storage to check if the input values were stored there. This test was successful and the input values
+are stored in local storage as expected.
+
+**_Background Image Cover_**
+
+
+_Check that the background image height is full viewheight in all devices._
+- I ran a test for this using Google Chrome Developer Tools and checked the result's container on all devices. It was covering the full view height in every device expect tablet devices when the
+background container was styled as auto. I was able to solve this issue by including a media query for medium devices that set the background container to 100vh. Currently there are no issues and 
+the background container for the result's section is the full height of the screen on all devices.
+
+**_Get Certificate Button Functionality_**
+
+_Test to check if the 'Get Certificate' button functions correctly: It should direct the user to the certificate html page_
+- The 'Get Certificate' button works as expected, once the input fields have been populated correctly and have been submitted via the click
+of the 'Get Certificate' button, then the user will be directed to the certificate html page. There are no issues found.
+
+**_Exit Game & Restart Game Buttons_**
+
+_Test that both buttons take the user to the target destination within the website_
+- The 'Exit Game' button functions as expected. Once clicked, an alert pops up to the user asking if they are sure they would like to leave the game.
+The user can then chose to press the cancel button which will automatically close the alert on the current page the user is on. If the user selects the confirm button to
+leave the game, this directs the user back to the homepage as it is supposed to. This button is working correctly.
+- The 'Restart Game' button also functions as expected. Once clicked, it directs the user back to the beginning of the game, opens the game container and displays the first question and
+clears the previous score back to zero. The user can then attempt the game again. This button works correctly.
+
+### Certificate
+
+**_Score generated_**
+_Check to see if user's score is populated when they request a Certificate_
+-I ran this test by completing the game, filling in the necessary input values on the result's form and submitting these
+through the click of the 'Get Certificate' button. This was a test passed and the user's individual score is successfully populated to the certificate
+when they select to generate a certificate.
+
+
+**_Name Generated_**
+_Check to see if user's name is populated when they complete the result's form and submit the values by clicking the 'Get Certificate button_
+-I ran this test by completing the game, filling in the necessary input values on the result's form and submitting these
+through the click of the 'Get Certificate' button. This was test passed and the user's name is successfully populated to the certificate
+when they select to generate a certificate using local storage to store and retrieve these input values.
+
 
 #### Footer 
-Responsiveness of footer
-#### General 
 
-Check alt text appears for all images
-Hover over images to see if there is clear alt text visible. 
-Button Functions
-Button Hover: colours
-Conducted spell check 
-Ran code through Autoprefixer and copied code back into css file.
-Ran code on Mobile Friendly Test page and passed all tests. 
+**_Responsiveness of footer_**
 
-#### Issues Encountered
-*Image Click to select an Answer*
+
+_Verify that the footer is responsive on all devices._
+- I ran a test using Google Chrome Dev Tools to check that the footer was responsive and was scaling up and down depending on the device being used.
+I can verify that the footer is fully responsive and the text size is altered to suit each device size.
+
+### General 
+_Check alt text appears for all images_
+- Hover over images to see if there is clear alt text visible.
+All images were tested and alt text appears on images.
+
+_Conducted spell check on README file and text used in 'About' section and 'Meet the Team' sections._
+- All spelling errors were corrected.
+
+_Autoprefixer CSS_
+- Ran code through Autoprefixer and copied code back into css file.
+
+_Mobile Friendly Test_
+- Ran code on Mobile Friendly Test page and passed all tests. The site is mobile friendly.
+
+_Testing on physical devices_
+- I also asked friends and family members to test the website on many different devices including large screen laptops,
+Iphone, android, android table and Ipad and across a variety of browsers Internet Explorer, Google Chrome, and Firefox.
+
+### Issues Encountered
+**_Image Click to select an Answer_**
 - I initially had set up the answers as radio buttons, but as this game is intended for children, I thought that having the ability to click the image would be more appealing and fun for them. So I attempted to add the image as a label for the radio button so that when clicked would also check the radio button element. However it was not working as I had set up the input in html and
 the label was being generated from the Javascript file and therefore not wrapping around the input tag in html. It was causing a bit of an issue so I contacted tutuor support for advice. From that discussion I decided to set up the label tag in the html file, which included the input, image tag and a span tag with the image text in it, within the label tag. I set up four of these inside 
 a div with a class of choice for the four options for each question. Then I was able to define the image src and alt tags from my Javascript file using the choices array to populate these choice containers. Using CSS I was able to hide the radio button element and this solved the first issue. Now when you click the image choice as an answer, the input tag is checked but this is hidden from browser.
 - Another element that needed to be addressed was that I had set up a for each loop on the node list within the choice container, which did what it was supposed to do but in order to check the answer, however it was causing the game to skip every second question. I did some research and identified that everytime I was looping through the node list the span item which is programmed to be hidden then 
 revealed on answer selection was causing the game to skip every second element in the questions array. I was able to rectify the issue by changing the for loop to only iterate through all images and inputs within the answers container. This worked and the game no longer is skipping any question. The solution was found on [MDN Web Docs](https://developer.mozilla.org/en-us/docs/web/API/Document/querySelectorAll)
 
-*Audio on Button Click (Game Section)*
+**_Audio on Button Click (Game Section)_**
 - While trying to set up the audio element for this project, I encountered an issue when testing the audio in the game. I included the audio files as part of my questions array of objects, however it would only play the first audio file no matter what question was being displayed. There was an issue, itterating through the arry of object to locate each audio file. 
 I decided to do some research on this as I had been informed that audio can be quite tricky to implement. So I came across a code snippet on [Stack Overflow](https://stackoverflow.com/questions/9419263/how-to-play-audio) and I created an audio element directly from Javascript using an Audio constructor and called the play method. I then set up a event listener on the 'Click for Letter Sound' button that would call the
 set Audio function when clicked. Each audio sound now plays with it's corresponding question when the button is pressed.
 
-*Certificate showing input values - separate js file*
+**_Certificate showing input values - separate js file_**
 - I encountered an issue when trying to set up my certificate section of the game. I needed to store the input values from the form in the results container which I managed to set up using local storage and then getting the items and populating the certificate html with these inputs. However when I tried to call these from the script.js file it was not generating correctly to the certifcate so I decided to set up an indiviual 
 Javascript file for the certificate html called certificate.js. This solved the issue and now the cert is personalised with each users name and score when they complete the game and sign up if they wish for the optional certificate element.
 
-*Using 'for of' loop for questions array*
+**_Using 'for of' loop for questions array_**
 - When I first started this project, I was had set up a standard for loop to iterate through my questions array. This worked as intended, however my mentor suggested that I use a for of loop as an alternative as it was a more proficient way to loop through the array. I did attempt to implement the 'for of' loop, however, I struggled to get it to work. The problems I was encountering were that the answer images were either showing up duplicated in each 
 choice container or only the last image would display for me. I did make several attempts to execute this change, but given my timeframe with my project deadline, it was taken up too much valuable time I needed to complete my project so I had to revert back to the original for loop that I had started the project with. It would have been nice to implement something new and hopefully will get to use this method in another project going forward.
 
@@ -412,7 +580,7 @@ This project was developed using Gitpod IDE, then pushed to GitHub, where the re
 
 ## Credits
 ### Content
-- CJ Fallon - Sounds Like Phonics Teachers Resource Book, CJ Fallon Website
+- CJ Fallon - Sounds Like Phonics Teachers Resource Book, CJ Fallon Website: Used for to identify letters in Initial Phonics Sounds Phases.
 - Orlagh Lomasney - Provided voice for the game audio and additional resources and advice on phonics learning
 
 ### Media
@@ -434,6 +602,13 @@ This project was developed using Gitpod IDE, then pushed to GitHub, where the re
 
 ### Acknowledgements
 I received inspiration for this project from my sister, she is a primary school teacher based in Cork and had discussed with me the lack of available
-interactive resources freely available online for parents and teachers.
-My mentor Brian Macharia
-Tim from Tutor Support for his advice, help and guidance. 
+interactive resources freely available online for parents and teachers. Orlagh was also extremely helpful throughout this project's development and provided me with essential information on the phonics curriculum
+and she provided the audio used in the game I developed.
+I decided that this would be a good opportunity to test my skills and also try something new that I felt would 
+challenge me and help me progress as a Software Developer. I have previously designed a business website and thought that a game would diversify my portfolio and show my ability to 
+develop a different kind of project. 
+
+I would like to thank my mentor Brian Macharia for being supportive through this project and also for his professional and very helpful advice through this process.
+
+I would also like to thank Tim from Tutor Support for his advice, help and guidance. It was my first interaction with tutor support and I was very grateful for the exceptional support I received when I encountered
+an issue while developing this project.

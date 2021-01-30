@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Sniglet&family=Fredoka+One&display=swap');
 
 /*General*/
@@ -106,6 +113,7 @@ hr {
     font-family: "Fredoka One", sans-serif;
     font-size: 1.4rem;
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
     -ms-flex-align: start;
     -ms-flex-pack: justify;
@@ -189,22 +197,43 @@ hr {
     line-height: 1.5;
     border-radius: .3rem;
     background-color: #f1e318 ;
-    animation: glowing 1300ms infinite;
+    -webkit-animation: glowing 1300ms infinite;
+            animation: glowing 1300ms infinite;
 }
 
 /*Glow Effect on PlayGame button - code snippet from W3Docs*/ 
-@keyframes glowing {
+@-webkit-keyframes glowing {
         0% {
           background-color: #f1e318;
-          box-shadow: 0 0 5px #f1e318;
+          -webkit-box-shadow: 0 0 5px #f1e318;
+                  box-shadow: 0 0 5px #f1e318;
         }
         50% {
           background-color: #f5e400;
-          box-shadow: 0 0 20px #f5e400;
+          -webkit-box-shadow: 0 0 20px #f5e400;
+                  box-shadow: 0 0 20px #f5e400;
         }
         100% {
           background-color: #ffee00;
-          box-shadow: 0 0 5px #ffee00;
+          -webkit-box-shadow: 0 0 5px #ffee00;
+                  box-shadow: 0 0 5px #ffee00;
+        }
+      } 
+@keyframes glowing {
+        0% {
+          background-color: #f1e318;
+          -webkit-box-shadow: 0 0 5px #f1e318;
+                  box-shadow: 0 0 5px #f1e318;
+        }
+        50% {
+          background-color: #f5e400;
+          -webkit-box-shadow: 0 0 20px #f5e400;
+                  box-shadow: 0 0 20px #f5e400;
+        }
+        100% {
+          background-color: #ffee00;
+          -webkit-box-shadow: 0 0 5px #ffee00;
+                  box-shadow: 0 0 5px #ffee00;
         }
       }
 
@@ -243,8 +272,12 @@ hr {
     background-color: #f5e400;
     color: #29838f;
     border: 1px solid #29838f;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .question-container{
@@ -274,6 +307,8 @@ hr {
     height: 100%;
     margin: 0 auto;
     padding: 10px 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;  
 }
 
@@ -349,6 +384,7 @@ label {
 }
 
 #finalBtns.btn-grid {
+    -ms-grid-columns: auto 10px auto;
     grid-template-columns: repeat(2, auto);
     gap: 10px;
     margin: 0px auto;
@@ -457,7 +493,9 @@ padding: 0px;
 margin: auto;
 text-align: center;
 border: 5px solid #fffb00;
-justify-content: center;
+-webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
 }
 
 .title-box{
@@ -515,6 +553,17 @@ justify-content: center;
 /* Medium devices (tablets, 768px and up) */
 
 @media screen and (min-width: 767px){
+#navbarLogo a {
+    font-size: 2rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-size: 1.8rem;
+}
+
+#playGame {
+    font-size: 2rem;
+}
 
 .game-container {
     padding: 10px 10px;
@@ -522,6 +571,7 @@ justify-content: center;
 
 h2{
     font-size: 3.5rem;
+    padding-top: 100px;
 }
 
 #home p {
@@ -573,6 +623,8 @@ h2#formTitle {
 }
 
 #finalBtns.btn-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
 }
 
@@ -580,19 +632,34 @@ h2#formTitle {
     font-size: 1.7rem;
 }
 
+#footer-details{
+    font-size:1.8rem ;
+}
+
 }
 
 /*Large devices (desktops, 992px and up)*/
 
 @media screen and (min-width: 992px){
+.navbar-light .navbar-nav .nav-link {
+    font-size: 2rem;
+}
+
+    #navbarLogo a {
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 4.5rem;
+}
+
+
 #home p {
-   padding-left:30px ;
-   padding-right: 30px;
-   font-size: 1.8rem;
+   font-size: 2.5rem;
 }
 
 #playGame{
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .game-container {
@@ -627,4 +694,7 @@ h2#formTitle {
     padding: 5px 50px;
 }
 
+#footer-details{
+    font-size:2.5rem ;
+}
 }
