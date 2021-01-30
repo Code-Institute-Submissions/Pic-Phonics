@@ -50,7 +50,7 @@ hr {
     font-family: "Fredoka One", sans-serif;
     font-size:1.5rem;
     font-weight: bold;
-    background-color:#1a8796ee;
+    background-color:#0f8392;;
     margin-bottom: 0;
     z-index: 2;
 }
@@ -92,7 +92,7 @@ hr {
 
 #ModalCenterInstructions .modal-body{
     color: #ffee00;
-    background-color: #1a8796ee;
+    background-color: #0f8392;;
     padding-left: 30px;
     height: 50vh;
 }
