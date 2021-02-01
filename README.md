@@ -592,11 +592,15 @@ set Audio function when clicked. Each audio sound now plays with its correspondi
 - **_MDN Web Docs_**
 This Javascript code problem solution was used to resolve the issue I had with 'for each' loop  I had set up on on the nodelist used for the user choice selction. This solution helped to stop the loop from skipping every second question in the game and was sourced on [MDN Web Docs](https://developer.mozilla.org/en-us/docs/web/API/Document/querySelectorAll)
 
+- **_W3Schools_**
+Javascript code snippet used to store input values from form in results container in local storage to be retrived later to populate the certificate html. The code for this was found on [W3Schools](https://www.w3schools.com/html/html5_webstorage.asp)
+
 - **_W3Docs_**
 This was a CSS code snippet used to give the 'Let's Play' button an appearance of glowing. It was found here on [W3Docs](https://www.w3docs.com/snippets/css/how-to-create-flashing-glowing-button-using-animation-in-css3.html).
 
 - **_Bootstrap Documentation_**
 HTML code used to build the 'Instructions' modal dialog box and edited for this project. This code was taken from [Bootstrap Documentation](https://getbootstrap.com/docs/4.1/components/modal/)
+Javascript code snippet used to validate form in results section of html file taken from [Bootstrap Documentation](https://getbootstrap.com/docs/4.0/components/forms/)
 
 - **_Favicon.io_**
 Code snippet used to generate a favicon for this website. This code was inserted into the html document in the `<head>` section. I have also included the source files for this in the favicon folder. The website used to generate the favicon and associated files was [Favicon.io](https://favicon.io/)
