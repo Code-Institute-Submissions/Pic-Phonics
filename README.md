@@ -43,7 +43,7 @@ a child's development. It can be a powerful tool in developing life skills.
 5. Create a forum space where parents and teachers can discuss phonics and ask questions.
 6. Ability to set up a user account to track and keep a record of progress made.
 
-## *UX*
+## **UX**
 
 This website was designed as an interactive educational tool for both teachers and parents to help children learn the initial phonics sounds. 
 The look and feel is vibrant and inviting. The website is created as to be user-friendly, easy to navigate, and provide a multi-sensory learning experience
@@ -258,10 +258,10 @@ asking them if they are sure before executing the exitGame function.
 
 ## *Testing*
 
-**_ Validation W3C HTML Markup Validator_**
-- Ran code through the HTML validator and it was displaying an error with using an <a> tag with a button type, so I changed the HTML file to make the nav link an a tag and removed type = button.
-The 'Let's Play' button was showing the same error, so I removed the <a> tag and left it as a button tag which resolved both issues.
-- The other error that was showing up was that there was no source for the image tags. The src attributes for the image tags in thE HTML document were being allocated from the Javascript file.
+**_Validation W3C HTML Markup Validator_**
+- Ran code through the HTML validator and it was displaying an error with using an `<a>` tag with a button type, so I changed the HTML file to make the nav link an `<a>` tag and removed type = button.
+The 'Let's Play' button was showing the same error, so I removed the `<a>` tag and left it as a button tag which resolved both issues.
+- The other error that was showing up was that there was no source for the image tags. The src attributes for the image tags in the HTML document were being allocated from the Javascript file.
 I did some research on this and found a solution on [StackOverflow](https://stackoverflow.com/questions/30658663/bad-value-for-attribute-src-on-element-img-must-be-non-empty-for-dynamically) and 
 added a '#' to the src in the HTML which is then populated with the correct image source from the Javascript file.
 - I ran my updated code back through the HTML validator and I found no errors.
@@ -577,17 +577,40 @@ This project was developed using Gitpod IDE, then pushed to GitHub, where the re
 2. Click on the 'Code' button at the top.
 3. From here you can select to either download or clone to a desktop IDE using the url provided.
 
-## Credits
-### Content
+## **Credits**
+### **_Code_**
+- **Stackoverflow:**
+HTML code was taken from StackOverflow, to solve an issue with the hamburger menu. The menu was not closing when a link had been clicked,
+the navbar was remaining open. Code taken from [Orel Eliyahu](https://stackoverflow.com/questions/36405991/bootstrap-toggle-menu-on-one-page-site-does-not-uncollapse-when-clicked)
+
+HTML code solution for adding the src attributes for the image tags in the HTML document that were being allocated from the Javascript file. To correct an error showing up on the HTML validator tool by using a '#' in the image tag in HTML.
+Found on [StackOverflow](https://stackoverflow.com/questions/30658663/bad-value-for-attribute-src-on-element-img-must-be-non-empty-for-dynamically) and 
+
+Javascript code snippet to create an audio element directly from Javascript using an Audio constructor which calls the play method. I then set up an event listener on the 'Click for Letter Sound' button that would call the
+set Audio function when clicked. Each audio sound now plays with its corresponding question when the button is pressed. This code snippet was found on [Stack Overflow](https://stackoverflow.com/questions/9419263/how-to-play-audio)
+
+- **_MDN Web Docs_**
+This Javascript code problem solution was used to resolve the issue I had with 'for each' loop  I had set up on on the nodelist used for the user choice selction. This solution helped to stop the loop from skipping every second question in the game and was sourced on [MDN Web Docs](https://developer.mozilla.org/en-us/docs/web/API/Document/querySelectorAll)
+
+- **_W3Docs_**
+This was a CSS code snippet used to give the 'Let's Play' button an appearance of glowing. It was found here on [W3Docs](https://www.w3docs.com/snippets/css/how-to-create-flashing-glowing-button-using-animation-in-css3.html).
+
+- **_Bootstrap Documentation_**
+HTML code used to build the 'Instructions' modal dialog box and edited for this project. This code was taken from [Bootstrap Documentation](https://getbootstrap.com/docs/4.1/components/modal/)
+
+- **_Favicon.io_**
+Code snippet used to generate a favicon for this website. This code was inserted into the html document in the `<head>` section. I have also included the source files for this in the favicon folder. The website used to generate the favicon and associated files was [Favicon.io](https://favicon.io/)
+
+### **_Content_**
 - CJ Fallon - Sounds Like Phonics Teachers Resource Book, CJ Fallon Website: Used for to identify letters in Initial Phonics Sounds Phases.
 - Orlagh Lomasney - Provided voice for the game audio and additional resources and advice on phonics learning
 
-### Media
+### **_Media_**
 - TeachersPay teachers website - letter image from flashcards obtained from the site
 - The photos used in this site were obtained from Unsplash.com & Pexels.com
 - Audio provided by my sister Orlagh Lomasney
 
-### Resources
+### **_Resources_**
 - Code Institute Content
 - Slack Community
 - Bootstrap Documentation
@@ -599,7 +622,7 @@ This project was developed using Gitpod IDE, then pushed to GitHub, where the re
 - Orlagh Lomasney - primary school teacher
 - Sounds Like Phonics - CJ Fallon 
 
-### Acknowledgements
+### **_Acknowledgements_**
 I received inspiration for this project from my sister, she is a primary school teacher based in Cork and had discussed with me the lack of available
 interactive resources freely available online for parents and teachers. Orlagh was also extremely helpful throughout this project's development and provided me with essential information on the phonics curriculum,
 and she provided the audio used in the game I developed.

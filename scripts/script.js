@@ -499,8 +499,8 @@ function incorrect() {
  Swal.fire({
     position: 'center',
     icon: 'error',
-    title: 'Incorrect...but do not worry',
-    text:'You are just learning! Keep trying, you will get it next time.',
+    title: 'Incorrect...but do not worry!You are learning!',
+    text: 'Keep trying, you will get it next time.',
     showConfirmButton: false,
     timer: 2200
 });
