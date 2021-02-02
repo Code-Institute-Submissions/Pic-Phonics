@@ -66,7 +66,7 @@ hr {
     font-weight: bolder;
     font-size: 1.6rem;
     color:#ffee00;
-    letter-spacing: .3rem;
+    letter-spacing: .25rem;
     text-decoration: none;
 }
 
@@ -190,7 +190,7 @@ hr {
     color:#2faadc;
     font-family: "Fredoka One", sans-serif;
     font-weight: bolder;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     line-height: 1.5;
     border: 1px solid #2faadc;
     border-radius: .3rem;
@@ -531,12 +531,16 @@ border: 5px solid #fffb00;
 
 /*Phones*/
 @media screen and (max-width:320px){
-#home{
+#navbarLogo a {
+    font-size: 1.5rem;
+}
+
+    #home{
     padding: 20px;
 }
 
 #playGame{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 #result h3 {
