@@ -83,15 +83,12 @@ hr {
     padding: .5rem 1rem;
 }
 
-.navbar-toggler-icon {
+.navbar-toggler {
+    border: none;
     display: inline-block;
-    width: 1.5rem;
-    height: 2.5rem;
     vertical-align: middle;
-    content: "";
     background: no-repeat center center;
     background-size: 100% 100%;
-    border: none;
 }
 
 /*Modal*/
@@ -193,8 +190,9 @@ hr {
     color:#2faadc;
     font-family: "Fredoka One", sans-serif;
     font-weight: bolder;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     line-height: 1.5;
+    border: 1px solid #2faadc;
     border-radius: .3rem;
     background-color: #ffee00 ;
     -webkit-animation: glowing 1300ms infinite;
@@ -205,18 +203,18 @@ hr {
 @-webkit-keyframes glowing {
         0% {
           background-color: #ffee00;
-          -webkit-box-shadow: 0 0 5px #ffee00;
-                  box-shadow: 0 0 5px #ffee00;
+          -webkit-box-shadow: 0 0 20px #ffee00;
+                  box-shadow: 0 0 20px #ffee00;
         }
         50% {
           background-color: #f5e400;
-          -webkit-box-shadow: 0 0 20px #f5e400;
-                  box-shadow: 0 0 20px #f5e400;
+          -webkit-box-shadow: 0 0 80px #f5e400;
+                  box-shadow: 0 0 80px #f5e400;
         }
         100% {
           background-color: #ffee00;
-          -webkit-box-shadow: 0 0 5px #ffee00;
-                  box-shadow: 0 0 5px #ffee00;
+          -webkit-box-shadow: 0 0 20px #ffee00;
+                  box-shadow: 0 0 20px #ffee00;
         }
       } 
 @keyframes glowing {
@@ -558,7 +556,7 @@ border: 5px solid #fffb00;
 }
 
 #playGame {
-    font-size: 2rem;
+    font-size: 2.2rem;
 }
 
 .game-container {
