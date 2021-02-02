@@ -20,7 +20,7 @@ body {
 }
 
 h2 {
-    color:  #f1e318;
+    color:  #ffee00;
     font-family: "Sniglet", sans-serif;
     font-size: 2.5rem;
     font-weight: bold;
@@ -56,7 +56,7 @@ hr {
     font-family: "Fredoka One", sans-serif;
     font-size:1.5rem;
     font-weight: bold;
-    background-color:#0f8392;;
+    background-color:#2faadc;
     margin-bottom: 0;
     z-index: 2;
 }
@@ -65,13 +65,13 @@ hr {
     font-family: "Fredoka One", sans-serif;
     font-weight: bolder;
     font-size: 1.6rem;
-    color:#f1e318;
+    color:#ffee00;
     letter-spacing: .3rem;
     text-decoration: none;
 }
 
 .navbar-light .navbar-nav .nav-link{
-    color: #f1e318;
+    color: #ffee00;
     letter-spacing: .2rem;
 }
 
@@ -98,7 +98,7 @@ hr {
 
 #ModalCenterInstructions .modal-body{
     color: #ffee00;
-    background-color: #0f8392;;
+    background-color: #2faadc;
     padding-left: 30px;
     height: 50vh;
 }
@@ -133,8 +133,8 @@ hr {
 }
 
 .modal-footer{
-    color: #f1e318;
-    background-color:#32cf4c;
+    color: #ffee00;
+    background-color:#70e470;
 }
 
 .modal-footer button{
@@ -152,7 +152,7 @@ hr {
 /*Homepage*/
 
 .home-container{
-    background-color: #29838f;
+    background-color: #2faadc;
     color: #ffee00;
     height: auto;
     width: auto;
@@ -176,7 +176,7 @@ hr {
 }
 
 #home p{
-    color:  #f1e318;
+    color:  #ffee00;
     font-family: "Sniglet", sans-serif;
     font-size: 1.3rem;
     font-weight: bold;
@@ -189,13 +189,13 @@ hr {
     cursor: pointer;
     padding-left: 50px;
     padding-right: 50px;
-    color:#0f8392;
+    color:#007fff;
     font-family: "Fredoka One", sans-serif;
     font-weight: bolder;
     font-size: 1.7rem;
     line-height: 1.5;
     border-radius: .3rem;
-    background-color: #f1e318 ;
+    background-color: #ffee00 ;
     -webkit-animation: glowing 1300ms infinite;
             animation: glowing 1300ms infinite;
 }
@@ -203,9 +203,9 @@ hr {
 /*Glow Effect on PlayGame button - code snippet from W3Docs*/ 
 @-webkit-keyframes glowing {
         0% {
-          background-color: #f1e318;
-          -webkit-box-shadow: 0 0 5px #f1e318;
-                  box-shadow: 0 0 5px #f1e318;
+          background-color: #ffee00;
+          -webkit-box-shadow: 0 0 5px #ffee00;
+                  box-shadow: 0 0 5px #ffee00;
         }
         50% {
           background-color: #f5e400;
@@ -220,9 +220,9 @@ hr {
       } 
 @keyframes glowing {
         0% {
-          background-color: #f1e318;
-          -webkit-box-shadow: 0 0 5px #f1e318;
-                  box-shadow: 0 0 5px #f1e318;
+          background-color: #ffee00;
+          -webkit-box-shadow: 0 0 5px #ffee00;
+                  box-shadow: 0 0 5px #ffee00;
         }
         50% {
           background-color: #f5e400;
@@ -237,12 +237,12 @@ hr {
       }
 
 #playGame:hover{
-    color: rgb(1, 83, 190);
+    color: #2faadc;
     background-color:#ffee00 ;
 }
 
 .background-container{
-    background-color: #29838f;
+    background-color: #2faadc;
     color: #ffee00;
     height: auto;
     width: auto;
@@ -255,7 +255,7 @@ hr {
 /*Game Container*/
 
 .game-container{
-    background: #0f8392;
+    background: #2faadc;
     color: #ffee00;
     height: auto;
     padding: 15px 5px;
@@ -269,8 +269,8 @@ hr {
     font-size: 1.2rem;
     font-weight: bolder;
     background-color: #f5e400;
-    color: #29838f;
-    border: 1px solid #29838f;
+    color: #2faadc;
+    border: 1px solid #007fff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -312,12 +312,13 @@ hr {
 }
 
 #sound{
-    color:#0f8392;
+    color:#2faadc;
     font-family: "Fredoka One", sans-serif;
     font-weight: bolder;
     font-size: 1.2rem;
-    background-color: #f1e318 ;
+    background-color: #ffee00 ;
     border-radius: 10px;
+    border: 1px solid #007fff;
     padding: 10px 10px;
     margin: 0 auto; 
     display: block   
@@ -366,11 +367,11 @@ label {
 
 #submit {
     cursor: pointer;
-    color: #0f8392;
+    color: #2faadc;
     font-family: "Fredoka One", sans-serif;
     font-weight: bolder;
     font-size: 1.4rem;
-    background-color: #f1e318;
+    background-color: #ffee00;
     line-height: 2;
     padding: 0 100px;
     border-radius: 5px;
@@ -396,11 +397,11 @@ label {
 
 #quizRepeat, #exit, #cert{
     cursor: pointer;
-    color: #0f8392;
+    color: #2faadc;
     font-family: "Fredoka One", sans-serif;
     font-weight: bolder;
     font-size: 1.2rem;
-    background-color: #f1e318;
+    background-color: #ffee00;
     border-radius: 5px;
     padding: 5px 5px;
     margin: 10px 0;
@@ -424,7 +425,7 @@ label {
  /*Form to generate certificate*/
 
  .form-container {
-    background: #29838f;
+    background: #2faadc;
     text-align: center;
     margin: 40px auto;
     padding-bottom: 10px;
@@ -468,13 +469,13 @@ form {
 /*Footer*/
 
 footer{
-    background-color:#32cf4c;
+    background-color:#70e470;
     padding: .5rem 1rem;
 }
 
 #footer-details{
     text-align: center;
-     color: #f5e400;
+     color: #ffee00;
      font-size: 1.5rem;
     font-family: "Fredoka One",sans-serif;
 }

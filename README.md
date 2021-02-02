@@ -134,12 +134,13 @@ for the headers and buttons and 'Sniglet' for the body text.
 
 ## *Features*
 ### **_Navigation Bar & Footer_**
-The **navigation bar** is in a fixed position, making it easy for users to access the navigation elements of the website, and allow them to view these elements at any point during or after the game.
-The navigation bar consists of a **logo** to the left, which acts as a link back to the homepage, and **three navigation links** to the right. These links are 'Instructions', 'Play', and 'Exit'. The 
+- The **navigation bar** is in a fixed position, making it easy for users to access the navigation elements of the website, and allow them to view these elements at any point during or after the game.
+- The navigation bar consists of a **logo** to the left, which acts as a link back to the homepage, and **three navigation links** to the right. These links are 'Instructions', 'Play', and 'Exit'. The 
 instructions link when clicked opens up a **pop up scrollable modal**, which displays the step by step instructions of how the game is to be played. The play link allows the user to start the quiz 
 and the exit link acts as means to exit the game at any point and return to the homepage. The 'Exit' link includes an **alert** when clicked, that asks the user if they are sure they want to exit the game, in 
 case this link was pressed by accident they have the ability to cancel the exit request or confirm it. The navigation bar is **responsive** and the navigation menu collapses into a **hamburger menu** for both 
-tablet and mobile devices. The footer is fixed at the bottom and contains **copyright information** located in the center. 
+tablet and mobile devices. 
+- The footer is fixed at the bottom and contains **copyright information** located in the center. 
 
 ### **_Homepage_**
 ![Homepage](screenshots/homepage.jpg "Homepage")
@@ -215,9 +216,9 @@ be prompted to complete each field in order to generate the certificate. If they
 to **confirm the request** by selecting the 'yes' button on the alert. Upon confirmation to leave the game, the user will be taken directly back to the homepage. The 'Restart Game' button, if selected, will automatically reset the game container, which will clear the previous score and begin the game again by displaying game container and the first question in the game.
 
 ### **_Certificate_**
-The certificate is a separate HTML file, created and designed to display as a **certificate** specifically for the game. It is populated using **Javascript local storage** to store the **user input values** from the form container in the results section, and also obtain the **user score** results.
+- The certificate is a separate HTML file, created and designed to display as a **certificate** specifically for the game. It is populated using **Javascript local storage** to store the **user input values** from the form container in the results section, and also obtain the **user score** results.
 The input values are stored using local storage and a separate Javascript file was created to retrieve these items and display them in the certificate HTML.
-The certificate is a **personalised addition** to the game, which will show the users name and their individual score each time they want to generate a certificate for their result.
+- The certificate is a **personalised addition** to the game, which will show the users name and their individual score each time they want to generate a certificate for their result.
 The certificate is **optional** for users, and is only displayed if the user opts to complete the **form**, located in the results container and have submitted this by clicking the **'Get Certificate' button**.
 
 ## **_Features Left to Implement_**
@@ -492,15 +493,19 @@ clears the previous score back to zero. The user can then attempt the game again
 ### Certificate
 
 **_Score generated_**
+
+
 _Check to see if user's score is populated when they request a Certificate_
--I ran this test by completing the game, filling in the necessary input values on the result's form and submitting these
+- I ran this test by completing the game, filling in the necessary input values on the result's form and submitting these
 through the click of the 'Get Certificate' button. This was a test passed and the user's individual score is successfully populated to the certificate
 when they select to generate a certificate.
 
 
 **_Name Generated_**
+
+
 _Check to see if user's name is populated when they complete the result's form and submit the values by clicking the 'Get Certificate button_
--I ran this test by completing the game, filling in the necessary input values on the result's form and submitting these
+- I ran this test by completing the game, filling in the necessary input values on the result's form and submitting these
 through the click of the 'Get Certificate' button. This was test passed and the user's name is successfully populated to the certificate
 when they select to generate a certificate using local storage to store and retrieve these input values.
 
