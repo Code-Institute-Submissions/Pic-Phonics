@@ -1,6 +1,8 @@
 # **Pic Phonics**
 
-**_You can check out Pic Phonics website [here]():_**
+![Mockup Multiple Devices](screenshots/mockup_alldevices.jpg "MockUp Multiple Devices")
+
+### **_You can check out Pic Phonics website_** [here](https://elomasney.github.io/Pic-Phonics/)
 
 ## **_Milestone Project 2 - Interactive Frontend development_**
 ---
