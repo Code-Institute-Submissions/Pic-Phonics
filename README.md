@@ -533,7 +533,7 @@ _Autoprefixer CSS_
 - Ran code through Autoprefixer and copied code back into css file.
 
 _Mobile Friendly Test_
-- Ran code on Mobile Friendly Test page and passed all tests. The site is mobile friendly.
+- Ran code on [Mobile Friendly Test](https://search.google.com/test/mobile-friendly) page and passed all tests. The site is mobile friendly.
 
 _Testing on physical devices_
 - I also asked friends and family members to test the website on many different devices including large screen laptops,
@@ -618,6 +618,7 @@ Code snippet used to generate a favicon for this website. This code was inserted
 - TeachersPay teachers website - letter image from flashcards obtained from the site
 - The photos used in this site were obtained from Unsplash.com & Pexels.com
 - Audio provided by my sister Orlagh Lomasney
+- The mockup of the website on all devices was created using [Techsini.com](https://techsini.com/multi-mockup/index.php)
 
 ### **_Resources_**
 - Code Institute Content
