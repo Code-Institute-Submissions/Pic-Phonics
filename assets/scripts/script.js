@@ -1,6 +1,7 @@
 /* jshint esversion: 8 */
 
 /**@global Constants & Variables used for game*/
+
 const playButton = document.getElementById("playGame");
 const playLink = document.getElementById("play");
 const exitLink = document.getElementById("leave");
@@ -35,11 +36,12 @@ let currentQuestion = 0;
 let score = 0;
 
 //Questions & Choices for the Game
-/**Questions Array of objects - Code used to generate game questions, images, audio, choices and answers.
+
+/**Questions Array of objects - Used to generate game questions, images, audio, choices and answers.
  * @global Object
  * @param {Array.<Object>} questions
- * @param {Array,<Object>}choices is an array within the questions array of objects.
-*/
+ * @param {Array,<Object>}choices is an array within the questions array.*/
+
 const questions = [
 {
 letterText:"'T'",
@@ -370,12 +372,13 @@ correct:choiceD,
 ];
 
 //Event Listener added to Homepage 'Let's Play' button that directs users to the start of the game
+
 playButton.addEventListener('click', playGame);
 
 /** @function playGame - initiates the game
  * Hides the homepage background, callout and overlay
- * Removes the hide class from the game section so it can be displayed to the user
-*/
+ * Removes the hide class from the game section so it can be displayed.*/
+
 function playGame() {
   playButton.classList.add('hide');
   document.getElementById("home").classList.add('hide');
@@ -389,17 +392,20 @@ function playGame() {
 
 /**@function renderQuestion - renders the questions and answers to the game container. 
  * Uses a 'for' loop to iterate through the questions array and choices array*/
+
 function renderQuestion(){
     for(let i=0; i<questions.length; i++){
 
     let q = questions[currentQuestion];
 
-     //Sets up the html layout for the Questions in the game using the objects within the questions array   
+     //Sets up the html layout for the Questions in the game using the objects within the questions array  
+
     lText.innerHTML = `<h3> This is the letter ${q.letterText} </h3>`;
     questionContainer.innerHTML = `<h3> ${q.question} </h3>`;
     qImg.innerHTML = `<img src= ${questionImageDirectory}${q.qimage} alt = ${q.letterText} >`;
 
     //Sets up the html layout for the Choices in the game using the objects within the choices array
+
     imageA.src = `${choiceImageDirectory}${q.choices[0].imageFile}`;
     imageA.alt = q.choices[0].choiceText;
     TextA.innerText =  q.choices[0].choiceText;
@@ -417,99 +423,106 @@ function renderQuestion(){
     TextD.innerText = q.choices[3].choiceText;
     TextD.classList.add("hide");//hides span text 
     
-    // Places the Score Counter in the score container in the html file
+    // Places the Score Counter in the score container.
     scoreCount.innerHTML=`Score: ${score}`;
     
     }
     /** Adds an event listener to the 'Click for Letter Sound' button in the game container. 
      * Allows the audio for the game to be played when the button is clicked*/
+
     soundButton.addEventListener('click', setAudio);
 }
 
 /**@function nextQuestion -  renders the next question in the game. 
- * Contains an if statement that tells the function to reveal the submit button when the final question has been reached.
- * If the question is not the final question then the else statement tells the function to display the next question in the questions array.*/
+ * The if/else statement that reveals the submit button when the final question has been reached.
+ * Otherwise it calls for the next question in the array to be rendered.*/
 function nextQuestion(){
-    /** @param currentQuestion 
-     * Checks if currentQuestion is equal to the final question in the array */
+
      if(currentQuestion == questions.length - 1){
          submitButton.classList.remove('hide'); //reveals the submit button at end of game container
      }
      else{
-    /** @param currentquestion ++ 
-     * Tells the function to move on to next question in the array*/
+
         renderQuestion(questions[currentQuestion++]);
      }
 }
 
-/**This functions is designed to locate and play audio files
+/**This functions locates and plays the audio files
  * @constructor audio with @parameter file to create a new Audio file
  * Calls the play() method on the new Audio file*/
+
 function playAudio(file){
     let playFile = new Audio(file);
     playFile.play();
   }
 
 /**This function sets the Audio for each question using the array audio objects
- * Creates a new variable called audioFile using the target audio object for each question.
- *  @callback playAudio - to play the current question audio file */  
+ * Creates a variable called audioFile using the target audio object from each question.
+ * @function playAudio - plays the current question audio file 
+ * @param audioFile - current question audio file*/
+
   function setAudio(){
     let audioFile = questions[currentQuestion].audio;
     playAudio(audioFile);
   }
 
-/**Creates a variable for the html div element answers container using querySelector.
+/**Creates a variable to select the html div element answers container using querySelector.
  * Creates another variable for the nodelist of elements called allChoices
  * @parameter 'input' - selected elements 
  * @parameter 'img' - selected elements 
  * A 'for each' loop is initiated to iterate through the 'input' and 'img' elements within the answers container. 
  * Adds an event listener to each 'input and 'img' html element.
- * Calls the @function checkAnswer for each of these elements within the answers container.
-*/
+ * Calls the @function checkAnswer for each of these elements within the answers container.*/
+
 const choiceContainer = document.querySelector("#answers");
 const allChoices = choiceContainer.querySelectorAll("input","img");
 allChoices.forEach((choice) => {
     choice.addEventListener("click", checkAnswer);
 });
 
-// Checks  if answer users selects is correct or incorrect
+// Checks  if selected answer is correct or incorrect
 function checkAnswer() {
 
     const correctAnswer = questions[currentQuestion].correct; //variable to identify the location of the correct answer within the questions array
-    /*Uses an if statement that checks if the input element with the name "choices" matches the correctAnswer variable
-    If this statement is true then the answer selected is correct*/
+    /** Uses an if/else statement that checks if the input element with the name "choices" matches the correctAnswer variable
+     * @function correct is called if true.  
+     * @function incorrect is called if false.*/
+
     if (document.querySelector('input[name = "choices"]:checked') == correctAnswer) {
         // answer is correct
 
         //If the answer is correct, increase score by 1
         score++;
 
-        /**Calls the @function correct*/
         correct();
 
-        //Removes the class 'hide' from the span elements in the answers container to reveal the text when one of the image choices is selected.
+        //Removes the class 'hide' from the span elements to reveal the text when one of the image choices is selected.
+
         document.getElementById("A").classList.remove('hide');
         document.getElementById("B").classList.remove('hide');
         document.getElementById("C").classList.remove('hide');
         document.getElementById("D").classList.remove('hide');
         
-        //Sets timeout delay  of 4 seconds before next question is rendered to the DOM
+        //Sets timeout delay of 4 seconds before next question is rendered.
+
         setTimeout(function () {
             nextQuestion();
         }, 4000);
 
-    /**Calls the @function incorrect if the answer selected does not equal the correctAnswer variable*/
+
     } else {
         // answer is incorrect
         incorrect();
 
-        //Removes the class 'hide' from the span elements in the answers container to reveal the text when one of the image choices is selected.    
+        //Removes the class 'hide' from the span elements to reveal the text when one of the image choices is selected. 
+
         document.getElementById("A").classList.remove('hide');
         document.getElementById("B").classList.remove('hide');
         document.getElementById("C").classList.remove('hide');
         document.getElementById("D").classList.remove('hide');
 
-        //Sets a time delay of 4 seconds before next question is rendered to the DOM
+        //Sets a time delay of 4 seconds before next question is rendered.
+
         setTimeout(function () {
             nextQuestion();
         }, 4000);
@@ -518,9 +531,9 @@ function checkAnswer() {
 }
 
 /** @function correct  - is called when the answer is correct.
- * Displays an alert to the user, informing them that they have chosen the correct answer
- * The alert has a timer that displays the alert for 2.2 seconds.
-*/
+ * Displays an alert to the user, if the correct answer is chosen
+ * The alert is timed to display for 2.2 seconds.*/
+
 function correct() {
 
  Swal.fire({
@@ -535,9 +548,9 @@ function correct() {
 }
 
 /** @function incorrect  - is called when the answer is correct.
- * Displays an alert to the user, informing them that they have chosen the incorrect answer
- * The alert has a timer that displays the alert for 2.2 seconds.
-*/
+ * Displays an alert to the user, if the incorrect answer is chosen
+ * The alert is timed to display for 2.2 seconds.*/
+
 function incorrect() {
  Swal.fire({
     position: 'center',
@@ -551,43 +564,44 @@ function incorrect() {
 }
 
 /**Adds an event listener to the 'Submit' button after the final question is answered
- * Calls the @function showResult - when the submit button is clicked 
- * Displays the results section container to the DOM
-*/
+ * @function showResult - when the submit button is clicked 
+ * Renders the results section*/
+
 submitButton.addEventListener('click', showResult);
 
-/** This @function showResult directs the user to the results section of the game.
- * User's'result is displayed in percentage format on completion of the game
- * Adds the hide class to the game container and removes the hide class from the results container to make it visible*/
+/** @function showResult - directs the user to the results section of the game.
+ * User's'result is displayed in percentage format.
+ * Adds the hide class to the game container and removes the hide class from the results container*/
+
 function showResult( ){
     gameContainer.classList.add('hide');
     resultsContainer.classList.remove('hide');
 
-    /**Creates a variable totalScore to convert the user score to percentage format by multipling the user score by 100
-     * Calls the toFixed method to set the percentage to fixed notation (rounding up the number to eliminate decimals)
-    */
+    /**Converts the user score to percentage format by multipling the user score by 100
+     * Calls the toFixed method to set the percentage to fixed notation (rounding up the number to eliminate decimals)*/
+
     let totalScore = (score/questions.length * 100).toFixed();
 
-    //Uses the html element scoreContainer to generate a html header element to display the users score in the results container.
+    //Generates a html header element to display the users score in the results container.
+
     scoreContainer.innerHTML = `<h3> You  scored ${totalScore}% in Pic Phonics Initial Sounds Game</<h3>`;
 
     //Uses local storage to store the user score in percentage format
+    
         localStorage.setItem("score",totalScore);
 }
 
-/** Created event listeners to call the @function exitGame
- * Calls this function when the 'Exit' nav link item is clicked
- * Calls this function when the 'Exit Game' button in the results section is clicked
- */
+/** Created event listeners  on the 'Exit' navigation link and 'Exit Game' button 
+ * @function exitGame - called when link or button is clicked*/
+
 exitLink.addEventListener("click", exitGame);
 exit.addEventListener("click", exitGame);
 
-/** This @function exitGame allows the user to exit the game when all questions are completed
+/** @function exitGame - allows the user to exit the game when all questions are completed
  * Displays an alert to the user aking if they are sure they want to leave the game.
- * This is to ensure their progress isn't deleted if the function is called on by accident
- * If the user confirms the request, they will be directed back to the homepage.
- * If the user selects rejects the request, the alert will automatically close
-*/
+ * If the request is confirmed, the user is directed back to the homepage.
+ * If the request is cancelled, the alert will automatically close.*/
+
 function exitGame() {
     Swal.fire({
         title: 'Are you sure you want to leave?',
@@ -600,6 +614,7 @@ function exitGame() {
 }
 
 //Bootstrap Form Validation - disables form submission if there are invalid fields
+
     cert.addEventListener('click', function(validate) {
         if (cert.checkValidity() === false) {
           validate.preventDefault();
@@ -611,25 +626,26 @@ form.classList.add('was-validated');
     });
 
 /** Creates event listeners to restarts the game
- * Calls this function when the 'Play' nav link item is clicked
- * Calls this function when the 'Let's Play' button is clicked */
+ * @function restartGame - called when 'Play' link or 'Restart Game' button is clicked*/
+
 playLink.addEventListener("click", restartGame);
 restart.addEventListener("click", restartGame);
 
-/** This @function restarts the game by resetting the game container
+/** @function restarts - restarts the game by resetting the game container
  * Hides the results container.
- * Removes the hide class on the game container
- * Calls the @function resetGame
-*/
+ * Displays the game container
+ * @function resetGame - resets score and displays first question*/
+
 function restartGame(){
      gameContainer.classList.remove('hide');
     resultsContainer.classList.add('hide');
 
 /** @function resetGame - resets the game container
- * Adds the hide class to the submit button that appears after the final question is answered in the game
- * Resets the question back to zero so the first question in the questions array will be displayed.
+ * Hides the submit button
+ * Displays the first question.
  * Resets the score back to zero.
  * @function playGame- to initiate the game.*/ 
+
 function resetGame() {
          submitButton.classList.add('hide');
         currentQuestion = 0;
@@ -641,15 +657,15 @@ function resetGame() {
   
 //Storing Result Form Inputs - Gets input values and stores these inputs in local storage
 /**Event listener added to 'Get Certificate' button in results container
- * Calls the @function getName
-*/
+ * Calls the @function getName*/
+
 cert.addEventListener('click', getName);
 
 /** @function getName - creates two variables first name and last name
  * Stores the first name input field using setItem
  * Stores the last name input field using setItem
- * Calls @function loadName to retrieve stored input values
- */
+ * @function loadName - retrieves stored input values*/
+
 function getName() {
         let firstName = document.getElementById("fname").value;
         let lastName = document.getElementById("lname").value;
@@ -657,9 +673,8 @@ function getName() {
         localStorage.setItem("lname", lastName);
       
         /** @function loadName - retrieves stored input values using getItem
-         * Creates two variables first name and last name to retriev this data
-         * Should populate users first and last name if they wish to take the test again
-        */
+         * Should populate users first and last name if they wish to take the test again*/
+
       function loadName() {
         let firstName = localStorage.getItem("fname");
         document.getElementById("fname").value = firstName;
