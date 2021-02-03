@@ -542,7 +542,7 @@ function incorrect() {
  Swal.fire({
     position: 'center',
     icon: 'error',
-    title: 'Incorrect...but do not worry!',
+    title: 'Incorrect! Do not worry!',
     text: 'You are learning! Keep trying, you will get it next time.',
     showConfirmButton: false,
     timer: 2200
@@ -629,7 +629,7 @@ function restartGame(){
  * Adds the hide class to the submit button that appears after the final question is answered in the game
  * Resets the question back to zero so the first question in the questions array will be displayed.
  * Resets the score back to zero.
- * @callback playGame - to initiate the game.*/ 
+ * @function playGame- to initiate the game.*/ 
 function resetGame() {
          submitButton.classList.add('hide');
         currentQuestion = 0;

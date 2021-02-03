@@ -183,6 +183,7 @@ hr {
     padding-bottom: 10px;
 }
 
+/*Play Game Button*/
 #playGame{
     cursor: pointer;
     padding-left: 50px;
@@ -372,6 +373,53 @@ label {
     overflow: hidden;
 }
 
+/* Sweet Alerts*/
+.swal2-shown {
+    font-size: .8rem; 
+}
+
+div.swal2-popup{
+      background-color: #ffee00;
+}
+
+h2#swal2-title.swal2-title,
+#swal2-content{
+    color: #2faadc;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+#swal2-content{
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+}
+
+div.swal2-icon.swal2-success{
+color: #2faadc;
+border-color: #2faadc;
+}
+
+div.swal2-icon.swal2-error{
+    
+    border-color: #eb1f1f;
+}
+
+span.swal2-x-mark{
+    color: #eb1f1f;
+}
+
+.swal2-icon.swal2-error span[class^=swal2-x-mark-line] {
+    background-color: #eb1f1f;
+}
+
+button.swal2-styled.swal2-cancel,
+button.swal2-styled.swal2-confirm{
+    color: #ffee00;
+    background-color: #2faadc;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
 /*Game Buttons*/
 #gameControls{
     margin: 0 auto;
@@ -380,13 +428,12 @@ label {
 #finalBtns.btn-grid {
     -ms-grid-columns: auto 10px auto;
     grid-template-columns: repeat(2, auto);
-    gap: 10px;
-    margin: 0px auto;
+    gap: 20px;
     padding: 5px;
     text-align: center;
     display: block;
     margin: 10px 10px; 
-    padding: 5px;
+
 }
 
 #quizRepeat, #exit, #cert{
