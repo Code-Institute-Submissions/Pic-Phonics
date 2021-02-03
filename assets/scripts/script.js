@@ -457,7 +457,6 @@ function playAudio(file){
   }
 
 /**This function sets the Audio for each question using the array audio objects
- * Creates a variable called audioFile using the target audio object from each question.
  * @function playAudio - plays the current question audio file 
  * @param audioFile - current question audio file*/
 
@@ -466,13 +465,11 @@ function playAudio(file){
     playAudio(audioFile);
   }
 
-/**Creates a variable to select the html div element answers container using querySelector.
- * Creates another variable for the nodelist of elements called allChoices
- * @parameter 'input' - selected elements 
- * @parameter 'img' - selected elements 
- * A 'for each' loop is initiated to iterate through the 'input' and 'img' elements within the answers container. 
- * Adds an event listener to each 'input and 'img' html element.
- * Calls the @function checkAnswer for each of these elements within the answers container.*/
+/**Selects the html div element answers container using querySelector.
+ * @parameter 'input' - selects all input elements 
+ * @parameter 'img' - selects all image elements 
+ * A 'for each' loop iterates through the 'input' and 'img' elements within the answers container. 
+ * @function checkAnswer - called when image or input is clicked*/
 
 const choiceContainer = document.querySelector("#answers");
 const allChoices = choiceContainer.querySelectorAll("input","img");
@@ -483,8 +480,8 @@ allChoices.forEach((choice) => {
 // Checks  if selected answer is correct or incorrect
 function checkAnswer() {
 
-    const correctAnswer = questions[currentQuestion].correct; //variable to identify the location of the correct answer within the questions array
-    /** Uses an if/else statement that checks if the input element with the name "choices" matches the correctAnswer variable
+    const correctAnswer = questions[currentQuestion].correct; //Locates the correct answer within the questions array
+    /** Checks if the input element with the name "choices" equals the correctAnswer variable
      * @function correct is called if true.  
      * @function incorrect is called if false.*/
 
@@ -496,14 +493,14 @@ function checkAnswer() {
 
         correct();
 
-        //Removes the class 'hide' from the span elements to reveal the text when one of the image choices is selected.
+        //Reveals the span text when one of the image choices is selected.
 
         document.getElementById("A").classList.remove('hide');
         document.getElementById("B").classList.remove('hide');
         document.getElementById("C").classList.remove('hide');
         document.getElementById("D").classList.remove('hide');
         
-        //Sets timeout delay of 4 seconds before next question is rendered.
+        //Next question is rendered after 4 second timeout.
 
         setTimeout(function () {
             nextQuestion();
@@ -514,14 +511,14 @@ function checkAnswer() {
         // answer is incorrect
         incorrect();
 
-        //Removes the class 'hide' from the span elements to reveal the text when one of the image choices is selected. 
+        //Reveals the span text when one of the image choices is selected. 
 
         document.getElementById("A").classList.remove('hide');
         document.getElementById("B").classList.remove('hide');
         document.getElementById("C").classList.remove('hide');
         document.getElementById("D").classList.remove('hide');
 
-        //Sets a time delay of 4 seconds before next question is rendered.
+        //The next question is rendered after a 4 second timeout.
 
         setTimeout(function () {
             nextQuestion();
@@ -531,8 +528,8 @@ function checkAnswer() {
 }
 
 /** @function correct  - is called when the answer is correct.
- * Displays an alert to the user, if the correct answer is chosen
- * The alert is timed to display for 2.2 seconds.*/
+ * Displays an alert to the user if the correct answer is selected
+ * The alert is displayed for 2.2 seconds.*/
 
 function correct() {
 
@@ -548,8 +545,8 @@ function correct() {
 }
 
 /** @function incorrect  - is called when the answer is correct.
- * Displays an alert to the user, if the incorrect answer is chosen
- * The alert is timed to display for 2.2 seconds.*/
+ * Displays an alert to the user if the incorrect answer is selected
+ * The alert is displayed for 2.2 seconds.*/
 
 function incorrect() {
  Swal.fire({
@@ -563,26 +560,26 @@ function incorrect() {
   
 }
 
-/**Adds an event listener to the 'Submit' button after the final question is answered
+/**Event Listener
  * @function showResult - when the submit button is clicked 
  * Renders the results section*/
 
 submitButton.addEventListener('click', showResult);
 
 /** @function showResult - directs the user to the results section of the game.
- * User's'result is displayed in percentage format.
- * Adds the hide class to the game container and removes the hide class from the results container*/
+ * User's result is displayed in percentage format.
+ * Hides the game container and displays the results container*/
 
 function showResult( ){
     gameContainer.classList.add('hide');
     resultsContainer.classList.remove('hide');
 
-    /**Converts the user score to percentage format by multipling the user score by 100
-     * Calls the toFixed method to set the percentage to fixed notation (rounding up the number to eliminate decimals)*/
+    /**Converts the user score to percentage format by multipling the score by 100
+     * Sets the percentage to fixed notation (rounding up the number to eliminate decimals)*/
 
     let totalScore = (score/questions.length * 100).toFixed();
 
-    //Generates a html header element to display the users score in the results container.
+    //Generates a html header element to display the users score.
 
     scoreContainer.innerHTML = `<h3> You  scored ${totalScore}% in Pic Phonics Initial Sounds Game</<h3>`;
 
@@ -591,16 +588,16 @@ function showResult( ){
         localStorage.setItem("score",totalScore);
 }
 
-/** Created event listeners  on the 'Exit' navigation link and 'Exit Game' button 
- * @function exitGame - called when link or button is clicked*/
+/** Event Listener
+ * @function exitGame - called when 'Exit' navigation link and 'Exit Game' button is clicked*/
 
 exitLink.addEventListener("click", exitGame);
 exit.addEventListener("click", exitGame);
 
-/** @function exitGame - allows the user to exit the game when all questions are completed
- * Displays an alert to the user aking if they are sure they want to leave the game.
- * If the request is confirmed, the user is directed back to the homepage.
- * If the request is cancelled, the alert will automatically close.*/
+/** @function exitGame - allows the user to exit the game
+ * Displays an alert to the user asking if they are sure they want to leave the game.
+ * Request is confirmed - the user is directed back to the homepage.
+ * Request is cancelled - the alert will automatically close.*/
 
 function exitGame() {
     Swal.fire({
@@ -625,7 +622,7 @@ form.classList.add('was-validated');
        }
     });
 
-/** Creates event listeners to restarts the game
+/** Event Listener
  * @function restartGame - called when 'Play' link or 'Restart Game' button is clicked*/
 
 playLink.addEventListener("click", restartGame);
@@ -656,14 +653,12 @@ function resetGame() {
 }
   
 //Storing Result Form Inputs - Gets input values and stores these inputs in local storage
-/**Event listener added to 'Get Certificate' button in results container
- * Calls the @function getName*/
+/**Event listener
+ * @function getName - called when 'Get Certificate' button is clicked */
 
 cert.addEventListener('click', getName);
 
-/** @function getName - creates two variables first name and last name
- * Stores the first name input field using setItem
- * Stores the last name input field using setItem
+/** @function getName - stores first and last name input values
  * @function loadName - retrieves stored input values*/
 
 function getName() {
@@ -672,8 +667,8 @@ function getName() {
         localStorage.setItem("fname", firstName);
         localStorage.setItem("lname", lastName);
       
-        /** @function loadName - retrieves stored input values using getItem
-         * Should populate users first and last name if they wish to take the test again*/
+       
+         //Should populate users first and last name values to input fields*/
 
       function loadName() {
         let firstName = localStorage.getItem("fname");
