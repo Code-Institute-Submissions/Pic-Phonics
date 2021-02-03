@@ -671,10 +671,15 @@ h2#formTitle {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; 
+    gap: 20px;
 }
 
 #quizRepeat, #exit, #cert {
     font-size: 1.7rem;
+}
+
+#quizRepeat, #exit{
+    margin: 5px 10px;
 }
 
 #footer-details{
