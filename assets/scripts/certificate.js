@@ -1,4 +1,5 @@
-/**Retrieves the data from the input values in the results container that were stored in local storage
+/**
+ * Retrieves the data from the input values in the results container that were stored in local storage
  * It uses this data to populate the certificate HTML with personalised name and score for each user
  */
 

@@ -360,14 +360,13 @@ const questions = [{
 ];
 
 //Event Listener added to Homepage 'Let's Play' button that directs users to the start of the game
-
 playButton.addEventListener('click', playGame);
 
 /** 
  * @function playGame - initiates the game
  * Hides the homepage background, callout and overlay
- * Removes the hide class from the game section so it can be displayed.*/
-
+ * Removes the hide class from the game section so it can be displayed.
+ */
 function playGame() {
     playButton.classList.add('hide');
     document.getElementById('home').classList.add('hide');
@@ -376,26 +375,23 @@ function playGame() {
     score = 0;
     gameContainer.classList.remove('hide');
     renderQuestion();
-
 }
 
 /**
  * @function renderQuestion - renders the questions and answers to the game container. 
- * Uses a 'for' loop to iterate through the questions array and choices array*/
-
+ * Uses a 'for' loop to iterate through the questions array and choices array
+ */
 function renderQuestion() {
     for (let i = 0; i < questions.length; i++) {
 
         let q = questions[currentQuestion];
 
         //Sets up the html layout for the Questions in the game using the objects within the questions array  
-
         lText.innerHTML = `<h3> This is the letter ${q.letterText} </h3>`;
         questionContainer.innerHTML = `<h3> ${q.question} </h3>`;
         qImg.innerHTML = `<img src= ${questionImageDirectory}${q.qimage} alt = ${q.letterText} >`;
 
         //Sets up the html layout for the Choices in the game using the objects within the choices array
-
         imageA.src = `${choiceImageDirectory}${q.choices[0].imageFile}`;
         imageA.alt = q.choices[0].choiceText;
         TextA.innerText = q.choices[0].choiceText;
@@ -437,7 +433,6 @@ function renderQuestion() {
  * The if/else statement that reveals the submit button when the final question has been reached.
  * Otherwise it calls for the next question in the array to be rendered.*/
 function nextQuestion() {
-
     if (currentQuestion == questions.length - 1) {
         submitButton.classList.remove('hide'); //reveals the submit button at end of game container
     } else {
@@ -476,7 +471,6 @@ allChoices.forEach((choice) => {
 
 // Checks  if selected answer is correct or incorrect
 function checkAnswer() {
-
     const correctAnswer = questions[currentQuestion].correct; //Locates the correct answer within the questions array
 
     //Disables choice elements are answer has been selected
@@ -495,6 +489,7 @@ function checkAnswer() {
         //If the answer is correct, increase score by 1
         score++;
 
+        //Displays correct alert
         correct();
 
         //Reveals the span text when one of the image choices is selected.
@@ -510,6 +505,7 @@ function checkAnswer() {
 
     } else {
         // answer is incorrect
+        //Displays incorrect alert
         incorrect();
 
         //Reveals the span text when one of the image choices is selected. 
@@ -586,7 +582,8 @@ function showResult() {
     localStorage.setItem('score', totalScore);
 }
 
-/** Event Listener
+/** 
+ * Event Listener
  * @function exitGame - called when 'Exit' navigation link and 'Exit Game' button is clicked
  */
 exitLink.addEventListener('click', exitGame);
@@ -610,7 +607,6 @@ function exitGame() {
 }
 
 //Bootstrap Form Validation - disables form submission if there are invalid fields
-
 cert.addEventListener('click', function(validate) {
     if (cert.checkValidity() === false) {
         validate.preventDefault();
@@ -664,19 +660,29 @@ cert.addEventListener('click', getName);
  * @function loadName - retrieves stored input values
  */
 function getName() {
+
     let firstName = document.getElementById('fname').value;
     let lastName = document.getElementById('lname').value;
     localStorage.setItem('fname', firstName);
     localStorage.setItem('lname', lastName);
 
-
     //Should populate users first and last name values to input fields*/
     function loadName() {
-        let firstName = localStorage.getItem('fname');
-        document.getElementById('fname').value = firstName;
+        if (localStorage.getItem('fname')) {
+            let firstName = localStorage.getItem('fname');
+            document.getElementById('fname').value = firstName;
+        } else {
+            let defaultValue1 = 'First Name';
+            return defaultValue1;
+        }
 
-        let lastName = localStorage.getItem('lname');
-        document.getElementById('lname').value = lastName;
+        if (localStorage.getItem('lname')) {
+            let lastName = localStorage.getItem('lname');
+            document.getElementById('lname').value = lastName;
+        } else {
+            let defaultValue2 = 'Last Name';
+            return defaultValue2;
+        }
     }
     loadName();
 }
