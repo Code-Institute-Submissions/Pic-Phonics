@@ -560,6 +560,12 @@ Javascript file for the certificate HTML called certificate.js. This solved the 
 - When I first started this project, I had set up a standard for loop to iterate through my questions array. This worked as intended, but during a discussion with my mentor, he suggested that I use a for of loop as an alternative as it was a more proficient way to loop through the array. I did attempt to implement the 'for of' loop, however, I struggled to get it to work. The problems I was encountering were that the answer images were either showing up duplicated in each 
 choice container or only the last image would display for me. I did make several attempts to execute this change, but given my time frame with my project deadline, it was taken up too much valuable time I needed to complete my project, so I had to revert to the original for loop that I had started the project with. It would have been nice to implement something new and hopefully will get to use this method in another project going forward.
 
+**_On click function still enabled after answer choice selected_**
+- I encountered an accidental minor bug when testing my game. I had added an event listener to the nodelist of elements within the answers container. This was to allow the user to select an image as their selected answer to the question.
+However, after the user had selected an answer, the event listener was still active on the remaining choices. This would give the user the ability to select an alternative answer, but was also causing the game to think the next question had been answered. 
+This was an issue I needed to rectify, so I did some research and found a solution to this issue. I was able to stop the user from selecting a choice a second time on the same question. I did this using ```Javascript: choice.disabled = true``` within the checkAnswer function. This meant the user would be unable to click another image as an answer to the question.
+In doing so, I also had to ensure that the choices would be enabled again, once the next question was displayed. I did this by including the ```Javascript: choice.disabled = false``` in the render question function. The solution was found on [Stack Overflow](https://stackoverflow.com/questions/48082982/how-do-i-disable-all-radio-buttons-after-select).
+
 ## Deployment
 This project was developed using Gitpod IDE, then pushed to GitHub, where the repository is stored.
 
@@ -593,6 +599,8 @@ Found on [StackOverflow](https://stackoverflow.com/questions/30658663/bad-value-
 
 Javascript code snippet to create an audio element directly from Javascript using an Audio constructor which calls the play method. I then set up an event listener on the 'Click for Letter Sound' button that would call the
 set Audio function when clicked. Each audio sound now plays with its corresponding question when the button is pressed. This code snippet was found on [Stack Overflow](https://stackoverflow.com/questions/9419263/how-to-play-audio)
+
+Javascript code used for to solve issue with disabling the event listener on the choices once an answer had been selected to the question.[Stack Overflow](https://stackoverflow.com/questions/48082982/how-do-i-disable-all-radio-buttons-after-select)
 
 - **_MDN Web Docs_**
 This Javascript code solution was used to resolve the issue I had with 'for each' loop  I had set up on on the nodelist used for the user choice selction. This solution helped to stop the loop from skipping every second question in the game and was sourced on [MDN Web Docs](https://developer.mozilla.org/en-us/docs/web/API/Document/querySelectorAll)

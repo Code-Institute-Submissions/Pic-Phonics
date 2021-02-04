@@ -416,6 +416,14 @@ function renderQuestion() {
         // Places the Score Counter in the score container.
         scoreCount.innerHTML = `Score: ${score}`;
 
+        /**
+         * Selects the html div element answers container using querySelector.
+         * A 'for each' loop iterates through the 'input' and 'img' elements within the answers container. 
+         * Enables 'input' and 'img' elements to be clicked
+         */
+        allChoices.forEach((choice) => {
+            choice.disabled = false;
+        });
     }
 
     /** 
@@ -470,6 +478,12 @@ allChoices.forEach((choice) => {
 function checkAnswer() {
 
     const correctAnswer = questions[currentQuestion].correct; //Locates the correct answer within the questions array
+
+    //Disables choice elements are answer has been selected
+    allChoices.forEach((choice) => {
+        choice.disabled = true;
+    });
+
     /** 
      * Checks if the input element with the name 'choices' equals the correctAnswer variable
      * @function correct is called if true.  
@@ -508,7 +522,6 @@ function checkAnswer() {
         setTimeout(function() {
             nextQuestion();
         }, 4000);
-
     }
 }
 
@@ -518,7 +531,6 @@ function checkAnswer() {
  * The alert is displayed for 2.2 seconds.
  */
 function correct() {
-
     Swal.fire({
         position: 'center',
         icon: 'success',
@@ -543,7 +555,6 @@ function incorrect() {
         showConfirmButton: false,
         timer: 2200
     });
-
 }
 
 /**
