@@ -454,6 +454,7 @@ function playAudio(file) {
  * This function sets the Audio for each question using the array audio objects
  * @function playAudio - plays the current question audio file 
  * @param audioFile - current question audio file
+ * Code snippet taken from Stack Overflow and edited
  */
 function setAudio() {
     let audioFile = questions[currentQuestion].audio;
@@ -546,8 +547,8 @@ function incorrect() {
     Swal.fire({
         position: 'center',
         icon: 'error',
-        title: 'Incorrect! Do not worry!',
-        text: 'You are learning! Keep trying, you will get it next time.',
+        title: 'Incorrect!',
+        text: 'Keep trying! You will get it next time!',
         showConfirmButton: false,
         timer: 2200
     });
@@ -658,6 +659,7 @@ cert.addEventListener('click', getName);
 /** 
  * @function getName - stores first and last name input values
  * @function loadName - retrieves stored input values
+ * Code for using local storage found on W3Schools and edited
  */
 function getName() {
 

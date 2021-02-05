@@ -591,33 +591,33 @@ This project was developed using Gitpod IDE, then pushed to GitHub, where the re
 
 ## **Credits**
 ### **_Code_**
-- **Stackoverflow:**
-HTML code was taken from StackOverflow, to solve an issue with the hamburger menu. The menu was not closing when a link had been clicked,
+**Stackoverflow:**
+- HTML code was taken from StackOverflow, to solve an issue with the hamburger menu. The menu was not closing when a link had been clicked,
 the navbar was remaining open. Code taken from [Orel Eliyahu](https://stackoverflow.com/questions/36405991/bootstrap-toggle-menu-on-one-page-site-does-not-uncollapse-when-clicked)
 
-HTML code solution for adding the src attributes for the image tags in the HTML document that were being allocated from the Javascript file. To correct an error showing up on the HTML validator tool by using a '#' in the image tag in HTML.
+- HTML code solution for adding the src attributes for the image tags in the HTML document that were being allocated from the Javascript file. To correct an error showing up on the HTML validator tool by using a '#' in the image tag in HTML.
 Found on [StackOverflow](https://stackoverflow.com/questions/30658663/bad-value-for-attribute-src-on-element-img-must-be-non-empty-for-dynamically) and 
 
-Javascript code snippet to create an audio element directly from Javascript using an Audio constructor which calls the play method. I then set up an event listener on the 'Click for Letter Sound' button that would call the
+- Javascript code snippet to create an audio element directly from Javascript using an Audio constructor which calls the play method. I then set up an event listener on the 'Click for Letter Sound' button that would call the
 set Audio function when clicked. Each audio sound now plays with its corresponding question when the button is pressed. This code snippet was found on [Stack Overflow](https://stackoverflow.com/questions/9419263/how-to-play-audio)
 
-Javascript code used for to solve issue with disabling the event listener on the choices once an answer had been selected to the question.[Stack Overflow](https://stackoverflow.com/questions/48082982/how-do-i-disable-all-radio-buttons-after-select)
+- Javascript code used for to solve issue with disabling the event listener on the choices once an answer had been selected to the question.[Stack Overflow](https://stackoverflow.com/questions/48082982/how-do-i-disable-all-radio-buttons-after-select)
 
-- **_MDN Web Docs_**
-This Javascript code solution was used to resolve the issue I had with 'for each' loop  I had set up on on the nodelist used for the user choice selction. This solution helped to stop the loop from skipping every second question in the game and was sourced on [MDN Web Docs](https://developer.mozilla.org/en-us/docs/web/API/Document/querySelectorAll)
+**_MDN Web Docs_**
+- This Javascript code solution was used to resolve the issue I had with 'for each' loop  I had set up on on the nodelist used for the user choice selction. This solution helped to stop the loop from skipping every second question in the game and was sourced on [MDN Web Docs](https://developer.mozilla.org/en-us/docs/web/API/Document/querySelectorAll)
 
-- **_W3Schools_**
-Javascript code snippet used to store input values from form in results container in local storage to be retrived later to populate the certificate html. The code for this was found on [W3Schools](https://www.w3schools.com/html/html5_webstorage.asp)
+**_W3Schools_**
+- Javascript code snippet used to store input values from form in results container in local storage to be retrived later to populate the certificate html. The code for this was found on [W3Schools](https://www.w3schools.com/html/html5_webstorage.asp) and edited
 
-- **_W3Docs_**
-This was a CSS code snippet used to give the 'Let's Play' button an appearance of glowing. It was found here on [W3Docs](https://www.w3docs.com/snippets/css/how-to-create-flashing-glowing-button-using-animation-in-css3.html).
+**_W3Docs_**
+- This was a CSS code snippet used to give the 'Let's Play' button an appearance of glowing. It was found here on [W3Docs](https://www.w3docs.com/snippets/css/how-to-create-flashing-glowing-button-using-animation-in-css3.html) and edited.
 
-- **_Bootstrap Documentation_**
-HTML code used to build the 'Instructions' modal dialog box and edited for this project. This code was taken from [Bootstrap Documentation](https://getbootstrap.com/docs/4.1/components/modal/)
-Javascript code snippet used to validate form in results section of html file taken from [Bootstrap Documentation](https://getbootstrap.com/docs/4.0/components/forms/)
+**_Bootstrap Documentation_**
+- HTML code used to build the 'Instructions' modal dialog box and edited for this project. This code was taken from [Bootstrap Documentation](https://getbootstrap.com/docs/4.1/components/modal/)
+- Javascript code snippet used to validate form in results section of html file taken from [Bootstrap Documentation](https://getbootstrap.com/docs/4.0/components/forms/)
 
-- **_Favicon.io_**
-Code snippet used to generate a favicon for this website. This code was inserted into the html document in the `<head>` section. I have also included the source files for this in the favicon folder. The website used to generate the favicon and associated files was [Favicon.io](https://favicon.io/)
+**_Favicon_**
+- Code snippet used to generate a favicon for this website. This code was inserted into the html document in the `<head>` section. I have also included the source files for this in the favicon folder. The website used to generate the favicon and associated files was [Favicon.io](https://favicon.io/)
 
 ### **_Content_**
 - CJ Fallon - Sounds Like Phonics Teachers Resource Book, CJ Fallon Website: Used for to identify letters in Initial Phonics Sounds Phases.
