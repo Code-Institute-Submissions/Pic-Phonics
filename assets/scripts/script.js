@@ -351,8 +351,8 @@ const questions = [{
                 choiceText: 'ORANGE'
             },
             {
-                imageFile: 'giraffe.jpg',
-                choiceText: 'GIRAFFE'
+                imageFile: 'grass.jpg',
+                choiceText: 'GRASS'
             }
         ],
         correct: choiceD,

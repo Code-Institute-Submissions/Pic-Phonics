@@ -40,11 +40,12 @@ a child's development. It can be a powerful tool in developing life skills.
 
 ### **_Future Goals_** 
 1. Addition of a variety of levels catering for different age groups.
-2. Add a drawing capability so children can practice writing the letter and words.
-3. Additional resources such as reading materials(access to e-books), songs, rhymes, stories etc.
-4. Include other activities such as fill in the blanks and audio games to guess the sound/word.
-5. Create a forum space where parents and teachers can discuss phonics and ask questions.
-6. Ability to set up a user account to track and keep a record of progress made.
+2. Addition of audio sounds for the words in the game.
+3. Add a drawing capability so children can practice writing the letter and words.
+4. Additional resources such as reading materials(access to e-books), songs, rhymes, stories etc.
+5. Include other activities such as fill in the blanks and audio games to guess the sound/word.
+6. Create a forum space where parents and teachers can discuss phonics and ask questions.
+7. Ability to set up a user account to track and keep a record of progress made.
 
 ## **UX**
 
