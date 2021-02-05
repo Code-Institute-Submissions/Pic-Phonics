@@ -117,7 +117,7 @@ These sections are as follows:
 , many calls to action, minimal text and easy access to game information at any time, for ease of use for the user.
 
 ### **_Surface Plane_**
-#### _Colours_
+#### **_Colours_**
 - The colours chosen for this project were based on research of colours that best facilitate children's ability to learn.
 Blue is described as universally the best colour to use in learning activities, as it can enhance reading comprehension. It is also 
 a calming and relaxing colour. A lighter shade of blue was chosen as research also shows, lighter shades create a lighter and positive vibe. 
@@ -125,17 +125,17 @@ Blue drives productivity, it is ideal for highly cognitive and challenging tasks
 Yellow is a vibrant colour and is shown to grab and maintain children's attention while learning. It generates positive energy, and encourages creativity.
 - Other colours I have chosen to use are red and green. Red stimulates energy, and green promotes a feeling of relaxation and ease.
 
-#### _Typography_
+#### **_Typography_**
 - When choosing the typography for this project, I consulted with my sister who is a primary school teacher. She was able to give me advice on the best typography to use
 in this project. It was important that the text was inviting and visually appealing, with an easy to read typeface. In light of this advice, I decided to use 'Fredoka One' 
 for the headers and buttons and 'Sniglet' for the body text.
 
-#### _Images_
+#### **_Images_**
 - The images for this project were obtained from a couple of different resources. The letter images for each question in the game were sourced from [TeachersPayTeachers.com](https://www.teacherspayteachers.com/Product/Large-Alphabet-Flash-Cards-Capital-Lowercase-1137338?st=1c42baaf6b98ba8c603c374104b2be5b)
 - The images for the choice options in the game were obtained from [Unsplash.com](https://unsplash.com/) and [Pexels.com](https://www.pexels.com/)
 - The background image for the containers was sourced from [Unsplash.com](https://unsplash.com/) 
 
-## *Features*
+## **Features**
 ### **_Navigation Bar & Footer_**
 - The **navigation bar** is in a fixed position, making it easy for users to access the navigation elements of the website, and allow them to view these elements at any point during or after the game.
 - The navigation bar consists of a **logo** to the left, which acts as a link back to the homepage, and **three navigation links** to the right. These links are 'Instructions', 'Play', and 'Exit'. The 
@@ -186,7 +186,7 @@ also populated into the certificate HTML file.
 - The user can then save this certificate as a **PDF**, or can be **printed** directly from the browser, if the user wishes to do so.
 - The certificate contains the **company name**, the **user name**, the **name of the game**, the **score** and the **company logo**.
 
-## *Existing Features*
+## **Existing Features**
 
 #### **_General_**
 - The navigation bar is displayed as a **fixed top** element, and is located at the top of the page at all times for each section. 
@@ -236,7 +236,7 @@ The certificate is **optional** for users, and is only displayed if the user opt
 - Ability to set up a user account, to track and keep a record of progress made.
 
 
-## *Technologies Used*
+## **Technologies Used**
 ### **_Languages_**
 - HTML5: This was used to create the structure for both the main page and the certificate that is generated at the end of the game.
 - CSS: This was used to style all elements of the website
@@ -258,7 +258,7 @@ asking them if they are sure before executing the exitGame function.
 - Tinyjpeg: This was used to compress the images used on the website.
 - Balsamiq Wireframes: Used to create wireframes for this project
 
-## *Testing*
+## **Testing**
 
 **_Validation W3C HTML Markup Validator_**
 - Ran code through the HTML validator and it was displaying an error with using an `<a>` tag with a button type, so I changed the HTML file to make the nav link an `<a>` tag and removed type = button.
@@ -275,10 +275,10 @@ added a '#' to the src in the HTML, which is then populated with the correct ima
 - When I first ran my Javascript code through JS Hint, it showed a few errors with unused variables, so I removed any unnecessary variables that were still in my code and these errors were rectified.
 The other error that was showing up was an undefined variable for the Swal variable used in my sweet alert messages. I tried to resolve this issue but the solutions I tried did not work. I am still working on this issue.
 
-### *Tests Carried Out*
+### **Tests Carried Out**
 
 
-#### User Story Tests
+#### **User Story Tests**
 **_As a teacher, I would like to have access to an interactive learning platform that would allow me to incorporate ICT and active learning within the classroom._**
 
 
@@ -324,7 +324,7 @@ consistency of school and home education.
 
 This website is accessible on all devices, large and small. It is a responsive and versatile website that can be utilised while on the go through mobile or tablet devices or from desktop devices.
 
-### Navigation Bar
+### **Navigation Bar**
 
 **_Navigation links_**
 
@@ -377,7 +377,7 @@ playing the game. This link works correctly and is visible and functional on all
 _Check to make sure that user can scroll through content in modal dialog box._
 - The scroll function on the modal works as intended and scrolls through the modal content as expected. This test was successful.
 
-### Homepage
+### **Homepage**
 
 **_Homepage Hero Image Responsiveness_**
 
@@ -398,7 +398,7 @@ The callout text is responsive and the text size changes slightly depending on t
 _Test to see if this call to action button works and directs the user to the start of the game._
 - The call to action button 'Let's Play' functions correctly and when clicked, opens up the game container displaying the first question of the game.
 
-### Game Section
+### **Game Section**
 
 **_Responsiveness of images_**
 
@@ -452,7 +452,7 @@ _Check that the 'Submit' button take the user to the targeted Section_
 - Once all questions have been answered in the game, the submit button is revealed. When this is clicked it should take the user directly to the result's section.
 The submit button functions exactly as expected, there are no issues with this button, it works correctly.
 
-### Results Section
+### **Results Section**
 **_Results Section Form Validity - required fields_**
 
 
@@ -493,7 +493,7 @@ leave the game, this directs the user back to the homepage as it is supposed to.
 - The 'Restart Game' button also functions as expected. Once clicked, it directs the user back to the beginning of the game, opens the game container and displays the first question and
 clears the previous score back to zero. The user can then attempt the game again. This button works correctly.
 
-### Certificate
+### **Certificate**
 
 **_Score generated_**
 
@@ -513,7 +513,7 @@ through the click of the 'Get Certificate' button. This was test passed and the 
 when they select to generate a certificate using local storage to store and retrieve these input values.
 
 
-#### Footer 
+#### **Footer**
 
 **_Responsiveness of footer_**
 
@@ -522,25 +522,25 @@ _Verify that the footer is responsive on all devices._
 - I ran a test using Google Chrome Dev Tools to check that the footer was responsive and was scaling up and down depending on the device being used.
 I can verify that the footer is fully responsive and the text size is altered to suit each device size.
 
-### General 
-_Check alt text appears for all images_
+### **General**
+**_Check alt text appears for all images_**
 - Hover over images to see if there is clear alt text visible.
 All images were tested and alt text appears on images.
 
-_Conducted spell check on README file and text used in both HTML files._
+**_Conducted spell check on README file and text used in both HTML files._**
 - All spelling errors were corrected.
 
-_Autoprefixer CSS_
+**_Autoprefixer CSS_**
 - Ran code through Autoprefixer and copied code back into css file.
 
-_Mobile Friendly Test_
+**_Mobile Friendly Test_**
 - Ran code on [Mobile Friendly Test](https://search.google.com/test/mobile-friendly) page and passed all tests. The site is mobile friendly.
 
-_Testing on physical devices_
+**_Testing on physical devices_**
 - I also asked friends and family members to test the website on many different devices including large screen laptops,
 iPhone, android, android table and iPad and across a variety of browsers Internet Explorer, Google Chrome, and Firefox.
 
-### Issues Encountered
+### **Issues Encountered**
 **_Image Click to select an Answer_**
 - I initially had set up the answers as radio buttons, but as this game is intended for children, I thought that having the ability to click the image would be more appealing and fun for them. So I attempted to add the image as a label for the radio button, so that when clicked, would also check the radio button element. It was not working as I had set up the input in HTML and
 the label was being generated from the Javascript file. Therefore the label tag was not wrapping around the input tag in HTML. It was causing a bit of an issue, so I contacted tutuor support for advice. From that discussion I decided to set up the label tag in the HTML file, which included the input, image tag and a span tag with the image text in it, within the label tag. I set up four of these inside 
@@ -567,12 +567,12 @@ However, after the user had selected an answer, the event listener was still act
 This was an issue I needed to rectify, so I did some research and found a solution to this issue. I was able to stop the user from selecting a choice a second time on the same question. I did this using ```Javascript: choice.disabled = true``` within the checkAnswer function. This meant the user would be unable to click another image as an answer to the question.
 In doing so, I also had to ensure that the choices would be enabled again, once the next question was displayed. I did this by including the ```Javascript: choice.disabled = false``` in the render question function. The solution was found on [Stack Overflow](https://stackoverflow.com/questions/48082982/how-do-i-disable-all-radio-buttons-after-select).
 
-## Deployment
+## **Deployment**
 This project was developed using Gitpod IDE, then pushed to GitHub, where the repository is stored.
 
-### Project Deployment
+### **Project Deployment**
 
-##### The following steps outline how the project was deployed to GitHub pages:
+##### **The following steps outline how the project was deployed to GitHub pages:**
 
 1. Logged on to GitHub
 2. Opened the repository Lomasney-Motors-1.0
@@ -583,53 +583,53 @@ This project was developed using Gitpod IDE, then pushed to GitHub, where the re
 7. This allowed the site to be published to GitHub pages and url for the site was displayed in a box above the source section.
 8. The deployed version and the development version of this project are the same.
 
-##### To run the project locally:
+##### **To run the project locally:**
 
 1. Open this link to the Project Repository
 2. Click on the 'Code' button at the top.
 3. From here you can select to either download or clone to a desktop IDE using the url provided.
 
 ## **Credits**
-### **_Code_**
-**Stackoverflow:**
+### **Code**
+**_Stackoverflow_**
 - HTML code was taken from StackOverflow, to solve an issue with the hamburger menu. The menu was not closing when a link had been clicked,
-the navbar was remaining open. Code taken from [Orel Eliyahu](https://stackoverflow.com/questions/36405991/bootstrap-toggle-menu-on-one-page-site-does-not-uncollapse-when-clicked)
+the navbar was remaining open. Code taken from [Orel Eliyahu](https://stackoverflow.com/questions/36405991/bootstrap-toggle-menu-on-one-page-site-does-not-uncollapse-when-clicked).
 
 - HTML code solution for adding the src attributes for the image tags in the HTML document that were being allocated from the Javascript file. To correct an error showing up on the HTML validator tool by using a '#' in the image tag in HTML.
-Found on [StackOverflow](https://stackoverflow.com/questions/30658663/bad-value-for-attribute-src-on-element-img-must-be-non-empty-for-dynamically) and 
+Found on [StackOverflow](https://stackoverflow.com/questions/30658663/bad-value-for-attribute-src-on-element-img-must-be-non-empty-for-dynamically) and edited.
 
 - Javascript code snippet to create an audio element directly from Javascript using an Audio constructor which calls the play method. I then set up an event listener on the 'Click for Letter Sound' button that would call the
-set Audio function when clicked. Each audio sound now plays with its corresponding question when the button is pressed. This code snippet was found on [Stack Overflow](https://stackoverflow.com/questions/9419263/how-to-play-audio)
+set Audio function when clicked. Each audio sound now plays with its corresponding question when the button is pressed. This code snippet was found on [Stack Overflow](https://stackoverflow.com/questions/9419263/how-to-play-audio).
 
-- Javascript code used for to solve issue with disabling the event listener on the choices once an answer had been selected to the question.[Stack Overflow](https://stackoverflow.com/questions/48082982/how-do-i-disable-all-radio-buttons-after-select)
+- Javascript code used for to solve issue with disabling the event listener on the choices once an answer had been selected to the question. Found on [Stack Overflow](https://stackoverflow.com/questions/48082982/how-do-i-disable-all-radio-buttons-after-select) and edited.
 
 **_MDN Web Docs_**
-- This Javascript code solution was used to resolve the issue I had with 'for each' loop  I had set up on on the nodelist used for the user choice selction. This solution helped to stop the loop from skipping every second question in the game and was sourced on [MDN Web Docs](https://developer.mozilla.org/en-us/docs/web/API/Document/querySelectorAll)
+- This Javascript code solution was used to resolve the issue I had with 'for each' loop  I had set up on on the nodelist used for the user choice selction. This solution helped to stop the loop from skipping every second question in the game and was sourced on [MDN Web Docs](https://developer.mozilla.org/en-us/docs/web/API/Document/querySelectorAll).
 
 **_W3Schools_**
-- Javascript code snippet used to store input values from form in results container in local storage to be retrived later to populate the certificate html. The code for this was found on [W3Schools](https://www.w3schools.com/html/html5_webstorage.asp) and edited
+- Javascript code snippet used to store input values from form in results container in local storage to be retrived later to populate the certificate html. The code for this was found on [W3Schools](https://www.w3schools.com/html/html5_webstorage.asp) and edited.
 
 **_W3Docs_**
 - This was a CSS code snippet used to give the 'Let's Play' button an appearance of glowing. It was found here on [W3Docs](https://www.w3docs.com/snippets/css/how-to-create-flashing-glowing-button-using-animation-in-css3.html) and edited.
 
 **_Bootstrap Documentation_**
-- HTML code used to build the 'Instructions' modal dialog box and edited for this project. This code was taken from [Bootstrap Documentation](https://getbootstrap.com/docs/4.1/components/modal/)
-- Javascript code snippet used to validate form in results section of html file taken from [Bootstrap Documentation](https://getbootstrap.com/docs/4.0/components/forms/)
+- HTML code used to build the 'Instructions' modal dialog box and edited for this project. This code was taken from [Bootstrap Documentation](https://getbootstrap.com/docs/4.1/components/modal/).
+- Javascript code snippet used to validate form in results section of html file taken from [Bootstrap Documentation](https://getbootstrap.com/docs/4.0/components/forms/).
 
 **_Favicon_**
 - Code snippet used to generate a favicon for this website. This code was inserted into the html document in the `<head>` section. I have also included the source files for this in the favicon folder. The website used to generate the favicon and associated files was [Favicon.io](https://favicon.io/)
 
-### **_Content_**
+### **Content**
 - CJ Fallon - Sounds Like Phonics Teachers Resource Book, CJ Fallon Website: Used for to identify letters in Initial Phonics Sounds Phases.
 - Orlagh Lomasney - Provided voice for the game audio and additional resources and advice on phonics learning
 
-### **_Media_**
+### **Media**
 - TeachersPay teachers website - letter image from flashcards obtained from the site
 - The photos used in this site were obtained from Unsplash.com & Pexels.com
 - Audio provided by my sister Orlagh Lomasney
 - The mockup of the website on all devices was created using [Techsini.com](https://techsini.com/multi-mockup/index.php)
 
-### **_Resources_**
+### **Resources**
 - Code Institute Content
 - Slack Community
 - Bootstrap Documentation
@@ -642,7 +642,7 @@ set Audio function when clicked. Each audio sound now plays with its correspondi
 - Orlagh Lomasney - primary school teacher
 - Sounds Like Phonics - CJ Fallon 
 
-### **_Acknowledgements_**
+### **Acknowledgements**
 I received inspiration for this project from my sister, she is a primary school teacher based in Cork and had discussed with me the lack of available interactive resources freely available
 online for parents and teachers. Orlagh was also extremely helpful throughout this project's development and provided me with essential information on the phonics curriculum, and she provided
 the audio used in the game I developed.

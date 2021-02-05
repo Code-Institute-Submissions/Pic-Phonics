@@ -1,7 +1,6 @@
 /* jshint esversion: 8 */
 
-/**
- * @global Constants & Variables used for game*/
+// Constants & Variables used for game
 const playButton = document.getElementById('playGame');
 const playLink = document.getElementById('play');
 const exitLink = document.getElementById('leave');
@@ -37,12 +36,11 @@ const allChoices = choiceContainer.querySelectorAll('input', 'img');
 let currentQuestion = 0;
 let score = 0;
 
-//Questions & Choices for the Game
 /**
  * Questions Array of objects - Used to generate game questions, images, audio, choices and answers.
  * @global Object
- * @param {Array.<Object>} questions
- * @param {Array,<Object>}choices is an array within the questions array.
+ * @param {Array.<Object>} questions - an array for all question objects
+ * @param {Array,<Object>} choices - an array within the questions array.
  */
 const questions = [{
         letterText: 'T',
@@ -363,9 +361,9 @@ const questions = [{
 playButton.addEventListener('click', playGame);
 
 /** 
- * @function playGame - initiates the game
- * Hides the homepage background, callout and overlay
- * Removes the hide class from the game section so it can be displayed.
+ * @function playGame - initiates the game.
+ * Hides the homepage background, callout and overlay.
+ * Displays the game container.
  */
 function playGame() {
     playButton.classList.add('hide');
@@ -412,26 +410,24 @@ function renderQuestion() {
         // Places the Score Counter in the score container.
         scoreCount.innerHTML = `Score: ${score}`;
 
-        /**
-         * Selects the html div element answers container using querySelector.
-         * A 'for each' loop iterates through the 'input' and 'img' elements within the answers container. 
-         * Enables 'input' and 'img' elements to be clicked
+         /*
+         A 'for each' loop iterates through the 'input' and 'img' elements within the answers container. 
+         Enables 'input' and 'img' elements to be clicked
          */
         allChoices.forEach((choice) => {
             choice.disabled = false;
         });
     }
 
-    /** 
-     * Adds an event listener to the 'Click for Letter Sound' button in the game container. 
-     * Allows the audio for the game to be played when the button is clicked*/
+    //Adds an event listener to the 'Click for Letter Sound' button in the game - Plays the letter audio sound when clicked.
     soundButton.addEventListener('click', setAudio);
 }
 
 /**
  * @function nextQuestion -  renders the next question in the game. 
- * The if/else statement that reveals the submit button when the final question has been reached.
- * Otherwise it calls for the next question in the array to be rendered.*/
+ * If the final question is reached, the submit button is displayed.
+ * Otherwise it calls for the next question in the array to be rendered.
+ */
 function nextQuestion() {
     if (currentQuestion == questions.length - 1) {
         submitButton.classList.remove('hide'); //reveals the submit button at end of game container
@@ -451,41 +447,41 @@ function playAudio(file) {
 }
 
 /**
- * This function sets the Audio for each question using the array audio objects
- * @function playAudio - plays the current question audio file 
- * @param audioFile - current question audio file
- * Code snippet taken from Stack Overflow and edited
+ * This function sets the Audio for each question using the array audio objects.
+ * @function playAudio - plays the current question audio file.
+ * @param audioFile - current question audio file.
+ * Code snippet taken from Stack Overflow and edited.
  */
 function setAudio() {
     let audioFile = questions[currentQuestion].audio;
     playAudio(audioFile);
 }
 
-/**
- * Selects the html div element answers container using querySelector.
- * A 'for each' loop iterates through the 'input' and 'img' elements within the answers container. 
- * @function checkAnswer - called when image or input is clicked
- */
+/* 
+A 'for each' loop iterates through the 'input' and 'img' elements within the answers container. 
+An event listener is added to all 'input' and 'img' elements - checks if selected choice is correct or incorrect.
+*/
 allChoices.forEach((choice) => {
     choice.addEventListener('click', checkAnswer);
 });
 
-// Checks  if selected answer is correct or incorrect
+/** 
+ * @function checkAnswer - Checks  if selected answer is correct or incorrect.
+ * Disables click function on images.
+ * If answer is correct - increases score by 1. Displays alert to user.
+ * If answer is incorrect - score does not increase. Displays alert to user.
+ * Reveals span text under images.
+ */
 function checkAnswer() {
     const correctAnswer = questions[currentQuestion].correct; //Locates the correct answer within the questions array
 
-    //Disables choice elements are answer has been selected
+    //Disables click on choice elements
     allChoices.forEach((choice) => {
         choice.disabled = true;
     });
 
-    /** 
-     * Checks if the input element with the name 'choices' equals the correctAnswer variable
-     * @function correct is called if true.  
-     * @function incorrect is called if false.
-     */
+    //Checks if the input element with the name 'choices' equals the correctAnswer in questions array. 
     if (document.querySelector('input[name = "choices"]:checked') == correctAnswer) {
-        // answer is correct
 
         //If the answer is correct, increase score by 1
         score++;
@@ -505,8 +501,7 @@ function checkAnswer() {
         }, 4000);
 
     } else {
-        // answer is incorrect
-        //Displays incorrect alert
+        // answer is incorrect - display incorrect alert
         incorrect();
 
         //Reveals the span text when one of the image choices is selected. 
@@ -524,7 +519,7 @@ function checkAnswer() {
 
 /** 
  * @function correct  - is called when the answer is correct.
- * Displays an alert to the user if the correct answer is selected
+ * Displays an alert to the user if the correct answer is selected.
  * The alert is displayed for 2.2 seconds.
  */
 function correct() {
@@ -540,7 +535,7 @@ function correct() {
 
 /** 
  * @function incorrect  - is called when the answer is correct.
- * Displays an alert to the user if the incorrect answer is selected
+ * Displays an alert to the user if the incorrect answer is selected.
  * The alert is displayed for 2.2 seconds.
  */
 function incorrect() {
@@ -554,17 +549,13 @@ function incorrect() {
     });
 }
 
-/**
- * Event Listener
- * @function showResult - when the submit button is clicked 
- * Renders the results section
- */
+//Event Listener added to submit button - to renders the results section when clicked.
 submitButton.addEventListener('click', showResult);
 
 /** 
  * @function showResult - directs the user to the results section of the game.
  * User's result is displayed in percentage format.
- * Hides the game container and displays the results container
+ * Hides the game container and displays the results container.
  */
 function showResult() {
     gameContainer.classList.add('hide');
@@ -583,14 +574,11 @@ function showResult() {
     localStorage.setItem('score', totalScore);
 }
 
-/** 
- * Event Listener
- * @function exitGame - called when 'Exit' navigation link and 'Exit Game' button is clicked
- */
+//Event Listener added to 'Exit' navigation link and 'Exit Game' button to allow user to exit the game.
 exitLink.addEventListener('click', exitGame);
 exit.addEventListener('click', exitGame);
 
-/** @function exitGame - allows the user to exit the game
+/** @function exitGame - allows the user to exit the game.
  * Displays an alert to the user asking if they are sure they want to leave the game.
  * Request is confirmed - the user is directed back to the homepage.
  * Request is cancelled - the alert will automatically close.
@@ -616,18 +604,15 @@ cert.addEventListener('click', function(validate) {
         form.classList.add('was-validated');
     }
 });
-
-/** 
- * Event Listener
- * @function restartGame - called when 'Play' link or 'Restart Game' button is clicked
- */
+ 
+// Event Listener added to 'Play' link and 'Restart Game' button to restart the game
 playLink.addEventListener('click', restartGame);
 restart.addEventListener('click', restartGame);
 
 /** 
- * @function restarts - restarts the game by resetting the game container
+ * @function restartGame - restarts the game.
  * Hides the results container.
- * Displays the game container
+ * Displays the game container.
  * @function resetGame - resets score and displays first question
  */
 function restartGame() {
@@ -636,10 +621,12 @@ function restartGame() {
 
     /** 
      * @function resetGame - resets the game container
-     * Hides the submit button
+     * 
+     * Hides the submit button.
      * Displays the first question.
      * Resets the score back to zero.
-     * @function playGame- to initiate the game.
+     * 
+     * @function playGame - initiates the game.
      */
     function resetGame() {
         submitButton.classList.add('hide');
@@ -650,15 +637,16 @@ function restartGame() {
     resetGame();
 }
 
-//Storing Result Form Inputs - Gets input values and stores these inputs in local storage
-/**
- * Event listener
- * @function getName - called when 'Get Certificate' button is clicked */
+/*
+Storing Result Form Inputs - Gets input values and stores these inputs in local storage
+Event listener -  calls the getName function when 'Get Certificate' button is clicked 
+*/
 cert.addEventListener('click', getName);
 
 /** 
  * @function getName - stores first and last name input values
  * @function loadName - retrieves stored input values
+ * 
  * Code for using local storage found on W3Schools and edited
  */
 function getName() {
