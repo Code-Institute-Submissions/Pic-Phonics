@@ -46,7 +46,7 @@ let score = 0;
  */
 const questions = [{
         letterText: 'T',
-        question: 'Choose the picture that begins with the letter T ?',
+        question: 'Choose the picture that begins with the letter T',
         qimage: 'Tt.jpg',
         audio: 'assets/audio/t.mp3',
         choices: [{
@@ -70,7 +70,7 @@ const questions = [{
     },
     {
         letterText: 'A',
-        question: 'Choose the picture that begins with the letter A ?',
+        question: 'Choose the picture that begins with the letter A',
         qimage: 'Aa.jpg',
         audio: 'assets/audio/a.mp3',
         choices: [{
@@ -94,7 +94,7 @@ const questions = [{
     },
     {
         letterText: 'S',
-        question: 'Choose the picture that begins with the letter S ?',
+        question: 'Choose the picture that begins with the letter S',
         qimage: 'Ss.jpg',
         audio: 'assets/audio/s.mp3',
         choices: [{
@@ -118,7 +118,7 @@ const questions = [{
     },
     {
         letterText: 'M',
-        question: 'Choose the picture that begins with the letter M ?',
+        question: 'Choose the picture that begins with the letter M',
         qimage: 'Mm.jpg',
         audio: 'assets/audio/m.mp3',
         choices: [{
@@ -142,7 +142,7 @@ const questions = [{
     },
     {
         letterText: 'I',
-        question: 'Choose the picture that begins with the letter I ?',
+        question: 'Choose the picture that begins with the letter I',
         qimage: 'Ii.jpg',
         audio: 'assets/audio/i.mp3',
         choices: [{
@@ -166,7 +166,7 @@ const questions = [{
     },
     {
         letterText: 'H',
-        question: 'Choose the picture that begins with the letter H ?',
+        question: 'Choose the picture that begins with the letter H',
         qimage: 'Hh.jpg',
         audio: 'assets/audio/h.mp3',
         choices: [{
@@ -190,7 +190,7 @@ const questions = [{
     },
     {
         letterText: 'C',
-        question: 'Choose the picture that begins with the letter C ?',
+        question: 'Choose the picture that begins with the letter C',
         qimage: 'Cc.jpg',
         audio: 'assets/audio/c.mp3',
         choices: [{
@@ -214,7 +214,7 @@ const questions = [{
     },
     {
         letterText: 'K',
-        question: 'Choose the picture that begins with the letter K ?',
+        question: 'Choose the picture that begins with the letter K',
         qimage: 'Kk.jpg',
         audio: 'assets/audio/k.mp3',
         choices: [{
@@ -238,7 +238,7 @@ const questions = [{
     },
     {
         letterText: 'O',
-        question: 'Choose the picture that begins with the letter O ?',
+        question: 'Choose the picture that begins with the letter O',
         qimage: 'Oo.jpg',
         audio: 'assets/audio/o.mp3',
         choices: [{
@@ -262,7 +262,7 @@ const questions = [{
     },
     {
         letterText: 'P',
-        question: 'Choose the picture that begins with the letter P ?',
+        question: 'Choose the picture that begins with the letter P',
         qimage: 'Pp.jpg',
         audio: 'assets/audio/p.mp3',
         choices: [{
@@ -287,7 +287,7 @@ const questions = [{
     },
     {
         letterText: 'L',
-        question: 'Choose the picture that begins with the letter L ?',
+        question: 'Choose the picture that begins with the letter L',
         qimage: 'Ll.jpg',
         audio: 'assets/audio/l.mp3',
         choices: [{
@@ -311,7 +311,7 @@ const questions = [{
     },
     {
         letterText: 'E',
-        question: 'Choose the picture that begins with the letter E ?',
+        question: 'Choose the picture that begins with the letter E',
         qimage: 'Ee.jpg',
         audio: 'assets/audio/e.mp3',
         choices: [{
@@ -335,7 +335,7 @@ const questions = [{
     },
     {
         'letterText': 'G',
-        'question': 'Choose the picture that begins with the letter G ?',
+        'question': 'Choose the picture that begins with the letter G',
         'qimage': 'Gg.jpg',
         'audio': 'assets/audio/g.mp3',
         'choices': [{
@@ -666,24 +666,14 @@ function getName() {
     localStorage.setItem('fname', firstName);
     localStorage.setItem('lname', lastName);
 
-    //Should populate users first and last name values to input fields*/
+    //Should populate users first and last name values to input fields
     function loadName() {
-        if (localStorage.getItem('fname')) {
-            let firstName = localStorage.getItem('fname');
-            document.getElementById('fname').value = firstName;
-        } else {
-            let defaultValue1 = 'First Name';
-            return defaultValue1;
-        }
+        let firstName = localStorage.getItem('fname');
+        document.getElementById('fname').value = firstName;
 
-        if (localStorage.getItem('lname')) {
-            let lastName = localStorage.getItem('lname');
-            document.getElementById('lname').value = lastName;
-        } else {
-            let defaultValue2 = 'Last Name';
-            return defaultValue2;
-        }
+        let lastName = localStorage.getItem('lname');
+        document.getElementById('lname').value = lastName;
     }
     loadName();
 }
-     
+    
