@@ -548,9 +548,10 @@ body {
 }
 
 #certTitle {
-  font-size: 50px;
+  font-size: 3rem;
   font-family: "Fredoka One", sans-serif;
   font-weight: bold;
+  letter-spacing: .2rem;
 }
 
 .cert-text {
@@ -558,19 +559,22 @@ body {
 }
 
 .certify {
-  font-size: 20px;
+  font-size: 1.3rem;
 }
 
 .name, .end-score, .quiz-name {
-  font-size: 20px;
+  font-size: 1.4rem;
+  font-family: "Sniglet", sans-serif;
 }
 
 .company-name {
+  font-family: "Fredoka One", sans-serif;
   color: #fffb00;
   font-weight: bolder;
-  font-size: 40px;
+  font-size: 2.5rem;
   background-color: #098edba4;
-  margin: 0px 100px;
+  margin: 0px 90px;
+  letter-spacing: .1rem;
 }
 
 /*Media Queries*/
