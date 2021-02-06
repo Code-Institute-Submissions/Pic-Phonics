@@ -36,7 +36,7 @@ a child's development. It can be a powerful tool in developing life skills.
 5. Increase parent engagement in the child's learning experience.
 6. Access to a learning resource that can be used on a variety of different devices.
 7. Access to learning resources that caters for all learning abilities and styles.
-7. Encourage active learning.
+8. Encourage active learning.
 
 ### **_Future Goals_** 
 1. Addition of a variety of levels catering for different age groups.
@@ -238,25 +238,25 @@ The certificate is **optional** for users, and is only displayed if the user opt
 
 ## **Technologies Used**
 ### **_Languages_**
-- HTML5: This was used to create the structure for both the main page and the certificate that is generated at the end of the game.
-- CSS: This was used to style all elements of the website
-- JavaScript: This was used extensively to create the game section and functionality of the website
+- **HTML5:** This was used to create the structure for both the main page and the certificate that is generated at the end of the game.
+- **CSS:** This was used to style all elements of the website
+- **JavaScript:** This was used extensively to create the game section and functionality of the website
 
 ### **_Frameworks/Integrations_**
-- Bootstrap4: Used for the grid layout for the website and modal dialog box.
-- Font Awesome: Used to add icons to my footer and button on the website.
-- Google Fonts: Used to select the font styles used on the website for the section headers and body.
-- JQuery: Used for the drop down navigation and also for the modal created to display the game instructions.
-- SweetAlert2: Used to create the alerts for 'correct' and 'incorrect' responses within the game and also as an alert when the user decides to leave the game,
+- **Bootstrap4:** Used for the grid layout for the website and modal dialog box.
+- **Font Awesome:** Used to add icons to my footer and button on the website.
+- **Google Fonts:** Used to select the font styles used on the website for the section headers and body.
+- **JQuery:** Used for the drop down navigation and also for the modal created to display the game instructions.
+- **SweetAlert2:** Used to create the alerts for 'correct' and 'incorrect' responses within the game and also as an alert when the user decides to leave the game,
 asking them if they are sure before executing the exitGame function.
 
 ### **_Workspace_**
-- GitHub: - (IDE) Integrated Development Environment
-- Gitpod: - Cloud based hosting platform for managing my repositories, tracking changes and storing files.
+- **GitHub:** - (IDE) Integrated Development Environment
+- **Gitpod:** - Cloud based hosting platform for managing my repositories, tracking changes and storing files.
 
 ### **_Other_**
-- Tinyjpeg: This was used to compress the images used on the website.
-- Balsamiq Wireframes: Used to create wireframes for this project
+- **Tinyjpeg:** This was used to compress the images used on the website.
+- **Balsamiq Wireframes:** Used to create wireframes for this project
 
 ## **Testing**
 
@@ -465,7 +465,7 @@ to the certificate HTML page once valid input have been inserted into the input 
 **_Storing Input Values in Local Storage_**
 
 
-_ Check that the input values are stored using local storage
+_Check that the input values are stored using local storage._
 - I ran a test using Google Chrome Developer Tools where I filled in a first and last name to the input fields in the results container
 and then selected application, then storage and then local storage to check if the input values were stored there. This test was successful and the input values
 are stored in local storage as expected.
@@ -546,7 +546,7 @@ iPhone, android, android table and iPad and across a variety of browsers Interne
 the label was being generated from the Javascript file. Therefore the label tag was not wrapping around the input tag in HTML. It was causing a bit of an issue, so I contacted tutuor support for advice. From that discussion I decided to set up the label tag in the HTML file, which included the input, image tag and a span tag with the image text in it, within the label tag. I set up four of these inside 
 a div with a class of choice for the four options for each question. Then I was able to define the image src and alt tags from my Javascript file using the choices array to populate these choice containers. Using CSS I was able to hide the radio button element and this solved the first issue. Now when you click the image choice as an answer, the input tag is checked but this is hidden from browser.
 - Another element that needed to be addressed was that I had set up a for each loop on the node list within the choice container, which did what it was supposed to do but in order to check the answer, however it was causing the game to skip every second question. I did some research and identified that every time I was looping through the node list the span item which is programmed to be hidden then 
-revealed on answer selection was causing the game to skip every second element in the questions array. I was able to rectify the issue by changing the for loop to only iterate through all images and inputs within the answers container. This worked and the game no longer is skipping any question. The solution was found on [MDN Web Docs](https://developer.mozilla.org/en-us/docs/web/API/Document/querySelectorAll)
+revealed on answer selection was causing the game to skip every second element in the questions array. I was able to rectify the issue by changing the for loop to only iterate through all images and inputs within the answers container. This worked and the game no longer is skipping any question. The solution was found on [MDN Web Docs](https://developer.mozilla.org/en-us/docs/web/API/Document/querySelectorAll).
 
 **_Audio on Button Click (Game Section)_**
 - While trying to set up the audio element for this project, I encountered an issue when testing the audio in the game. I included the audio files as part of my questions array of objects, however it would only play the first audio file no matter what question was being displayed. There was an issue, iterating through the array of object to locate each audio file. 
@@ -604,7 +604,7 @@ set Audio function when clicked. Each audio sound now plays with its correspondi
 - Javascript code used for to solve issue with disabling the event listener on the choices once an answer had been selected to the question. Found on [Stack Overflow](https://stackoverflow.com/questions/48082982/how-do-i-disable-all-radio-buttons-after-select) and edited.
 
 **_MDN Web Docs_**
-- This Javascript code solution was used to resolve the issue I had with 'for each' loop  I had set up on on the nodelist used for the user choice selction. This solution helped to stop the loop from skipping every second question in the game and was sourced on [MDN Web Docs](https://developer.mozilla.org/en-us/docs/web/API/Document/querySelectorAll).
+- This Javascript code solution was used to resolve the issue I had with 'for each' loop  I had set up on on the nodelist used for the user choice selction. This solution was edited and used to stop the loop from skipping every second question in the game and was sourced on [MDN Web Docs](https://developer.mozilla.org/en-us/docs/web/API/Document/querySelectorAll).
 
 **_W3Schools_**
 - Javascript code snippet used to store input values from form in results container in local storage to be retrived later to populate the certificate html. The code for this was found on [W3Schools](https://www.w3schools.com/html/html5_webstorage.asp) and edited.
@@ -613,11 +613,12 @@ set Audio function when clicked. Each audio sound now plays with its correspondi
 - This was a CSS code snippet used to give the 'Let's Play' button an appearance of glowing. It was found here on [W3Docs](https://www.w3docs.com/snippets/css/how-to-create-flashing-glowing-button-using-animation-in-css3.html) and edited.
 
 **_Bootstrap Documentation_**
-- HTML code used to build the 'Instructions' modal dialog box and edited for this project. This code was taken from [Bootstrap Documentation](https://getbootstrap.com/docs/4.1/components/modal/).
+- HTML code used to build the 'Instructions' modal dialog box and edited for this project. This code was taken from [Bootstrap Documentation](https://getbootstrap.com/docs/4.1/components/modal/) and edited.
 - Javascript code snippet used to validate form in results section of html file taken from [Bootstrap Documentation](https://getbootstrap.com/docs/4.0/components/forms/).
 
 **_Favicon_**
-- Code snippet used to generate a favicon for this website. This code was inserted into the html document in the `<head>` section. I have also included the source files for this in the favicon folder. The website used to generate the favicon and associated files was [Favicon.io](https://favicon.io/)
+- Code snippet used to generate a favicon for this website. This code was inserted into the html document in the `<head>` section. I have also included the source files for this in the favicon folder. The website used to generate the favicon and associated files was [Favicon.io](https://favicon.io/).
+An error was showing up with the manifest file, so after some research I solved this issue by including `crossorigin = "use-credentials"` to the manifest link file. This was found on [Stack Overflow](https://stackoverflow.com/questions/33758001/manifest-is-not-valid-json-line-1-column-1-unexpected-token/55618215).
 
 ### **Content**
 - CJ Fallon - Sounds Like Phonics Teachers Resource Book, CJ Fallon Website: Used for to identify letters in Initial Phonics Sounds Phases.

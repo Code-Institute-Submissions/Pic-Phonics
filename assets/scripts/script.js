@@ -595,7 +595,10 @@ function exitGame() {
     });
 }
 
-//Bootstrap Form Validation - disables form submission if there are invalid fields
+/*
+ Bootstrap Form Validation - disables form submission if there are invalid fields.
+ Code snippet taken from Bootstrap Documentation. 
+ */
 cert.addEventListener('click', function(validate) {
     if (cert.checkValidity() === false) {
         validate.preventDefault();

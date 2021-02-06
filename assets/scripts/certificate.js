@@ -1,4 +1,3 @@
-/**
 /* jshint esversion: 8 */
 
 /** Retrieves the data from the input values in the results container that were stored in local storage
